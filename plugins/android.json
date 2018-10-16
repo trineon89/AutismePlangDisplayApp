@@ -10,19 +10,19 @@
     "com.hughisaacs2.cordova.plugins.androidtvplugin": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-android-tv": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-camera": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-android-tv": {
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-camera": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     }
   },

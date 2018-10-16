@@ -244,15 +244,36 @@ function showCongeKrank(theAtelierjson, sel)
 	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
 	for (var _i in theAtelierjson.Dag)
 	{
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url(\'img/personal/'+theAtelierjson.Dag[_i].photo+'\')"><div class="numm meindescldag">Dag</div></div>';
+		var fdel="\'img/personal/";
+		var edel="\'";
+		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Dag[_i].photo+edel+')"><div class="numm cldag">Dag</div></div>';
 	}
 	for (var _i in theAtelierjson.Moies)
 	{
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url(\'img/personal/'+theAtelierjson.Moies[_i].photo+'\')"><div class="numm clmoies">Moies</div></div>';
+		var fdel="\'img/personal/";
+		var edel="\'";
+		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Moies[_i].photo+edel+')"><div class="numm clmoies">Moies</div></div>';
 	}
 	for (var _i in theAtelierjson.Mettes)
 	{
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url(\'img/personal/'+theAtelierjson.Mettes[_i].photo+'\')"><div class="numm clmettes">Mëttes</div></div>';
+		var fdel="\'img/personal/";
+		var edel="\'";
+		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.Mettes[_i].photo+edel+')"><div class="numm clmettes">Mëttes</div></div>';
 	}
 	htmlcontent+='</div>';
 	htmlcontent+='</div>';
@@ -305,15 +326,36 @@ function showFormatiounMaart(theAtelierjson, sel)
 	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
 	for (var _i in theAtelierjson.Dag)
 	{
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url(\'img/personal/'+theAtelierjson.Dag[_i].photo+'\')"><div class="numm cldag">Dag</div></div>';
+		var fdel="\'img/personal/";
+		var edel="\'";
+		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Dag[_i].photo+edel+')"><div class="numm cldag">Dag</div></div>';
 	}
 	for (var _i in theAtelierjson.Moies)
 	{
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url(\'img/personal/'+theAtelierjson.Moies[_i].photo+'\')"><div class="numm clmettes">Moies</div></div>';
+		var fdel="\'img/personal/";
+		var edel="\'";
+		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Moies[_i].photo+edel+')"><div class="numm clmettes">Moies</div></div>';
 	}
 	for (var _i in theAtelierjson.Mettes)
 	{
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url(\'img/personal/'+theAtelierjson.Mettes[_i].photo+'\')"><div class="numm clmmettes">Mëttes</div></div>';
+		var fdel="\'img/personal/";
+		var edel="\'";
+		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.Mettes[_i].photo+edel+')"><div class="numm clmmettes">Mëttes</div></div>';
 	}
 	htmlcontent+='</div>';
 	htmlcontent+='</div>';
