@@ -1,0 +1,15 @@
+{
+  "ios": {
+    "debug": {
+      "developmentTeam": "33Z9K5FGT5",
+	  "automaticProvisioning": true,
+	   "packageType": "development"
+    },
+
+    "release": {
+      "developmentTeam": "33Z9K5FGT5",
+      "packageType": "app-store",
+	  "automaticProvisioning": true
+    }
+  }
+}
