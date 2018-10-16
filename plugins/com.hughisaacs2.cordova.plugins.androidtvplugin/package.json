@@ -1,0 +1,54 @@
+{
+  "_from": "git+https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+  "_id": "com.hughisaacs2.cordova.plugins.androidtvplugin@1.0.3",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/com.hughisaacs2.cordova.plugins.androidtvplugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+    "rawSpec": "https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+    "saveSpec": "git+https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+    "fetchSpec": "https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git#d3390d7804aba652fec1a918b3509b5286f5b653",
+  "_spec": "https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+  "_where": "C:\\Users\\jilladmin\\iCloudDrive\\Documents\\Apps\\AutismePlangDisplayApp",
+  "author": {
+    "name": "Hugh Isaacs II"
+  },
+  "bugs": {
+    "url": "https://github.com/HughIsaacs2/Cordova-Android-TV-Plugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova_name": "AndroidTVPlugin",
+  "deprecated": false,
+  "description": "Cordova Android TV Plugin",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "homepage": "https://github.com/HughIsaacs2/Cordova-Android-TV-Plugin",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "license": "MIT",
+  "name": "com.hughisaacs2.cordova.plugins.androidtvplugin",
+  "platforms": [
+    "android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HughIsaacs2/Cordova-Android-TV-Plugin.git"
+  },
+  "version": "1.0.3"
+}

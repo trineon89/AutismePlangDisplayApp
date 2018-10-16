@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.hughisaacs2.cordova.plugins.androidtvplugin": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-plugin-android-tv": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    }
+  },
+  "dependent_plugins": {}
+}

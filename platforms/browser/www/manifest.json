@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Autisme Display App",
+  "short_name": "Autisme Display App",
+  "version": "lu.autisme.displayclient",
+  "description": "Autisme Display Manager",
+  "author": "Staudt Jill",
+  "icons": [],
+  "start_url": "index.html"
+}
