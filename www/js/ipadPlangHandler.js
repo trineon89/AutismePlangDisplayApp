@@ -400,8 +400,8 @@ function ShowService(servicename)
 		result+="<div class='text'>Encadrants Moies:</div>";
 		for (var _i =0;_i < singleService.encadrantsMoies.length;_i++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
+			var fdel="img/personal/";
+			var edel="";
 			if (singleService.encadrantsMoies[_i].photo.substring(0,4)=="data")
 			{
 				fdel="";
