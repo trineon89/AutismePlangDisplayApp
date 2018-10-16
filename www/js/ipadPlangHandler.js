@@ -317,7 +317,7 @@ function getServiceSelectorForPopup()
 	//
 	for (_i = 0;_i < theJson.Services.length;_i++)
 	{
-		result+= "<div class='smallservice' id='"+theJson.Services[_i].id+"-"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/services/"+deUmlaut(theJson.Services[_i].name)+".jpg' alt='"+theJson.Services[_i].name+"' /></div></div>";
+		result+= "<div class='smallservice' id='"+theJson.Services[_i].id+"-"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".jpg' alt='"+theJson.Services[_i].name+"' /></div></div>";
 	}
 	result+="</div>";
 	return result;
