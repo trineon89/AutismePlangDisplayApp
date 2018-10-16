@@ -467,14 +467,14 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.Dag[_i].photo.substring(0,4)=="data")
+			if (singleService.Dag[_dag].photo.substring(0,4)=="data")
 			{
 				fdel="";
 				edel="";
 			}
 			// result+="<div class='phphoto' id='"+singleService.Dag[_dag].id+"-1'><img src='img/personal/"+singleService.Dag[_dag].photo+"'></div>";
 			result+="<div class='flipit' id='"+singleService.Dag[_dag].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Dag[_i].photo+edel+"'></div>";
+			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Dag[_dag].photo+edel+"'></div>";
 			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Dag[_dag].virnumm+" "+singleService.Dag[_dag].numm+"</div></div>";
 			result+="</div></div>";
 		}
@@ -484,14 +484,14 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.Moies[_i].photo.substring(0,4)=="data")
+			if (singleService.Moies[_moi].photo.substring(0,4)=="data")
 			{
 				fdel="";
 				edel="";
 			}
 			// result+="<div class='phphoto' id='"+singleService.Moies[_moi].id+"-1'><img src='img/personal/"+singleService.Moies[_moi].photo+"'></div>";
 			result+="<div class='flipit' id='"+singleService.Moies[_moi].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Moies[_i].photo+edel+"'></div>";
+			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Moies[_moi].photo+edel+"'></div>";
 			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Moies[_moi].virnumm+" "+singleService.Moies[_moi].numm+"</div></div>";
 			result+="</div></div>";
 		}
@@ -501,14 +501,14 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.Mettes[_i].photo.substring(0,4)=="data")
+			if (singleService.Mettes[_met].photo.substring(0,4)=="data")
 			{
 				fdel="";
 				edel="";
 			}
 			// result+="<div class='phphoto' id='"+singleService.Mettes[_met].id+"-2'><img src='img/personal/"+singleService.Mettes[_met].photo+"'></div>";
 			result+="<div class='flipit' id='"+singleService.Mettes[_met].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Mettes[_i].photo+edel+"'></div>";
+			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Mettes[_met].photo+edel+"'></div>";
 			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Mettes[_met].virnumm+" "+singleService.Mettes[_met].numm+"</div></div>";
 			result+="</div></div>";
 		}
