@@ -125,7 +125,8 @@ function WSHandler(ip) {
 			{
 				case 'ytplayer':
 					document.getElementById('theContent').innerHTML='<div id="empty-container"><h1>YT Mode!</h1></div>';
-					$("#theContent").css("height","100vh");
+					$("#theContent").css("height","100%");
+					$("#theContent").css("min-height","100vh");
 					$("#theContent").css("background-color","black");
 					if (typeof(player) === 'undefined') 
 					{ 

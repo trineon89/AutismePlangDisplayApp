@@ -32,6 +32,7 @@ body {
 	margin: 0 auto;
 	padding-top:60px;
 	display: block;
+	overflow: hidden;
 	/* max-height: 100vh; */
 }
 
@@ -348,7 +349,7 @@ h2 {
 
 .flipcard .flipcard-back {
     position: absolute;
-	height: 217px;
+	height: 216px;
     display: none;
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -378,5 +379,7 @@ h2 {
 
 #theContent {
  background-color:#F2EEEB;
- height: 100vh;
+ height: 100%;
+ min-height: 100vh;
+ overflow:hidden;
 }

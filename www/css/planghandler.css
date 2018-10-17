@@ -32,6 +32,7 @@ body {
 	margin: 0 auto;
 	padding-top:60px;
 	display: block;
+	overflow: hidden;
 	/* max-height: 100vh; */
 }
 
@@ -380,4 +381,5 @@ h2 {
  background-color:#F2EEEB;
  height: 100%;
  min-height: 100vh;
+ overflow:hidden;
 }
