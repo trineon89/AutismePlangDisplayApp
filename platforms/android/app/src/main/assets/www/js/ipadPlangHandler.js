@@ -402,7 +402,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.encadrantsMoies[_i].photo.substring(0,4)=="data")
+			if (singleService.encadrantsMoies[_i].photo.substring(0,4)=="data" || singleService.encadrantsMoies[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -417,7 +417,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.usagersMoies[_i].photo.substring(0,4)=="data")
+			if (singleService.usagersMoies[_i].photo.substring(0,4)=="data" || singleService.usagersMoies[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -433,7 +433,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.encadrantsMettes[_i].photo.substring(0,4)=="data")
+			if (singleService.encadrantsMettes[_i].photo.substring(0,4)=="data" || singleService.encadrantsMettes[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -448,7 +448,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.usagersMettes[_i].photo.substring(0,4)=="data")
+			if (singleService.usagersMettes[_i].photo.substring(0,4)=="data" || singleService.usagersMettes[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -467,7 +467,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.Dag[_dag].photo.substring(0,4)=="data")
+			if (singleService.Dag[_dag].photo.substring(0,4)=="data" || singleService.Dag[_dag].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -484,7 +484,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.Moies[_moi].photo.substring(0,4)=="data")
+			if (singleService.Moies[_moi].photo.substring(0,4)=="data" || singleService.Moies[_moi].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -501,7 +501,7 @@ function ShowService(servicename)
 		{
 			var fdel="img/personal/";
 			var edel="";
-			if (singleService.Mettes[_met].photo.substring(0,4)=="data")
+			if (singleService.Mettes[_met].photo.substring(0,4)=="data" ||singleService.Mettes[_met].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";

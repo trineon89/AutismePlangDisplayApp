@@ -340,6 +340,12 @@ h2 {
     -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
+
+.flipcard .flipcard-front img {
+	width:124px;
+	height:193px;
+}
+
 .flipcard .flipcard-back {
     position: absolute;
 	height: 217px;
