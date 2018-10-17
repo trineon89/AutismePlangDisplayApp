@@ -64,7 +64,7 @@ function buildService(AtelierJSON) {
 		{
 			var fdel="\'img/personal/";
 			var edel="\'";
-			if (theAtelierjson.encadrantsMoies[_i].photo.substring(0,4)=="data")
+			if (theAtelierjson.encadrantsMoies[_i].photo.substring(0,4)=="data" || theAtelierjson.encadrantsMoies[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -83,7 +83,7 @@ function buildService(AtelierJSON) {
 		{
 			var fdel="\'img/personal/";
 			var edel="\'";
-			if (theAtelierjson.usagersMoies[_i].photo.substring(0,4)=="data")
+			if (theAtelierjson.usagersMoies[_i].photo.substring(0,4)=="data" || theAtelierjson.usagersMoies[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -102,7 +102,7 @@ function buildService(AtelierJSON) {
 		{
 			var fdel="\'img/personal/";
 			var edel="\'";
-			if (theAtelierjson.encadrantsMettes[_i].photo.substring(0,4)=="data")
+			if (theAtelierjson.encadrantsMettes[_i].photo.substring(0,4)=="data" || theAtelierjson.encadrantsMettes[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -121,7 +121,7 @@ function buildService(AtelierJSON) {
 		{
 			var fdel="\'img/personal/";
 			var edel="\'";
-			if (theAtelierjson.usagersMettes[_i].photo.substring(0,4)=="data")
+			if (theAtelierjson.usagersMettes[_i].photo.substring(0,4)=="data" || theAtelierjson.usagersMettes[_i].photo.substring(0,4)=="http")
 			{
 				fdel="";
 				edel="";
@@ -162,7 +162,7 @@ function showDoku(theAtelierjson)
 	{
 		var fdel="\'img/personal/";
 		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data")
+		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data" || theAtelierjson.Dag[_i].photo.substring(0,4)=="http")
 		{
 			fdel="";
 			edel="";
@@ -178,7 +178,7 @@ function showDoku(theAtelierjson)
 	{
 		var fdel="\'img/personal/";
 		var edel="\'";
-		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data")
+		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data" || theAtelierjson.Moies[_i].photo.substring(0,4)=="http")
 		{
 			fdel="";
 			edel="";
@@ -200,7 +200,7 @@ function showDoku(theAtelierjson)
 	{
 		var fdel="\'img/personal/";
 		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data")
+		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data" || theAtelierjson.Dag[_i].photo.substring(0,4)=="http")
 		{
 			fdel="";
 			edel="";
@@ -246,7 +246,7 @@ function showCongeKrank(theAtelierjson, sel)
 	{
 		var fdel="\'img/personal/";
 		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data")
+		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data" || theAtelierjson.Dag[_i].photo.substring(0,4)=="http")
 		{
 			fdel="";
 			edel="";
@@ -257,7 +257,7 @@ function showCongeKrank(theAtelierjson, sel)
 	{
 		var fdel="\'img/personal/";
 		var edel="\'";
-		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data")
+		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data" || theAtelierjson.Moies[_i].photo.substring(0,4)=="http")
 		{
 			fdel="";
 			edel="";
@@ -268,7 +268,7 @@ function showCongeKrank(theAtelierjson, sel)
 	{
 		var fdel="\'img/personal/";
 		var edel="\'";
-		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data")
+		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data" || theAtelierjson.Mettes[_i].photo.substring(0,4)=="http")
 		{
 			fdel="";
 			edel="";
