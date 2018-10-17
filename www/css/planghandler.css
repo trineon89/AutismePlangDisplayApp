@@ -348,7 +348,7 @@ h2 {
 
 .flipcard .flipcard-back {
     position: absolute;
-	height: 217px;
+	height: 215px;
     display: none;
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
