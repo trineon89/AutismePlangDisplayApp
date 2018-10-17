@@ -262,7 +262,7 @@ function getTapHoldPopup() {
 	var result="";
 	result+="<div class='phmodal' id='phmodal'>";
 	result+="<div class='modalcontent'>";
-	result+="<h2 id='modalTitle'>_PlaceHolder_</h2>";
+	result+="<h1 id='modalTitle'>_PlaceHolder_</h1>";
 	result+="<span id='moveService' class='popupButtons'>An en aneren Service sätzen</span>";
 	result+="<input type='hidden' id='hiddenuserid'>";
 	result+="<input type='hidden' id='hiddenusermoveday'>";
@@ -272,7 +272,7 @@ function getTapHoldPopup() {
 	result+=getServiceSelectorForPopup();
 	result+="</div>";
 	result+="<div class='phmodal' id='phmodalservseltime'>";
-	result+="<div class='modalcontent' id='selectservicecontainer'><h2>Wéi laang?</h2><div class='popupButtons' id='btn_moies'>Moies</div><div class='popupButtons' id='btn_mettes'>Mëttes</div><div class='popupButtons' id='btn_dag'>ganzen Dag</div></div>"
+	result+="<div class='modalcontent' id='selectservicecontainer'><h1>Wéi laang?</h1><div class='popupButtons' id='btn_moies'>Moies</div><div class='popupButtons' id='btn_mettes'>Mëttes</div><div class='popupButtons' id='btn_dag'>ganzen Dag</div></div>"
 	result+="</div>";
 	return result;
 }
@@ -313,7 +313,7 @@ function getServiceSelectorForPopup()
 	var theJson = JSON.parse(serviceJSON);
 	var singleService;
 	var result="";
-	result+="<div id='smallservicecontainer'>";
+	result+="<div id='smallservicecontainer'><h1>A weieen Service sätzen?</h1>";
 	//
 	for (_i = 0;_i < theJson.Services.length;_i++)
 	{
@@ -381,7 +381,7 @@ function ShowService(servicename)
 	var theJson = JSON.parse(serviceJSON);
 	var singleService;
 	var result="";
-	result+="<i id='backlink' class='backlink fas fa-chevron-circle-left' onclick='javascript:goBack();'>&nbsp;zeréck</i>";
+	result+="<i id='backlink' class='backlink fas fa-chevron-circle-left' onclick='javascript:goBack();'>&nbsp;<h1 style='display:inline-block'>zeréck</h1></i>";
 	//
 	for (var _i = 0;_i < theJson.Services.length;_i++)
 	{
