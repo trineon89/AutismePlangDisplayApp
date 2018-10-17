@@ -392,7 +392,8 @@ function ShowService(servicename)
 		}
 	}
 	result+="<h1 class='title'>"+singleService.name+"</h1><div id='container'>";
-	result+="<div class='text'>Datum:"+theJson.Date+"</div>";
+	let datum = theJson.Date.substring(0,10);
+	result+="<div class='text'>Datum:"+datum+"</div>";
 	
 	if (singleService.id < 30)
 	{
