@@ -183,12 +183,14 @@ function PhotoWidget()
 	$("#sendPhotoData").bind("click", function(ev) {
 		var e = document.getElementById("sel-service");
 		var optionId = e.options[e.selectedIndex].value;
+		var isenc = true;
+		//if ($('#chk-isEncadrant')[0].checked) { } else { isenc=false; }
 		var res = {
 			message : "req_insert_new", 
 			userdata : {
 				numm : document.getElementById('inpNumm').value,
 				virnumm : document.getElementById('inpVirnumm').value,
-				isencardant : $('#chk-isEncadrant')[0].checked,
+				isencadrant : $('#chk-isEncadrant')[0].checked,
 				id : optionId,
 				photo : document.getElementById('preview-image').src
 			}
@@ -199,7 +201,7 @@ function PhotoWidget()
 }
 
 function cameraGetPicture() {
-   navigator.camera.getPicture(onSuccess, onFail, { quality: 100,
+   navigator.camera.getPicture(onSuccess, onFail, { quality: 45,
       destinationType: Camera.DestinationType.DATA_URL,
       sourceType: Camera.PictureSourceType.CAMERA,
 	  encodingType: Camera.EncodingType.JPEG,
@@ -315,7 +317,7 @@ function getServiceSelectorForPopup()
 	//
 	for (_i = 0;_i < theJson.Services.length;_i++)
 	{
-		result+= "<div class='smallservice' id='"+theJson.Services[_i].id+"-"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/services/"+deUmlaut(theJson.Services[_i].name)+".jpg' alt='"+theJson.Services[_i].name+"' /></div></div>";
+		result+= "<div class='smallservice' id='"+theJson.Services[_i].id+"-"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
 	}
 	result+="</div>";
 	return result;
@@ -398,8 +400,8 @@ function ShowService(servicename)
 		result+="<div class='text'>Encadrants Moies:</div>";
 		for (var _i =0;_i < singleService.encadrantsMoies.length;_i++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
+			var fdel="img/personal/";
+			var edel="";
 			if (singleService.encadrantsMoies[_i].photo.substring(0,4)=="data")
 			{
 				fdel="";
@@ -413,8 +415,8 @@ function ShowService(servicename)
 		result+="<div class='text'>Usagers Moies:</div>";
 		for (var _i =0;_i < singleService.usagersMoies.length;_i++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
+			var fdel="img/personal/";
+			var edel="";
 			if (singleService.usagersMoies[_i].photo.substring(0,4)=="data")
 			{
 				fdel="";
@@ -429,8 +431,8 @@ function ShowService(servicename)
 		result+="<div class='text'>Encadrants Mëttes:</div>";
 		for (var _i =0;_i < singleService.encadrantsMettes.length;_i++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
+			var fdel="img/personal/";
+			var edel="";
 			if (singleService.encadrantsMettes[_i].photo.substring(0,4)=="data")
 			{
 				fdel="";
@@ -444,8 +446,8 @@ function ShowService(servicename)
 		result+="<div class='text'>Usagers Mëttes:</div>";
 		for (var _i =0;_i < singleService.usagersMettes.length;_i++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
+			var fdel="img/personal/";
+			var edel="";
 			if (singleService.usagersMettes[_i].photo.substring(0,4)=="data")
 			{
 				fdel="";
@@ -463,16 +465,16 @@ function ShowService(servicename)
 		result+="<div class='text'>De ganzen Dag:</div>";
 		for (var _dag =0;_dag < singleService.Dag.length;_dag++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (singleService.Dag[_i].photo.substring(0,4)=="data")
+			var fdel="img/personal/";
+			var edel="";
+			if (singleService.Dag[_dag].photo.substring(0,4)=="data")
 			{
 				fdel="";
 				edel="";
 			}
 			// result+="<div class='phphoto' id='"+singleService.Dag[_dag].id+"-1'><img src='img/personal/"+singleService.Dag[_dag].photo+"'></div>";
 			result+="<div class='flipit' id='"+singleService.Dag[_dag].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Dag[_i].photo+edel+"'></div>";
+			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Dag[_dag].photo+edel+"'></div>";
 			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Dag[_dag].virnumm+" "+singleService.Dag[_dag].numm+"</div></div>";
 			result+="</div></div>";
 		}
@@ -480,16 +482,16 @@ function ShowService(servicename)
 		result+="<div class='text'>Moies:</div>";
 		for (var _moi =0;_moi < singleService.Moies.length;_moi++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (singleService.Moies[_i].photo.substring(0,4)=="data")
+			var fdel="img/personal/";
+			var edel="";
+			if (singleService.Moies[_moi].photo.substring(0,4)=="data")
 			{
 				fdel="";
 				edel="";
 			}
 			// result+="<div class='phphoto' id='"+singleService.Moies[_moi].id+"-1'><img src='img/personal/"+singleService.Moies[_moi].photo+"'></div>";
 			result+="<div class='flipit' id='"+singleService.Moies[_moi].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Moies[_i].photo+edel+"'></div>";
+			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Moies[_moi].photo+edel+"'></div>";
 			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Moies[_moi].virnumm+" "+singleService.Moies[_moi].numm+"</div></div>";
 			result+="</div></div>";
 		}
@@ -497,16 +499,16 @@ function ShowService(servicename)
 		result+="<div class='text'>Mëttes:</div>";
 		for (var _met =0;_met < singleService.Mettes.length;_met++)
 		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (singleService.Mettes[_i].photo.substring(0,4)=="data")
+			var fdel="img/personal/";
+			var edel="";
+			if (singleService.Mettes[_met].photo.substring(0,4)=="data")
 			{
 				fdel="";
 				edel="";
 			}
 			// result+="<div class='phphoto' id='"+singleService.Mettes[_met].id+"-2'><img src='img/personal/"+singleService.Mettes[_met].photo+"'></div>";
 			result+="<div class='flipit' id='"+singleService.Mettes[_met].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Mettes[_i].photo+edel+"'></div>";
+			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Mettes[_met].photo+edel+"'></div>";
 			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Mettes[_met].virnumm+" "+singleService.Mettes[_met].numm+"</div></div>";
 			result+="</div></div>";
 		}

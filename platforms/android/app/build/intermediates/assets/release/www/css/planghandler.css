@@ -282,6 +282,8 @@ h2 {
 #smallservicecontainer {
 	width: 80%;
     margin: 200px auto;
+	padding:5%;
+	background-color: white;
 }
 
 
