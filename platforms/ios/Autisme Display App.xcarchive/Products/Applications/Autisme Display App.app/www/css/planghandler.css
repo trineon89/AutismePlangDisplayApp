@@ -32,6 +32,7 @@ body {
 	margin: 0 auto;
 	padding-top:60px;
 	display: block;
+	overflow: hidden;
 	/* max-height: 100vh; */
 }
 
@@ -140,7 +141,7 @@ break {
 		width: 135px;
 	}
 	#container {
-		width:700px;
+		width:720px;
 	}
 
 }
@@ -340,9 +341,15 @@ h2 {
     -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
+
+.flipcard .flipcard-front img {
+	width:124px;
+	height:193px;
+}
+
 .flipcard .flipcard-back {
     position: absolute;
-	height: 217px;
+	height: 216px;
     display: none;
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -372,5 +379,7 @@ h2 {
 
 #theContent {
  background-color:#F2EEEB;
- height: 100vh;
+ height: 100%;
+ min-height: 100vh;
+ overflow:hidden;
 }

@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		yEwQSSbda1PR4laxxUa81SOOr4c=
+		3PU9YhYBjE1AxJ6dDiK9nQJeDcE=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		s0QwlI+arqUHCAIkRhNC2Q5107Q=
+		tsI+0nSjrMYl2jeW3G6+AsNvgeQ=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		IbyM9rnGpH1jUQNEwqvZGc0SQYo=
+		GjcN9AD66NVNAftGwa6YoM9ItdE=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JZ/XFClqdCAdeGFW+Pys+c6hgIk=
+		U/IyZDWJTxJ7qSVaWMr1+/tlm+g=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		4e+QMJ7qK8vXpgOa97rPuQDfvBw=
+		HjQGozJh6SPPJZFKGJ0S8ASac20=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		AWQ6J2z4PfXdlJBjCa9bGK09aIk=
+		/7yI+cMqApl1d2CVk5Y0S6TeG5c=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -1082,7 +1082,7 @@
 		</data>
 		<key>www/css/planghandler.css</key>
 		<data>
-		Zyz/YPUM99sCM9YOs1hcT1gxh+Q=
+		o8+poEwhxUH5eo0wYkNOWJjvoxo=
 		</data>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
 		<data>
@@ -2034,11 +2034,11 @@
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		i/qtsoQiIcP8tCrZEHujLM/pHnM=
+		ufCtTCRElN5FlSSGyi2ccrfH3qQ=
 		</data>
 		<key>www/js/ipadPlangHandler.js</key>
 		<data>
-		awQjKhETcVe38DEWfIPuhgj8LIs=
+		1aanUotTNe7gklkik0JOmAPxVpE=
 		</data>
 		<key>www/js/jquery-1.11.1.min.js</key>
 		<data>
@@ -2054,7 +2054,7 @@
 		</data>
 		<key>www/js/plangJsonHandler.js</key>
 		<data>
-		15BbB3zrpMPIoUuXn21HKzUTuxE=
+		USA/MLm80SKiAVZh+/Vgq9TgKW8=
 		</data>
 		<key>www/js/youtubehandler.js</key>
 		<data>
@@ -2395,22 +2395,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yEwQSSbda1PR4laxxUa81SOOr4c=
+			3PU9YhYBjE1AxJ6dDiK9nQJeDcE=
 			</data>
 			<key>hash2</key>
 			<data>
-			ruXzTtUm4lGNJiWUZxsdWgN+ASXU8QoROSbhdDGN380=
+			4/qYBkyyTiSpKAHAF5Y13RGudHO16h7q8Ga4wMU8UO4=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s0QwlI+arqUHCAIkRhNC2Q5107Q=
+			tsI+0nSjrMYl2jeW3G6+AsNvgeQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			eSKXhFEYa5OMz+EfjrUjLB2nQMiNGp80XImHiCg+fkc=
+			Z70pCPc8DZzX1slnS0sfXE7oJYc1ROLqEj/GS6FMS+8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -2428,11 +2428,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			IbyM9rnGpH1jUQNEwqvZGc0SQYo=
+			GjcN9AD66NVNAftGwa6YoM9ItdE=
 			</data>
 			<key>hash2</key>
 			<data>
-			mDM2PNf2fAInA/QefUXsbTEznd0wNbXG7tz/4dokO2A=
+			G3qe734DnZy/q07qWN0Xsmja5ho7EhXRdiU2gkC6A9Q=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2615,22 +2615,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4e+QMJ7qK8vXpgOa97rPuQDfvBw=
+			HjQGozJh6SPPJZFKGJ0S8ASac20=
 			</data>
 			<key>hash2</key>
 			<data>
-			cFyCLkXAGMvF98RE7u0B205LLAVVgiMd7WzS3uuO2bs=
+			YgP68Z6psYg3poPWx/302GWLOe+eJplmHxj6PcOGc04=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AWQ6J2z4PfXdlJBjCa9bGK09aIk=
+			/7yI+cMqApl1d2CVk5Y0S6TeG5c=
 			</data>
 			<key>hash2</key>
 			<data>
-			xIIkGNEdgO7sVY+67jEjGIi9Tewbikru7/NZ4oKohBs=
+			YoZ8kSOlOQK2TcnfOoLX37vfRkHZ/YCls8fulCHoxXA=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -5112,11 +5112,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Zyz/YPUM99sCM9YOs1hcT1gxh+Q=
+			o8+poEwhxUH5eo0wYkNOWJjvoxo=
 			</data>
 			<key>hash2</key>
 			<data>
-			oik3GSuprpAGA4/NjngV+c1jTLg3j0EZ3lt17jIqFPE=
+			RR09tsgRTbLhc8W8vvIfEeNpcK0HM1BtGXaOvZ6yzqc=
 			</data>
 		</dict>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
@@ -7730,22 +7730,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			i/qtsoQiIcP8tCrZEHujLM/pHnM=
+			ufCtTCRElN5FlSSGyi2ccrfH3qQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			A53OqCn9eZHrr+zTLiF2YPx8b/1eNCBDMMTThWRGKwI=
+			t9Jn1Oqwf9XU0Gxspkf/7g37w4yLEcAKsUMGehTTm2g=
 			</data>
 		</dict>
 		<key>www/js/ipadPlangHandler.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			awQjKhETcVe38DEWfIPuhgj8LIs=
+			1aanUotTNe7gklkik0JOmAPxVpE=
 			</data>
 			<key>hash2</key>
 			<data>
-			IHPffOYUrrjbbyeenvrRjtUqZ+Ejok+O+DGJTBYB6BU=
+			PeW6jZwaXPTW4ytApfYYY5C+zZR9Vn3/6mWA8dw2j1M=
 			</data>
 		</dict>
 		<key>www/js/jquery-1.11.1.min.js</key>
@@ -7785,11 +7785,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			15BbB3zrpMPIoUuXn21HKzUTuxE=
+			USA/MLm80SKiAVZh+/Vgq9TgKW8=
 			</data>
 			<key>hash2</key>
 			<data>
-			lji048jPfujhpBTX47/sRNvyOmc1gZLJc8fkXIuML4c=
+			sZ/mSiWeUxB7hWkA2m2noSbWzwgHU8CNa4cuKp5EM5k=
 			</data>
 		</dict>
 		<key>www/js/youtubehandler.js</key>
