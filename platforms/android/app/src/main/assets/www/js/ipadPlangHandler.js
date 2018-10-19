@@ -1,3 +1,12 @@
+function request_fresh()
+{
+	var res = {
+		message : "plang_handler", 
+		sender : myId
+	};
+	ws.send(JSON.stringify(res));
+}
+
 function showPlangHandler(serviceJSON) {
 	// var content = showPlangHandlerFunction(serviceJSON);
 	var content = showPlangHandlerFunctionv2(serviceJSON);
@@ -7,6 +16,7 @@ function showPlangHandler(serviceJSON) {
 
 function getConfig() {
 	var shtml = "";
+	shtml+='<div id="reconnect-button-container"><i style="font-size:24pt;color:#0a328c;" class="fas fa-sync"></div>';
 	shtml+='<div id="config-icon-container"><div id="config-icon" class="config-icon-autisme"></div></div>';
 	shtml+='<div id="config-container">';
 	shtml+='<div class="config-innercontainer">';
@@ -75,6 +85,8 @@ function goBack()
 function appendEventHandlers()
 {
 	$("div.service").bind("click", function(ev) { ShowService(ev.target.alt); });
+	
+	$("#reconnect-button-container").bind("click", function() {request_fresh();});
 	
 	$("div.phphoto").bind("taphold", tapholdHandler);
 	$("#moveService").bind("click", function(ev) {document.getElementById("phmodalservseltime").style.display = "block";} );

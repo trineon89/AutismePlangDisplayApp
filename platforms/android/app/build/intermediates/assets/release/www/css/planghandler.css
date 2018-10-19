@@ -32,6 +32,7 @@ body {
 	margin: 0 auto;
 	padding-top:60px;
 	display: block;
+	overflow: hidden;
 	/* max-height: 100vh; */
 }
 
@@ -140,7 +141,7 @@ break {
 		width: 135px;
 	}
 	#container {
-		width:700px;
+		width:720px;
 	}
 
 }
@@ -258,10 +259,10 @@ h2 {
 }
 
 .modalcontent {
-    width: 300px;
-    height: 400px;
+    width: 450px;
+    height: 700px;
     background-color: rgba(255, 255, 255, 1);
-	margin: 200px auto;
+	margin: 150px auto;
 }
 #modalTitle {
     text-align: center;
@@ -277,10 +278,11 @@ h2 {
     color: white;
     text-decoration: none;
 	margin-bottom: 10px;
+	font-size:22pt;
 }
 
 #smallservicecontainer {
-	width: 80%;
+	width: 88%;
     margin: 200px auto;
 	padding:5%;
 	background-color: white;
@@ -340,9 +342,15 @@ h2 {
     -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
+
+.flipcard .flipcard-front img {
+	width:124px;
+	height:193px;
+}
+
 .flipcard .flipcard-back {
     position: absolute;
-	height: 217px;
+	height: 216px;
     display: none;
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
@@ -358,6 +366,21 @@ h2 {
 .flipcard .flipcard-back.ms-back-flipped {
     -ms-transform: rotateY(0deg);
 }
+
+.info-highlight {
+	position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 15px;
+    right: 8px;
+    top: 7px;
+    z-index: 1;
+    border-radius: 8px;
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
 .info {
     text-align:justify;
     padding:0px 5px;
@@ -370,7 +393,14 @@ h2 {
     font-size: 18pt;
 }
 
+.back-info-append {
+	text-align: center;
+    font-size: 12pt;
+}
+
 #theContent {
  background-color:#F2EEEB;
- height: 100vh;
+ height: 100%;
+ min-height: 100vh;
+ overflow:hidden;
 }

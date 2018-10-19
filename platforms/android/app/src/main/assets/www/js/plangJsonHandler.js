@@ -1,3 +1,21 @@
+setInterval(function(){resetTooLate(); }, 60000);
+
+function resetTooLate()
+{
+	$(".photo-info-append").each(function() {
+		var $this = this;
+		$(this).children().each(function() {
+			if (toolateTimerShow($(this).text().substring(0,5)) )
+			{
+				// console.log("Still show");
+			} else {
+				// console.log("Dont show");
+				$this.remove();
+			}
+		});
+	});
+}
+
 function updateContent(ContentJSON){
 	var content = pJSON(ContentJSON);
 	document.getElementById('theContent').innerHTML=content;
@@ -8,8 +26,6 @@ function updateContent(ContentJSON){
 
 function pJSON(serviceJSON) {
 	var theJson = JSON.parse(serviceJSON);
-	// var theJson = serviceJSON;
-	
 	var SHTML = '';
 	for (var _i=0;_i <= theJson.Services.length -1;_i++)
 	{
@@ -20,7 +36,6 @@ function pJSON(serviceJSON) {
 			SHTML+='<div class="col"></div>';
 		}
 	}
-	
 	return SHTML;
 }
 
@@ -28,16 +43,12 @@ function toolateTimerShow(t)
 {
 	res = false;
 	var d = new Date();
-	// var h = plangpaddingZero(d.getHours());
 	var h = d.getHours();
-	// var m = plangpaddingZero(d.getMinutes());
 	var m = d.getMinutes();
-	
 	var dt = t.split(":");
 	var ht = dt[0];
 	var hm = dt[1];
-	
-	console.log("ht:"+ht+ " h:"+h+" hm:"+hm+" m:"+m);
+	// console.log("ht:"+ht+ " h:"+h+" hm:"+hm+" m:"+m);
 	
 	if ( ((h>=ht) && (m>=hm)) || (h>ht))
 	{
@@ -63,8 +74,6 @@ function getPersonBuilderAtelier(json,sel)
 			fdel="";
 			edel="";
 		}
-		
-		
 		
 		SHTML+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')">';
 		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate" && toolateTimerShow(json.info.value)) { SHTML+="<div class='photo-info-append'><div class='photo-info-append-innercontainter'>"+json.info.value+"h</div></div>"; }

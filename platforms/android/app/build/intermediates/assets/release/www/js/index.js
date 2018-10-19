@@ -58,7 +58,6 @@ var myId;
 var storage;
 var backupJsonObject;
 var ws;
-// var serverip="192.168.188.28";
 // var serverip="192.168.1.173";
 // var serverip="192.168.1.217";
 var serverip="192.168.1.28";
@@ -125,7 +124,8 @@ function WSHandler(ip) {
 			{
 				case 'ytplayer':
 					document.getElementById('theContent').innerHTML='<div id="empty-container"><h1>YT Mode!</h1></div>';
-					$("#theContent").css("height","100vh");
+					$("#theContent").css("height","100%");
+					$("#theContent").css("min-height","100vh");
 					$("#theContent").css("background-color","black");
 					if (typeof(player) === 'undefined') 
 					{ 

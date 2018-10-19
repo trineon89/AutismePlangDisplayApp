@@ -262,7 +262,7 @@ function getTapHoldPopup() {
 	var result="";
 	result+="<div class='phmodal' id='phmodal'>";
 	result+="<div class='modalcontent'>";
-	result+="<h2 id='modalTitle'>_PlaceHolder_</h2>";
+	result+="<h1 id='modalTitle'>_PlaceHolder_</h1>";
 	result+="<span id='moveService' class='popupButtons'>An en aneren Service sätzen</span>";
 	result+="<input type='hidden' id='hiddenuserid'>";
 	result+="<input type='hidden' id='hiddenusermoveday'>";
@@ -272,7 +272,7 @@ function getTapHoldPopup() {
 	result+=getServiceSelectorForPopup();
 	result+="</div>";
 	result+="<div class='phmodal' id='phmodalservseltime'>";
-	result+="<div class='modalcontent' id='selectservicecontainer'><h2>Wéi laang?</h2><div class='popupButtons' id='btn_moies'>Moies</div><div class='popupButtons' id='btn_mettes'>Mëttes</div><div class='popupButtons' id='btn_dag'>ganzen Dag</div></div>"
+	result+="<div class='modalcontent' id='selectservicecontainer'><h1>Wéi laang?</h1><div class='popupButtons' id='btn_moies'>Moies</div><div class='popupButtons' id='btn_mettes'>Mëttes</div><div class='popupButtons' id='btn_dag'>ganzen Dag</div></div>"
 	result+="</div>";
 	return result;
 }
@@ -313,7 +313,7 @@ function getServiceSelectorForPopup()
 	var theJson = JSON.parse(serviceJSON);
 	var singleService;
 	var result="";
-	result+="<div id='smallservicecontainer'>";
+	result+="<div id='smallservicecontainer'><h1>A weieen Service sätzen?</h1>";
 	//
 	for (_i = 0;_i < theJson.Services.length;_i++)
 	{
@@ -373,6 +373,45 @@ function flipThis(e)
 		
 }
 
+function getPersonBuilderAtelier(json,sel)
+{
+	var fdel="img/personal/";
+	var result='';
+		var edel="";
+		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
+		{
+			fdel="";
+			edel="";
+		}
+		result+="<div class='flipit' id='"+json.id+"-"+sel+"'><div class='flipcard'>";
+		// if ()
+		if (typeof(json.info) !== 'undefined') { result+="<div class='info-highlight'></div>"; }
+		result+="<div class='phphoto flipcard-front'><img src='"+fdel+json.photo+edel+"'></div>";
+		result+="<div class='flipcard-back'><div class='back-info'>"+json.virnumm+" "+json.numm+"</div>";
+		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate") { result+="<div class='back-info-append'>kënnt um "+json.info.value+"h</div>"; }
+		result+="";
+		result+="</div></div></div>";
+	return result;
+}
+
+function getPersonBuilderOtherServ(json,sel)
+{
+	var fdel="img/personal/";
+	var result='';
+		var edel="";
+		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
+		{
+			fdel="";
+			edel="";
+		}
+		result+="<div class='flipit' id='"+json.id+"-"+sel+"'><div class='flipcard'>";
+		result+="<div class='phphoto flipcard-front'><img src='"+fdel+json.photo+edel+"'></div>";
+		result+="<div class='flipcard-back'><div class='back-info'>"+json.virnumm+" "+json.numm+"</div>";
+		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate") { result+="<div class='back-info-append'>kënnt um "+json.info.value+"h</div>"; }
+		result+="</div></div></div>";
+	return result;
+}
+
 function ShowService(servicename)
 {
 	// console.log(serviceJS);
@@ -381,7 +420,7 @@ function ShowService(servicename)
 	var theJson = JSON.parse(serviceJSON);
 	var singleService;
 	var result="";
-	result+="<i id='backlink' class='backlink fas fa-chevron-circle-left' onclick='javascript:goBack();'>&nbsp;zeréck</i>";
+	result+="<i id='backlink' class='backlink fas fa-chevron-circle-left' onclick='javascript:goBack();'>&nbsp;<h1 style='display:inline-block'>zeréck</h1></i>";
 	//
 	for (var _i = 0;_i < theJson.Services.length;_i++)
 	{
@@ -392,126 +431,35 @@ function ShowService(servicename)
 		}
 	}
 	result+="<h1 class='title'>"+singleService.name+"</h1><div id='container'>";
-	result+="<div class='text'>Datum:"+theJson.Date+"</div>";
+	let datum = theJson.Date.substring(0,10);
+	result+="<div class='text'>Datum:"+datum+"</div>";
 	
 	if (singleService.id < 30)
 	{
 		// Ateliers
 		result+="<div class='text'>Encadrants Moies:</div>";
-		for (var _i =0;_i < singleService.encadrantsMoies.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.encadrantsMoies[_i].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.encadrantsMoies[_i].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.encadrantsMoies[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.encadrantsMoies[_i].virnumm+" "+singleService.encadrantsMoies[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.encadrantsMoies.length;_i++) { result+=getPersonBuilderAtelier(singleService.encadrantsMoies[_i], "1"); }
+		
 		result+="<div class='text'>Usagers Moies:</div>";
-		for (var _i =0;_i < singleService.usagersMoies.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.usagersMoies[_i].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.usagersMoies[_i].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.usagersMoies[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.usagersMoies[_i].virnumm+" "+singleService.usagersMoies[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.usagersMoies.length;_i++) { result+=getPersonBuilderAtelier(singleService.usagersMoies[_i], "1"); }
 		
 		result+="<div class='text'>Encadrants Mëttes:</div>";
-		for (var _i =0;_i < singleService.encadrantsMettes.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.encadrantsMettes[_i].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.encadrantsMettes[_i].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.encadrantsMettes[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.encadrantsMettes[_i].virnumm+" "+singleService.encadrantsMettes[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.encadrantsMettes.length;_i++) { result+=getPersonBuilderAtelier(singleService.encadrantsMettes[_i], "2"); }
+		
 		result+="<div class='text'>Usagers Mëttes:</div>";
-		for (var _i =0;_i < singleService.usagersMettes.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.usagersMettes[_i].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.usagersMettes[_i].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.usagersMettes[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.usagersMettes[_i].virnumm+" "+singleService.usagersMettes[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.usagersMettes.length;_i++) { result+=getPersonBuilderAtelier(singleService.usagersMettes[_i], "2"); }
 	}
 	else
 	{
 		//Krank, Congé, Doku, Formatioun, Maart,...
 		result+="<div class='text'>De ganzen Dag:</div>";
-		for (var _dag =0;_dag < singleService.Dag.length;_dag++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.Dag[_dag].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			// result+="<div class='phphoto' id='"+singleService.Dag[_dag].id+"-1'><img src='img/personal/"+singleService.Dag[_dag].photo+"'></div>";
-			result+="<div class='flipit' id='"+singleService.Dag[_dag].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Dag[_dag].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Dag[_dag].virnumm+" "+singleService.Dag[_dag].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i = 0; _i < singleService.Dag.length; _i++) { result+=getPersonBuilderOtherServ(singleService.Dag[_i] , "1") }
 		
 		result+="<div class='text'>Moies:</div>";
-		for (var _moi =0;_moi < singleService.Moies.length;_moi++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.Moies[_moi].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			// result+="<div class='phphoto' id='"+singleService.Moies[_moi].id+"-1'><img src='img/personal/"+singleService.Moies[_moi].photo+"'></div>";
-			result+="<div class='flipit' id='"+singleService.Moies[_moi].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Moies[_moi].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Moies[_moi].virnumm+" "+singleService.Moies[_moi].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.Moies.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Moies[_i] , "1") }
 		
 		result+="<div class='text'>Mëttes:</div>";
-		for (var _met =0;_met < singleService.Mettes.length;_met++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.Mettes[_met].photo.substring(0,4)=="data")
-			{
-				fdel="";
-				edel="";
-			}
-			// result+="<div class='phphoto' id='"+singleService.Mettes[_met].id+"-2'><img src='img/personal/"+singleService.Mettes[_met].photo+"'></div>";
-			result+="<div class='flipit' id='"+singleService.Mettes[_met].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Mettes[_met].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Mettes[_met].virnumm+" "+singleService.Mettes[_met].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.Mettes.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Mettes[_i] , "2") }
 		
 	}
 	result+="</div>";
