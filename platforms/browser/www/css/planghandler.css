@@ -259,10 +259,10 @@ h2 {
 }
 
 .modalcontent {
-    width: 300px;
-    height: 400px;
+    width: 450px;
+    height: 700px;
     background-color: rgba(255, 255, 255, 1);
-	margin: 200px auto;
+	margin: 150px auto;
 }
 #modalTitle {
     text-align: center;
@@ -278,10 +278,11 @@ h2 {
     color: white;
     text-decoration: none;
 	margin-bottom: 10px;
+	font-size:22pt;
 }
 
 #smallservicecontainer {
-	width: 80%;
+	width: 88%;
     margin: 200px auto;
 	padding:5%;
 	background-color: white;
@@ -365,6 +366,21 @@ h2 {
 .flipcard .flipcard-back.ms-back-flipped {
     -ms-transform: rotateY(0deg);
 }
+
+.info-highlight {
+	position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 15px;
+    right: 8px;
+    top: 7px;
+    z-index: 1;
+    border-radius: 8px;
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
 .info {
     text-align:justify;
     padding:0px 5px;
@@ -375,6 +391,11 @@ h2 {
 	margin: 5px;
     text-align: center;
     font-size: 18pt;
+}
+
+.back-info-append {
+	text-align: center;
+    font-size: 12pt;
 }
 
 #theContent {

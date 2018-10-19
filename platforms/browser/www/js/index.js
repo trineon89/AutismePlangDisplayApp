@@ -59,9 +59,9 @@ var storage;
 var backupJsonObject;
 var ws;
 // var serverip="192.168.188.28";
-// var serverip="192.168.1.173";
+var serverip="192.168.1.173";
 // var serverip="192.168.1.217";
-var serverip="192.168.1.28";
+// var serverip="192.168.1.28";
 var actualMode=null;
 var screens;
 
@@ -72,8 +72,8 @@ function WSHandler(ip) {
 	ws.onopen = function () {
 		console.log("Connected. Prepare sending...");
 		// Web Socket is connected, send data using send()
-		if (device.platform=="Android")
-		// if (device.platform=="Android" || device.platform=="browser")
+		// if (device.platform=="Android")
+		if (device.platform=="Android" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_init", 
@@ -93,8 +93,8 @@ function WSHandler(ip) {
 			actualMode="ytplayer";
 		}	
 		*/
-		// if (device.platform=="iOS")
-		if (device.platform=="iOS" || device.platform=="browser")
+		if (device.platform=="iOS")
+		// if (device.platform=="iOS" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_handler", 

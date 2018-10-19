@@ -373,6 +373,45 @@ function flipThis(e)
 		
 }
 
+function getPersonBuilderAtelier(json,sel)
+{
+	var fdel="img/personal/";
+	var result='';
+		var edel="";
+		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
+		{
+			fdel="";
+			edel="";
+		}
+		result+="<div class='flipit' id='"+json.id+"-"+sel+"'><div class='flipcard'>";
+		// if ()
+		if (typeof(json.info) !== 'undefined') { result+="<div class='info-highlight'></div>"; }
+		result+="<div class='phphoto flipcard-front'><img src='"+fdel+json.photo+edel+"'></div>";
+		result+="<div class='flipcard-back'><div class='back-info'>"+json.virnumm+" "+json.numm+"</div>";
+		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate") { result+="<div class='back-info-append'>kënnt um "+json.info.value+"h</div>"; }
+		result+="";
+		result+="</div></div></div>";
+	return result;
+}
+
+function getPersonBuilderOtherServ(json,sel)
+{
+	var fdel="img/personal/";
+	var result='';
+		var edel="";
+		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
+		{
+			fdel="";
+			edel="";
+		}
+		result+="<div class='flipit' id='"+json.id+"-"+sel+"'><div class='flipcard'>";
+		result+="<div class='phphoto flipcard-front'><img src='"+fdel+json.photo+edel+"'></div>";
+		result+="<div class='flipcard-back'><div class='back-info'>"+json.virnumm+" "+json.numm+"</div>";
+		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate") { result+="<div class='back-info-append'>kënnt um "+json.info.value+"h</div>"; }
+		result+="</div></div></div>";
+	return result;
+}
+
 function ShowService(servicename)
 {
 	// console.log(serviceJS);
@@ -399,120 +438,28 @@ function ShowService(servicename)
 	{
 		// Ateliers
 		result+="<div class='text'>Encadrants Moies:</div>";
-		for (var _i =0;_i < singleService.encadrantsMoies.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.encadrantsMoies[_i].photo.substring(0,4)=="data" || singleService.encadrantsMoies[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.encadrantsMoies[_i].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.encadrantsMoies[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.encadrantsMoies[_i].virnumm+" "+singleService.encadrantsMoies[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.encadrantsMoies.length;_i++) { result+=getPersonBuilderAtelier(singleService.encadrantsMoies[_i], "1"); }
+		
 		result+="<div class='text'>Usagers Moies:</div>";
-		for (var _i =0;_i < singleService.usagersMoies.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.usagersMoies[_i].photo.substring(0,4)=="data" || singleService.usagersMoies[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.usagersMoies[_i].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.usagersMoies[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.usagersMoies[_i].virnumm+" "+singleService.usagersMoies[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.usagersMoies.length;_i++) { result+=getPersonBuilderAtelier(singleService.usagersMoies[_i], "1"); }
 		
 		result+="<div class='text'>Encadrants Mëttes:</div>";
-		for (var _i =0;_i < singleService.encadrantsMettes.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.encadrantsMettes[_i].photo.substring(0,4)=="data" || singleService.encadrantsMettes[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.encadrantsMettes[_i].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.encadrantsMettes[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.encadrantsMettes[_i].virnumm+" "+singleService.encadrantsMettes[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.encadrantsMettes.length;_i++) { result+=getPersonBuilderAtelier(singleService.encadrantsMettes[_i], "2"); }
+		
 		result+="<div class='text'>Usagers Mëttes:</div>";
-		for (var _i =0;_i < singleService.usagersMettes.length;_i++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.usagersMettes[_i].photo.substring(0,4)=="data" || singleService.usagersMettes[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			result+="<div class='flipit' id='"+singleService.usagersMettes[_i].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.usagersMettes[_i].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.usagersMettes[_i].virnumm+" "+singleService.usagersMettes[_i].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.usagersMettes.length;_i++) { result+=getPersonBuilderAtelier(singleService.usagersMettes[_i], "2"); }
 	}
 	else
 	{
 		//Krank, Congé, Doku, Formatioun, Maart,...
 		result+="<div class='text'>De ganzen Dag:</div>";
-		for (var _dag =0;_dag < singleService.Dag.length;_dag++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.Dag[_dag].photo.substring(0,4)=="data" || singleService.Dag[_dag].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			// result+="<div class='phphoto' id='"+singleService.Dag[_dag].id+"-1'><img src='img/personal/"+singleService.Dag[_dag].photo+"'></div>";
-			result+="<div class='flipit' id='"+singleService.Dag[_dag].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Dag[_dag].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Dag[_dag].virnumm+" "+singleService.Dag[_dag].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i = 0; _i < singleService.Dag.length; _i++) { result+=getPersonBuilderOtherServ(singleService.Dag[_i] , "1") }
 		
 		result+="<div class='text'>Moies:</div>";
-		for (var _moi =0;_moi < singleService.Moies.length;_moi++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.Moies[_moi].photo.substring(0,4)=="data" || singleService.Moies[_moi].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			// result+="<div class='phphoto' id='"+singleService.Moies[_moi].id+"-1'><img src='img/personal/"+singleService.Moies[_moi].photo+"'></div>";
-			result+="<div class='flipit' id='"+singleService.Moies[_moi].id+"-1'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Moies[_moi].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Moies[_moi].virnumm+" "+singleService.Moies[_moi].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.Moies.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Moies[_i] , "1") }
 		
 		result+="<div class='text'>Mëttes:</div>";
-		for (var _met =0;_met < singleService.Mettes.length;_met++)
-		{
-			var fdel="img/personal/";
-			var edel="";
-			if (singleService.Mettes[_met].photo.substring(0,4)=="data" ||singleService.Mettes[_met].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			// result+="<div class='phphoto' id='"+singleService.Mettes[_met].id+"-2'><img src='img/personal/"+singleService.Mettes[_met].photo+"'></div>";
-			result+="<div class='flipit' id='"+singleService.Mettes[_met].id+"-2'><div class='flipcard'>";
-			result+="<div class='phphoto flipcard-front'><img src='"+fdel+singleService.Mettes[_met].photo+edel+"'></div>";
-			result+="<div class='flipcard-back'><div class='back-info'>"+singleService.Mettes[_met].virnumm+" "+singleService.Mettes[_met].numm+"</div></div>";
-			result+="</div></div>";
-		}
+		for (var _i =0;_i < singleService.Mettes.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Mettes[_i] , "2") }
 		
 	}
 	result+="</div>";

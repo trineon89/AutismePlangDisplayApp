@@ -366,6 +366,21 @@ h2 {
 .flipcard .flipcard-back.ms-back-flipped {
     -ms-transform: rotateY(0deg);
 }
+
+.info-highlight {
+	position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 15px;
+    right: 8px;
+    top: 7px;
+    z-index: 1;
+    border-radius: 8px;
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
 .info {
     text-align:justify;
     padding:0px 5px;
@@ -376,6 +391,11 @@ h2 {
 	margin: 5px;
     text-align: center;
     font-size: 18pt;
+}
+
+.back-info-append {
+	text-align: center;
+    font-size: 12pt;
 }
 
 #theContent {

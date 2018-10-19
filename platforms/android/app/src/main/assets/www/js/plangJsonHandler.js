@@ -24,6 +24,72 @@ function pJSON(serviceJSON) {
 	return SHTML;
 }
 
+function toolateTimerShow(t)
+{
+	res = false;
+	var d = new Date();
+	// var h = plangpaddingZero(d.getHours());
+	var h = d.getHours();
+	// var m = plangpaddingZero(d.getMinutes());
+	var m = d.getMinutes();
+	
+	var dt = t.split(":");
+	var ht = dt[0];
+	var hm = dt[1];
+	
+	console.log("ht:"+ht+ " h:"+h+" hm:"+hm+" m:"+m);
+	
+	if ( ((h>=ht) && (m>=hm)) || (h>ht))
+	{
+		return false;
+	} else { return true; }
+}
+
+function plangpaddingZero(i)
+{
+	if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+function getPersonBuilderAtelier(json,sel)
+{
+	SHTML="";
+	var fdel="\'img/personal/";
+		var edel="\'";
+		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
+		{
+			fdel="";
+			edel="";
+		}
+		
+		
+		
+		SHTML+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')">';
+		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate" && toolateTimerShow(json.info.value)) { SHTML+="<div class='photo-info-append'><div class='photo-info-append-innercontainter'>"+json.info.value+"h</div></div>"; }
+		if (json.photo=="placeholder.png" || fdel=="")
+		{
+			SHTML+='<div class="nummplaceholder">'+json.virnumm+'</div>';
+		}
+		SHTML+="</div>";
+	return SHTML;
+}
+
+function getPersonBuilderKrankDoku(json,sel,classsel)
+{
+	var fdel="\'img/personal/";
+	var htmlcontent="";
+		var edel="\'";
+		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
+		{
+			fdel="";
+			edel="";
+		}
+		htmlcontent+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')"><div class="numm '+classsel+'">Dag</div></div>';
+	return htmlcontent;
+}
+
 function buildService(AtelierJSON) {	
 	var theAtelierjson = AtelierJSON;
 	var SHTML ='';
@@ -60,79 +126,26 @@ function buildService(AtelierJSON) {
 		SHTML+= '<div class="atelier breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'"><span class="helper"></span><img src="img/services/'+deUmlaut(theAtelierjson.name)+'.jpg" class="atelierimg" id="atelierimg"></div>';
 		SHTML+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/sonn.png" class="auerimg" id="auerimg"><span>9:00</span></div>';
 		SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-e1">';
-		for (var _i in theAtelierjson.encadrantsMoies)
-		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (theAtelierjson.encadrantsMoies[_i].photo.substring(0,4)=="data" || theAtelierjson.encadrantsMoies[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			SHTML+='<div class="photo" id="'+theAtelierjson.encadrantsMoies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.encadrantsMoies[_i].photo+edel+')">';
-			if (theAtelierjson.encadrantsMoies[_i].photo=="placeholder.png" || fdel=="")
-			{
-				SHTML+='<div class="nummplaceholder">'+theAtelierjson.encadrantsMoies[_i].virnumm+'</div>';
-			}
-			SHTML+="</div>";
-		}
+		
+		for (var _i in theAtelierjson.encadrantsMoies) { SHTML+=getPersonBuilderAtelier(theAtelierjson.encadrantsMoies[_i],"1"); }
+		
 		SHTML+= '</div>';
 		SHTML+= '<div class="trenner" id="trenner"></div>';
 		SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-u1">';
-		for (var _i in theAtelierjson.usagersMoies)
-		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (theAtelierjson.usagersMoies[_i].photo.substring(0,4)=="data" || theAtelierjson.usagersMoies[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			SHTML+='<div class="photo" id="'+theAtelierjson.usagersMoies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.usagersMoies[_i].photo+edel+')">';
-			if (theAtelierjson.usagersMoies[_i].photo=="placeholder.png" || fdel=="")
-			{
-				SHTML+='<div class="nummplaceholder">'+theAtelierjson.usagersMoies[_i].virnumm+'</div>';
-			}
-			SHTML+="</div>";
-		}
+		
+		for (var _i in theAtelierjson.usagersMoies) { SHTML+=getPersonBuilderAtelier(theAtelierjson.usagersMoies[_i],"1"); }
+		
 		SHTML+= '</div>';
 		SHTML+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/iessen.png" class="auerimg" id="auerimg"><span>'+theAtelierjson.auerzait+'</span></div>';
 			SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-e2">';
-		for (var _i in theAtelierjson.encadrantsMettes)
-		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (theAtelierjson.encadrantsMettes[_i].photo.substring(0,4)=="data" || theAtelierjson.encadrantsMettes[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			SHTML+='<div class="photo" id="'+theAtelierjson.encadrantsMettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.encadrantsMettes[_i].photo+edel+')">';
-			if (theAtelierjson.encadrantsMettes[_i].photo=="placeholder.png" || fdel=="")
-			{
-				SHTML+='<div class="nummplaceholder">'+theAtelierjson.encadrantsMettes[_i].virnumm+'</div>';
-			}
-			SHTML+="</div>";
-		}
+		
+		for (var _i in theAtelierjson.encadrantsMettes) { SHTML+=getPersonBuilderAtelier(theAtelierjson.encadrantsMettes[_i],"2"); }
+		
 		SHTML+= '</div>';
 		SHTML+= '<div class="trenner" id="trenner"></div>';
 		SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-u2">';
-		for (var _i in theAtelierjson.usagersMettes)
-		{
-			var fdel="\'img/personal/";
-			var edel="\'";
-			if (theAtelierjson.usagersMettes[_i].photo.substring(0,4)=="data" || theAtelierjson.usagersMettes[_i].photo.substring(0,4)=="http")
-			{
-				fdel="";
-				edel="";
-			}
-			SHTML+='<div class="photo" id="'+theAtelierjson.usagersMettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.usagersMettes[_i].photo+edel+')">';
-			if (theAtelierjson.usagersMettes[_i].photo=="placeholder.png" || fdel=="")
-			{
-				SHTML+='<div class="nummplaceholder">'+theAtelierjson.usagersMettes[_i].virnumm+'</div>';
-			}
-			SHTML+="</div>";
-		}
+		
+		for (var _i in theAtelierjson.usagersMettes) { SHTML+=getPersonBuilderAtelier(theAtelierjson.usagersMettes[_i],"2"); }
 		
 		SHTML+= '</div>';
 		SHTML+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/bus.png" class="auerimg" id="auerimg"><span>16:30</span></div>';
@@ -158,77 +171,19 @@ function showDoku(theAtelierjson)
 	htmlcontent+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/sonn.png" class="auerimg" id="auerimg"><span>9:00</span></div>';
 	htmlcontent+= '<div class="photos atelierphotos" style="height:201px;" id="'+theAtelierjson.id+'-x1">';
 	
-	for (var _i in theAtelierjson.Dag)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data" || theAtelierjson.Dag[_i].photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Dag[_i].photo+edel+')">';
-		if (theAtelierjson.Dag[_i].photo=="placeholder.png" || fdel=="")
-		{
-			htmlcontent+='<div class="nummplaceholder">'+theAtelierjson.Dag[_i].virnumm+'</div>';
-		}
-		htmlcontent+="</div>";
-	}
-	for (var _i in theAtelierjson.Moies)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data" || theAtelierjson.Moies[_i].photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Moies[_i].photo+edel+')">';
-		if (theAtelierjson.Moies[_i].photo=="placeholder.png" || fdel=="")
-		{
-			htmlcontent+='<div class="nummplaceholder">'+theAtelierjson.Moies[_i].virnumm+'</div>';
-		}
-		htmlcontent+="</div>";
-	}
+	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Dag[_i],"1"); }
+	
+	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Moies[_i],"1"); }
+	
 	htmlcontent+= '</div>';
 	var auerzait;
 	if (theAtelierjson.auerzait == undefined) { auerzait="12-13h"; } else {auerzait = theAtelierjson.auerzait; }
 	htmlcontent+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/iessen.png" class="auerimg" id="auerimg"><span>'+auerzait+'</span></div>';
 	htmlcontent+= '<div class="photos atelierphotos" style="height:201px;" id="'+theAtelierjson.id+'-x2">';
 	
-	for (var _i in theAtelierjson.Dag)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data" || theAtelierjson.Dag[_i].photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.Dag[_i].photo+edel+')">';
-		if (theAtelierjson.Dag[_i].photo=="placeholder.png" || fdel=="")
-		{
-			htmlcontent+='<div class="nummplaceholder">'+theAtelierjson.Dag[_i].virnumm+'</div>';
-		}
-		htmlcontent+="</div>";
-	}
-	for (var _i in theAtelierjson.Mettes)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data")
-		{
-			fdel="";
-			edel="";
-		}
-		// SHTML+='<div class="photo" id="'+theAtelierjson.usagersMoies[_i].id+'-1" style="background-image:url(\'img/personal/'+theAtelierjson.usagersMoies[_i].id+'.jpg\')"><div class="numm">'+theAtelierjson.usagersMoies[_i].numm+'</div></div>';
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.Mettes[_i].photo+edel+')">';
-		if (theAtelierjson.Mettes[_i].photo=="placeholder.png" || fdel=="")
-		{
-			htmlcontent+='<div class="nummplaceholder">'+theAtelierjson.Mettes[_i].virnumm+'</div>';
-		}
-		htmlcontent+="</div>";
-	}
+	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Dag[_i],"2"); }
+	
+	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Mettes[_i],"2"); }
 
 	htmlcontent+= '</div>';
 	htmlcontent+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/bus.png" class="auerimg" id="auerimg"><span>16:30</span></div>';
@@ -242,39 +197,29 @@ function showCongeKrank(theAtelierjson, sel)
 	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
 	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
 	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
-	for (var _i in theAtelierjson.Dag)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data" || theAtelierjson.Dag[_i].photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Dag[_i].photo+edel+')"><div class="numm cldag">Dag</div></div>';
-	}
-	for (var _i in theAtelierjson.Moies)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data" || theAtelierjson.Moies[_i].photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Moies[_i].photo+edel+')"><div class="numm clmoies">Moies</div></div>';
-	}
-	for (var _i in theAtelierjson.Mettes)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data" || theAtelierjson.Mettes[_i].photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.Mettes[_i].photo+edel+')"><div class="numm clmettes">Mëttes</div></div>';
-	}
+	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag"); }
+	
+	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies"); }
+	
+	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); }
+	
+	htmlcontent+='</div>';
+	htmlcontent+='</div>';
+	
+	return htmlcontent;
+}
+
+function showFormatiounMaart(theAtelierjson, sel)
+{
+	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
+	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
+	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
+	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag"); }
+	
+	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies"); }
+
+	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"2", "clmettes"); }
+
 	htmlcontent+='</div>';
 	htmlcontent+='</div>';
 	
@@ -317,48 +262,4 @@ function appendHandlerPlang(date=null)
 	}
 	var theHeaderText = Wochendag+', den '+today.getDate()+'. '+Mount+' '+today.getFullYear();
 	$('#info_header').text(theHeaderText);
-}
-
-function showFormatiounMaart(theAtelierjson, sel)
-{
-	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
-	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
-	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
-	for (var _i in theAtelierjson.Dag)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Dag[_i].photo.substring(0,4)=="data")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Dag[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Dag[_i].photo+edel+')"><div class="numm cldag">Dag</div></div>';
-	}
-	for (var _i in theAtelierjson.Moies)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Moies[_i].photo.substring(0,4)=="data")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Moies[_i].id+'-1" style="background-image:url('+fdel+theAtelierjson.Moies[_i].photo+edel+')"><div class="numm clmettes">Moies</div></div>';
-	}
-	for (var _i in theAtelierjson.Mettes)
-	{
-		var fdel="\'img/personal/";
-		var edel="\'";
-		if (theAtelierjson.Mettes[_i].photo.substring(0,4)=="data")
-		{
-			fdel="";
-			edel="";
-		}
-		htmlcontent+='<div class="photo" id="'+theAtelierjson.Mettes[_i].id+'-2" style="background-image:url('+fdel+theAtelierjson.Mettes[_i].photo+edel+')"><div class="numm clmmettes">Mëttes</div></div>';
-	}
-	htmlcontent+='</div>';
-	htmlcontent+='</div>';
-	
-	return htmlcontent;
 }
