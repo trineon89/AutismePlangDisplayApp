@@ -71,8 +71,8 @@ function WSHandler(ip) {
 	ws.onopen = function () {
 		console.log("Connected. Prepare sending...");
 		// Web Socket is connected, send data using send()
-		// if (device.platform=="Android")
-		if (device.platform=="Android" || device.platform=="browser")
+		if (device.platform=="Android")
+		// if (device.platform=="Android" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_init", 
@@ -92,8 +92,8 @@ function WSHandler(ip) {
 			actualMode="ytplayer";
 		}	
 		*/
-		if (device.platform=="iOS")
-		// if (device.platform=="iOS" || device.platform=="browser")
+		// if (device.platform=="iOS")
+		if (device.platform=="iOS" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_handler", 
