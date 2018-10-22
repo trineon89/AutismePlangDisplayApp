@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":900},"path":"AndroidManifest.xml","properties":{"packageId":"lu.autisme.displayclient","split":"","minSdkVersion":"16"}}]
+=======
+[{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":562},"path":"AndroidManifest.xml","properties":{"packageId":"lu.autisme.displayclient","split":"","minSdkVersion":"16"}}]
+>>>>>>> master

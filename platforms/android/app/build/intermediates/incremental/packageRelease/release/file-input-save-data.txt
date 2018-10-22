@@ -1,5 +1,9 @@
 #Internal package file, do not edit.
+<<<<<<< HEAD
 #Mon Oct 22 14:48:27 CEST 2018
+=======
+#Fri Oct 19 13:09:38 CEST 2018
+>>>>>>> master
 20.base=C\:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\assets\\release
 143.base=C\:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\assets\\release
 493.base=C\:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\assets\\release

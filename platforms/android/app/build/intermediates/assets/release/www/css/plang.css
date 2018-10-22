@@ -16,6 +16,7 @@ body {
     background-color: rgba(255, 99, 39, 0.5);
 }
 
+<<<<<<< HEAD
 #special_content {
 	height: 486px;
 }
@@ -51,6 +52,8 @@ body {
 	font-style: italic;
 }
 
+=======
+>>>>>>> master
 #info_header {
 	font-size: 20pt;
     text-align: center;

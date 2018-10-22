@@ -56,6 +56,17 @@ body {
 	background-color: #F2EEEB;
 }
 
+#reconnect-button-container {
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    width: 30px;
+    z-index: 1;
+    padding: 10px;
+    background-color: #F2EEEB;
+}
+
 #config-icon {
 	font-size:24pt;
 }
