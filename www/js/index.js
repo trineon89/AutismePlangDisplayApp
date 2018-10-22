@@ -59,9 +59,9 @@ var storage;
 var backupJsonObject;
 var ws;
 // var serverip="192.168.188.28";
-var serverip="192.168.1.173";
+// var serverip="192.168.1.173";
 // var serverip="192.168.1.217";
-// var serverip="192.168.1.28";
+var serverip="192.168.1.28";
 var actualMode=null;
 var screens;
 
@@ -207,6 +207,7 @@ function WSHandler(ip) {
 				storage.setItem('backup', JSON.stringify(pjson.content));
 				$('#theContent').addClass('flex-grid');
 				appendHandlerPlang(pjson.content.Date);
+				 menuDuJourContainer(pjson.content.Date);
 			  }
 			break;
 		  case 'Fullplang' :

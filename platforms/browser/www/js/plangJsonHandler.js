@@ -114,10 +114,10 @@ function buildService(AtelierJSON) {
 			break;
 		case 35:
 				SHTML=showFormatiounMaart(theAtelierjson, 'maart')
-				SHTML+='</div>';
+				SHTML+='</div><div class="col"></div>';
 				SHTML+='<div class="col" style="flex: 100;">';
 				SHTML+='<div id="info_header"></div>';
-				SHTML+='<div id="special_content"></div>';
+				SHTML+='<div id="special_content"><div id="menu-jour-container"></div></div>';
 				SHTML+='</div>';
 			break;
 		default:
@@ -152,6 +152,30 @@ function buildService(AtelierJSON) {
 		SHTML+= '</div>';
 	}
 	return SHTML;
+}
+
+function menuDuJourContainer(date)
+{
+	$.ajax({
+		type:	"POST",
+		url:	"http://intern.autisme.lu/remote/getMenuOfTheDay.ajax.php",
+		data: {date: date},
+		success: function (result) {
+			if (result.result)
+			{
+				console.log(result);
+				let res='<h1>Menu du jour</h1>';
+				res+='<h3 class="menu-header3">Menu</h3>';
+				res+='<p>'+result.menu+'<span class="alternative">allergènes: '+result.almenu+'</span></p>';
+				res+='<h3 class="menu-header3">Alternative 1</h3>';
+				res+='<p>'+result.al1+'<span class="alternative">allergènes: '+result.alal1+'</span></p>';
+				res+='<h3 class="menu-header3">Alternative 2</h3>';
+				res+='<p>'+result.al2+'<span class="alternative">allergènes: '+result.alal2+'</span></p>';
+				res+='<h3 class="menu-header3">Liste Allergènes</h3><p>1.&nbsp;Arachide | 2.&nbsp;Céléri | 3.&nbsp;Crustacés | 4.&nbsp;Fruits&nbsp;à coque | 5.&nbsp;Gluten | 6.&nbsp;Lait/Lactose | 7.&nbsp;Lupin | 8.&nbsp;Mollusques | 9.&nbsp;Moutarde | 10.&nbsp;Oeufs | 11.&nbsp;Poisson | 12.&nbsp;Sésame | 13.&nbsp;Soja | 14.&nbsp;Anhydride&nbsp;sulfureux&nbsp;et&nbsp;sulfites</p>';
+				$('#menu-jour-container').html(res);
+			}
+		}
+	});
 }
 
 function showExtraContent(theAtelierjson)
