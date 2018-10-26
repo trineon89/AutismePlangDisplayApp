@@ -85,61 +85,6 @@ function getPersonBuilderAtelier(json,sel)
 	return SHTML;
 }
 
-<<<<<<< HEAD
-function toolateTimerShow(t)
-{
-	res = false;
-	var d = new Date();
-	// var h = plangpaddingZero(d.getHours());
-	var h = d.getHours();
-	// var m = plangpaddingZero(d.getMinutes());
-	var m = d.getMinutes();
-	
-	var dt = t.split(":");
-	var ht = dt[0];
-	var hm = dt[1];
-	
-	console.log("ht:"+ht+ " h:"+h+" hm:"+hm+" m:"+m);
-	
-	if ( ((h>=ht) && (m>=hm)) || (h>ht))
-	{
-		return false;
-	} else { return true; }
-}
-
-function plangpaddingZero(i)
-{
-	if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}
-
-function getPersonBuilderAtelier(json,sel)
-{
-	SHTML="";
-	var fdel="\'img/personal/";
-		var edel="\'";
-		if (json.photo.substring(0,4)=="data" || json.photo.substring(0,4)=="http")
-		{
-			fdel="";
-			edel="";
-		}
-		
-		
-		
-		SHTML+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')">';
-		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate" && toolateTimerShow(json.info.value)) { SHTML+="<div class='photo-info-append'><div class='photo-info-append-innercontainter'>"+json.info.value+"h</div></div>"; }
-		if (json.photo=="placeholder.png" || fdel=="")
-		{
-			SHTML+='<div class="nummplaceholder">'+json.virnumm+'</div>';
-		}
-		SHTML+="</div>";
-	return SHTML;
-}
-
-=======
->>>>>>> master
 function getPersonBuilderKrankDoku(json,sel,classsel)
 {
 	var fdel="\'img/personal/";

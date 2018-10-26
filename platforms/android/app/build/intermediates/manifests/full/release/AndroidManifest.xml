@@ -2,17 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lu.autisme.displayclient"
     android:hardwareAccelerated="true"
-<<<<<<< HEAD
-    android:versionCode="900"
-    android:versionName="0.9.0" >
-=======
-    android:versionCode="562"
-    android:versionName="0.5.62" >
->>>>>>> master
+    android:versionCode="903"
+    android:versionName="0.9.3" >
 
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="26" />
+        android:minSdkVersion="19"
+        android:targetSdkVersion="27" />
 
     <supports-screens
         android:anyDensity="true"

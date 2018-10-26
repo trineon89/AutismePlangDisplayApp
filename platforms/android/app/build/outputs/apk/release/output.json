@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":900},"path":"app-release.apk","properties":{"packageId":"lu.autisme.displayclient","split":"","minSdkVersion":"16"}}]
-=======
-[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":562},"path":"app-release.apk","properties":{"packageId":"lu.autisme.displayclient","split":"","minSdkVersion":"16"}}]
->>>>>>> master
+[{"outputType":{"type":"APK"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":903},"path":"app-release.apk","properties":{"packageId":"lu.autisme.displayclient","split":"","minSdkVersion":"19"}}]

@@ -89,6 +89,8 @@ body {
 }
 
 .KrankCongeHeader {
+	margin-top: 11px;
+    margin-bottom: 10px;
 	text-shadow:none;
 	font-size: 16pt;
     text-align: center;
@@ -167,6 +169,12 @@ body {
 }
 .breet-6 {
 	width: 192px;
+}
+.breet-7 {
+	width: 224px;
+}
+.breet-8 {
+	width: 256px;
 }
 
 .atelier {
