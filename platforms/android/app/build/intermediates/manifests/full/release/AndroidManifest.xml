@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lu.autisme.displayclient"
     android:hardwareAccelerated="true"
-    android:versionCode="907"
-    android:versionName="0.9.7" >
+    android:versionCode="909"
+    android:versionName="0.9.9" >
 
     <uses-sdk
         android:minSdkVersion="19"

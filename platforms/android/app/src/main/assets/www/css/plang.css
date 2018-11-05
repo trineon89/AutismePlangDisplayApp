@@ -16,6 +16,9 @@ body {
     background-color: rgba(255, 99, 39, 0.5);
 }
 
+#player {
+	min-height:100vh;
+}
 
 @keyframes slide {
   from {
@@ -277,6 +280,7 @@ span {
 .photos {
 	/* background:#cee5eb; */
 	/* height: 98px; */
+	overflow:auto;
 }
 .atelierphotos {
 	/*background:#cee5eb;*/

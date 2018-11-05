@@ -322,15 +322,37 @@ function showDoku(theAtelierjson)
 
 function showCongeKrank(theAtelierjson, sel)
 {
+	var htmltmp ="";
 	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
 	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
 	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
-	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag"); }
+	for (var _i in theAtelierjson.Dag) { 
+		if (theAtelierjson.Dag[_i].isencadrant) {
+			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag");
+		} else {
+			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag");
+		}
+	}
 	
-	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies"); }
+	for (var _i in theAtelierjson.Moies) {
+		if (theAtelierjson.Moies[_i].isencadrant) {
+			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies");
+		} else {
+			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies");
+		}
+	}
 	
-	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); }
+	for (var _i in theAtelierjson.Mettes) { 
+		if (theAtelierjson.Mettes[_i].isencadrant) {
+			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); 
+		} else {
+			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); 
+		}
+	}
 	
+	htmlcontent+='</div>';
+	htmlcontent+='<div class="photos" id="'+theAtelierjson.id+'-x2" style="border-top-color:#b5b5b5;border-top-width:5px;border-top-style: solid;padding-top: 1px;margin-top: 1px;">';
+	htmlcontent+=htmltmp;
 	htmlcontent+='</div>';
 	htmlcontent+='</div>';
 	
