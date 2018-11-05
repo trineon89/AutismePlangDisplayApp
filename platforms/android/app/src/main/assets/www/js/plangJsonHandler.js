@@ -95,7 +95,13 @@ function getPersonBuilderKrankDoku(json,sel,classsel)
 			fdel="";
 			edel="";
 		}
-		htmlcontent+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')"><div class="numm '+classsel+'">Dag</div></div>';
+		htmlcontent+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')"><div class="numm '+classsel+'">';
+		
+		if (classsel == 'cldag') {htmlcontent+='Dag';}
+		if (classsel == 'clmoies') {htmlcontent+='Moies';}
+		if (classsel == 'clmettes') {htmlcontent+='Mëttes';}
+		
+		htmlcontent+='</div></div>';
 	return htmlcontent;
 }
 

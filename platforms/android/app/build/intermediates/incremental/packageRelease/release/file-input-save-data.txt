@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Oct 26 14:27:18 CEST 2018
+#Mon Nov 05 08:34:37 CET 2018
 20.base=C\:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\assets\\release
 143.base=C\:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\assets\\release
 237.path=www/img/personal/staudt-jill.jpg
