@@ -207,6 +207,7 @@ function WSHandler(ip) {
 				storage.setItem('backup', JSON.stringify(pjson.content));
 				$('#theContent').addClass('flex-grid');
 				appendHandlerPlang(pjson.content.Date);
+				 menuDuJourContainer(pjson.content.Date);
 			  }
 			break;
 		  case 'Fullplang' :
