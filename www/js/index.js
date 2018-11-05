@@ -208,6 +208,7 @@ function WSHandler(ip) {
 				$('#theContent').addClass('flex-grid');
 				appendHandlerPlang(pjson.content.Date);
 				 menuDuJourContainer(pjson.content.Date);
+				 motdCheck(pjson.content.Date);
 			  }
 			break;
 		  case 'Fullplang' :
