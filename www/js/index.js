@@ -329,7 +329,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 		if (ateliername=="Congé" || ateliername=="Krank" || ateliername=="Formatioun" || ateliername=="Maart")
 		{
 			
-			$('<div/>',{id: usid+"-1", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-x0');
+			$('<div/>',{id: usid+"-1", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-x2');
 			if (fullday==1) { $('<div/>',{class:"numm cldag", text: "Dag"}).appendTo('#'+usid+"-1"); }
 			if (fullday==2) { $('<div/>',{class:"numm clmoies", text: "Moies"}).appendTo('#'+usid+"-1"); }
 			if (fullday==3) { $('<div/>',{class:"numm clmettes", text: "Mëttes"}).appendTo('#'+usid+"-1"); }
