@@ -95,7 +95,13 @@ function getPersonBuilderKrankDoku(json,sel,classsel)
 			fdel="";
 			edel="";
 		}
-		htmlcontent+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')"><div class="numm '+classsel+'">Dag</div></div>';
+		htmlcontent+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')"><div class="numm '+classsel+'">';
+		
+		if (classsel == 'cldag') {htmlcontent+='Dag';}
+		if (classsel == 'clmoies') {htmlcontent+='Moies';}
+		if (classsel == 'clmettes') {htmlcontent+='Mëttes';}
+		
+		htmlcontent+='</div></div>';
 	return htmlcontent;
 }
 
@@ -126,7 +132,7 @@ function buildService(AtelierJSON) {
 				SHTML+='</div><div class="col"></div>';
 				SHTML+='<div class="col" style="flex: 100;">';
 				SHTML+='<div id="info_header"></div>';
-				SHTML+='<div id="special_content"><div id="menu-jour-container"></div></div>';
+				SHTML+='<div id="special_content"><div id="menu-jour-container"></div><div id="motd_container"></div></div>';
 				SHTML+='</div>';
 			break;
 		default:
@@ -162,6 +168,95 @@ function buildService(AtelierJSON) {
 	}
 	return SHTML;
 }
+
+function motdCheck(date)
+{
+	$.ajax({
+		type:	"POST",
+		url:	"http://intern.autisme.lu/remote/getMotdOfTheDay.ajax.php",
+		data: {date: date},
+		success: function (result) {
+			if (result.result)
+			{
+				console.log(result);
+
+				var theobj = Object.values(result.string);
+				let objstring = "[";
+				for (i=0;i<theobj.length;i++)
+				{
+					theobj[i] = theobj[i].replace(/\'/g, "’");
+					objstring+="\""+theobj[i]+"\"";
+					if (i<theobj.length-1) {objstring+=",";}
+				}
+				objstring+="]";
+				
+				console.log(objstring);
+				
+				let res="<div class='typewrite' data-period='2000' data-type='"+objstring+"'><span class=\"typewrap motd\"</div>";
+				$('#motd_container').html(res);
+				$('#motd_container').css("display", "block");
+	
+				var elements = document.getElementsByClassName('typewrite');
+				for (var i=0; i<elements.length; i++) {
+					var toRotate = elements[i].getAttribute('data-type');
+					var period = elements[i].getAttribute('data-period');
+					if (toRotate) {
+					  new TxtType(elements[i], JSON.parse(toRotate), period);
+					}
+				}
+				// INJECT CSS
+				var css = document.createElement("style");
+				css.type = "text/css";
+				css.innerHTML = ".typewrite > .typewrap { border-right: 0.08em solid #fff}";
+				document.body.appendChild(css);
+			}
+		}
+	});
+
+}
+
+
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="typewrap motd">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
 
 function menuDuJourContainer(date)
 {
@@ -227,15 +322,37 @@ function showDoku(theAtelierjson)
 
 function showCongeKrank(theAtelierjson, sel)
 {
+	var htmltmp ="";
 	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
 	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
 	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
-	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag"); }
+	for (var _i in theAtelierjson.Dag) { 
+		if (theAtelierjson.Dag[_i].isencadrant) {
+			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag");
+		} else {
+			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag");
+		}
+	}
 	
-	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies"); }
+	for (var _i in theAtelierjson.Moies) {
+		if (theAtelierjson.Moies[_i].isencadrant) {
+			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies");
+		} else {
+			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies");
+		}
+	}
 	
-	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); }
+	for (var _i in theAtelierjson.Mettes) { 
+		if (theAtelierjson.Mettes[_i].isencadrant) {
+			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); 
+		} else {
+			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); 
+		}
+	}
 	
+	htmlcontent+='</div>';
+	htmlcontent+='<div class="photos" id="'+theAtelierjson.id+'-x2" style="border-top-color:#b5b5b5;border-top-width:5px;border-top-style: solid;padding-top: 1px;margin-top: 1px;">';
+	htmlcontent+=htmltmp;
 	htmlcontent+='</div>';
 	htmlcontent+='</div>';
 	

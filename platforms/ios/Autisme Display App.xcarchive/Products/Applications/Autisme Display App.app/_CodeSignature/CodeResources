@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		otZ+o91KUIikroZcW6Qjt6MI/yw=
+		GSQLrSeWvH9HLChz8loUsekz9P4=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		XbUw1gIcw7+Ze3ibpeXwhK4ItxM=
+		LNnguIPCAIpU1af9qoeIRhWuq4Q=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		Ie/1bU9gCjLo25AFRqIqMZ6c2zo=
+		H8ErwoULDmDKmwrsKXQXnVQQqCQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5yQ2jUK9ZuV5bi4huyGtuqcPcV0=
+		p506sKy7o6HRnahI7aCuruZ8ARk=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		PReeZwv6fISs7becd9yyA2WM7Fo=
+		L0Uuk7Q/GRZg2z5PMnw0Yc4SVms=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		+eIp5pJw+uzloNgal5d6p9C/Myc=
+		xo3hKNwhrXVgNQkVfYw7csJ9tow=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -1078,7 +1078,7 @@
 		</data>
 		<key>www/css/plang.css</key>
 		<data>
-		THEWGasWC1E9NKfMdfQuYNwNhNg=
+		SvBMIxinJs43N81hYLWII3gg2nw=
 		</data>
 		<key>www/css/planghandler.css</key>
 		<data>
@@ -1230,7 +1230,7 @@
 		</data>
 		<key>www/img/personal/caroll-isabelle.jpg</key>
 		<data>
-		d6MgwJwy4+NLCyBHgeF+VIkvwfU=
+		7E3BR3uJJ5SKlC848GcosMM4COM=
 		</data>
 		<key>www/img/personal/cheche-laetitia.jpg</key>
 		<data>
@@ -1251,6 +1251,18 @@
 		<key>www/img/personal/coimbra-laura.jpg</key>
 		<data>
 		Ud71k54YR4TDiB5toiLv3Qi1vxQ=
+		</data>
+		<key>www/img/personal/copus-eva.jpg</key>
+		<data>
+		LDlh0SaIGo9VoKUy+h4WJYa5P3I=
+		</data>
+		<key>www/img/personal/cordobes-kevin.jpg</key>
+		<data>
+		6te1A+w6gt6amc5ybwDR2rIIqSQ=
+		</data>
+		<key>www/img/personal/dallo-stefanie.jpg</key>
+		<data>
+		brvmPp4bykM98bYPTlQEkKQ0ZxA=
 		</data>
 		<key>www/img/personal/de-almeida-fernando.jpg</key>
 		<data>
@@ -1680,6 +1692,10 @@
 		<data>
 		vlzpFLBo+59aIx9Mzl9qqKA7uj4=
 		</data>
+		<key>www/img/personal/rausch-anouk.jpg</key>
+		<data>
+		hg5zWyVSrcUbauUWBaH9Kc/N274=
+		</data>
 		<key>www/img/personal/rehlinger-raymond.jpg</key>
 		<data>
 		lLINpBBqcPTy7QFHIqmdxIp+qzE=
@@ -1792,6 +1808,10 @@
 		<data>
 		RTHqApCTv5kqnwAZIgk8He4y3hg=
 		</data>
+		<key>www/img/personal/stork-cathia.jpg</key>
+		<data>
+		wRQInG9lkaLFyGcBZRM4PEqYpAk=
+		</data>
 		<key>www/img/personal/streff-nadia.jpg</key>
 		<data>
 		Cie9smjpNDR4GZEDbdflC7VZb6Y=
@@ -1852,6 +1872,10 @@
 		<data>
 		wkFO2itaJwZB9VI1Al06H7ct8qA=
 		</data>
+		<key>www/img/personal/weiler-rick.jpg</key>
+		<data>
+		bLNlCzG8q3h7WcuniTGqgBMLWpY=
+		</data>
 		<key>www/img/personal/wikstrom-sonia.jpg</key>
 		<data>
 		QeYf2v7OPUoeMBsz7zHwsKG25k0=
@@ -1875,6 +1899,10 @@
 		<key>www/img/services/Thumbs.db</key>
 		<data>
 		qUUAu+9fIyrZjipeqxc8VbFGyoo=
+		</data>
+		<key>www/img/services/apaken.jpg</key>
+		<data>
+		yDwLZe7mdXEJXbUBUbUqgLBCqYo=
 		</data>
 		<key>www/img/services/backoffice.jpg</key>
 		<data>
@@ -1948,6 +1976,10 @@
 		<data>
 		l4NheM5C/x2Uunid44V3V2ls1ao=
 		</data>
+		<key>www/img/servicesnew/apaken.png</key>
+		<data>
+		qBNPu4Y/JdjO2pkxJslpltZMXgs=
+		</data>
 		<key>www/img/servicesnew/backoffice.png</key>
 		<data>
 		nttCCAKXr1+K2dYqKuU7LremOUU=
@@ -1980,6 +2012,10 @@
 		<data>
 		SMfro4R/45Xv4OpNw2+IlVE1hFs=
 		</data>
+		<key>www/img/servicesnew/fraei.png</key>
+		<data>
+		i7md/hC7H71ftGUd+CXTolzmxag=
+		</data>
 		<key>www/img/servicesnew/gaart.png</key>
 		<data>
 		6fWFZ7z1mt0iFnG5bzJMH097c+Y=
@@ -2003,6 +2039,10 @@
 		<key>www/img/servicesnew/maart.png</key>
 		<data>
 		48MN6c49I1xMAj3u2BWifNKz274=
+		</data>
+		<key>www/img/servicesnew/notassigned.png</key>
+		<data>
+		VYNYoJsrhKs569GzihtcEST7pfU=
 		</data>
 		<key>www/img/servicesnew/pabeier.png</key>
 		<data>
@@ -2034,11 +2074,11 @@
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		vCvOH/shVZGHXaa/qYRxcUBSeRo=
+		tUumbph2qXu/RYobjw6nZK2SZoU=
 		</data>
 		<key>www/js/ipadPlangHandler.js</key>
 		<data>
-		cnMfSFhfQ5Q3WuXYr7grZLsyM+s=
+		Lzo+iDeV3lVMPFRm3VMx82VrAV4=
 		</data>
 		<key>www/js/jquery-1.11.1.min.js</key>
 		<data>
@@ -2054,7 +2094,7 @@
 		</data>
 		<key>www/js/plangJsonHandler.js</key>
 		<data>
-		Tjq2C7GbKIwg/DTVvcXPmkohUj8=
+		DGguw1Rc8KagKaC16Bmgwev1ylQ=
 		</data>
 		<key>www/js/youtubehandler.js</key>
 		<data>
@@ -2395,22 +2435,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			otZ+o91KUIikroZcW6Qjt6MI/yw=
+			GSQLrSeWvH9HLChz8loUsekz9P4=
 			</data>
 			<key>hash2</key>
 			<data>
-			hB5HIXle4u+awglFvQACVSYLgRdBlHnx7nuYivSYKr8=
+			ej+vnWHML8AfQZo1bWgVfq0i/k+TwKI1l1PS6RWH/+I=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XbUw1gIcw7+Ze3ibpeXwhK4ItxM=
+			LNnguIPCAIpU1af9qoeIRhWuq4Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			b7lBA1zYeBXdi3UkBJabFjMDMdh5AoFZfGZSvXWo9Qc=
+			T1cYOwBh04j2zGUZdOmnQsuaARTC00d5DH4E3s5EdMI=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -2428,11 +2468,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ie/1bU9gCjLo25AFRqIqMZ6c2zo=
+			H8ErwoULDmDKmwrsKXQXnVQQqCQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			j8OPWk/PyMusYM8UZcmMfE+CSq+nSSd6dqVyiNV+mP8=
+			h515aMpIDtajLBe16F0Hv1WB4k06Vm+jGQ1lkAXL5Uw=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2615,22 +2655,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			PReeZwv6fISs7becd9yyA2WM7Fo=
+			L0Uuk7Q/GRZg2z5PMnw0Yc4SVms=
 			</data>
 			<key>hash2</key>
 			<data>
-			q7rVCzJQYTrXmhaGkiCBqI+J7cOrIhx/WmYErEOlAGA=
+			pvxykuTPs69jLgalEE5HA0/ZvhwZ/smH16hgNDMY0Zc=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			+eIp5pJw+uzloNgal5d6p9C/Myc=
+			xo3hKNwhrXVgNQkVfYw7csJ9tow=
 			</data>
 			<key>hash2</key>
 			<data>
-			cc0qE9YBhpmwk1N7RkU6B6pJl0yhEdb04/7lOJSFjMQ=
+			+22rF33gXi4DQDv33uc49geDqjSWAZQy17rdiQh5ly4=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -5101,11 +5141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			THEWGasWC1E9NKfMdfQuYNwNhNg=
+			SvBMIxinJs43N81hYLWII3gg2nw=
 			</data>
 			<key>hash2</key>
 			<data>
-			hVf+HOGTD5S6qo/klgA5/5y4wH9+H688pPOTJoEHCpo=
+			QlF0uiL6nZvZrC29uIe2D9pRnboYTYvYZ0CXz9aZtBE=
 			</data>
 		</dict>
 		<key>www/css/planghandler.css</key>
@@ -5519,11 +5559,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			d6MgwJwy4+NLCyBHgeF+VIkvwfU=
+			7E3BR3uJJ5SKlC848GcosMM4COM=
 			</data>
 			<key>hash2</key>
 			<data>
-			A33l8vfCkR0cYitRb/jU5xJEkXk4Zs7LWakqvAMiu+g=
+			MHKZEAgCeCf59oK4X9ztbuSjCk98tqB2iEpEdoMUK9U=
 			</data>
 		</dict>
 		<key>www/img/personal/cheche-laetitia.jpg</key>
@@ -5579,6 +5619,39 @@
 			<key>hash2</key>
 			<data>
 			L6srxxjcztfjj6xC3PS7XMseR7eBRq7OvscgltlItAQ=
+			</data>
+		</dict>
+		<key>www/img/personal/copus-eva.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LDlh0SaIGo9VoKUy+h4WJYa5P3I=
+			</data>
+			<key>hash2</key>
+			<data>
+			7bbPoGrZXCXmm4kHht0ci7tOgE03FeOYoP/+zY67aFc=
+			</data>
+		</dict>
+		<key>www/img/personal/cordobes-kevin.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6te1A+w6gt6amc5ybwDR2rIIqSQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			hiv4QT86ECkOLUwcV/x+nDeSUkFEKra60CwnzMhAM7g=
+			</data>
+		</dict>
+		<key>www/img/personal/dallo-stefanie.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			brvmPp4bykM98bYPTlQEkKQ0ZxA=
+			</data>
+			<key>hash2</key>
+			<data>
+			SAYB9dXuctrT+mrtO2sBwwuEiCrWnZRMTXwGX6Zl/M4=
 			</data>
 		</dict>
 		<key>www/img/personal/de-almeida-fernando.jpg</key>
@@ -6758,6 +6831,17 @@
 			Od2zPDQtvYAcob79ET6sy0jwPovFS3st6BIkT63xBx4=
 			</data>
 		</dict>
+		<key>www/img/personal/rausch-anouk.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			hg5zWyVSrcUbauUWBaH9Kc/N274=
+			</data>
+			<key>hash2</key>
+			<data>
+			ie7MpWJX545H9jU23KmiKQ9JImEWKT+37SzAn1+qFmU=
+			</data>
+		</dict>
 		<key>www/img/personal/rehlinger-raymond.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7066,6 +7150,17 @@
 			vo7vMvcvQMM3TZSzzckdgVXYcx7PY6Gz0n7cqSDxq/A=
 			</data>
 		</dict>
+		<key>www/img/personal/stork-cathia.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			wRQInG9lkaLFyGcBZRM4PEqYpAk=
+			</data>
+			<key>hash2</key>
+			<data>
+			YK6uGv59XzGiBodVQFOwyvomVixwrK+BVlgLpgEGgVY=
+			</data>
+		</dict>
 		<key>www/img/personal/streff-nadia.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7231,6 +7326,17 @@
 			0PqF7Zk4dLD77DXyJdTr32c1p4Tkbu7VWxCfQETK9lU=
 			</data>
 		</dict>
+		<key>www/img/personal/weiler-rick.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			bLNlCzG8q3h7WcuniTGqgBMLWpY=
+			</data>
+			<key>hash2</key>
+			<data>
+			s0eTkQ7KTl1b/QpnbEb1dIWaPMX2NbYPi82hMLkFLTA=
+			</data>
+		</dict>
 		<key>www/img/personal/wikstrom-sonia.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7295,6 +7401,17 @@
 			<key>hash2</key>
 			<data>
 			zin9EkCB6joWQPpkd38jVXwvSi2Hy+Uvd6lpKLR+8lY=
+			</data>
+		</dict>
+		<key>www/img/services/apaken.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			yDwLZe7mdXEJXbUBUbUqgLBCqYo=
+			</data>
+			<key>hash2</key>
+			<data>
+			YrUXR/x6IUtu3Eqm+8tsKldA6arRZlT2+VJ+FUY827Y=
 			</data>
 		</dict>
 		<key>www/img/services/backoffice.jpg</key>
@@ -7495,6 +7612,17 @@
 			kGa1Nf1k16nCjWdPWOO6KAeRfhbrwBBFswYF9cBinq8=
 			</data>
 		</dict>
+		<key>www/img/servicesnew/apaken.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			qBNPu4Y/JdjO2pkxJslpltZMXgs=
+			</data>
+			<key>hash2</key>
+			<data>
+			mPtUR6TA2oYGvoagByClKx+lmC/SIzUpB2c81/ExTqE=
+			</data>
+		</dict>
 		<key>www/img/servicesnew/backoffice.png</key>
 		<dict>
 			<key>hash</key>
@@ -7583,6 +7711,17 @@
 			gmYz/EvEXDKG25gFsnSLOel7wr+Tpwhxlzl3fJKZd1U=
 			</data>
 		</dict>
+		<key>www/img/servicesnew/fraei.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			i7md/hC7H71ftGUd+CXTolzmxag=
+			</data>
+			<key>hash2</key>
+			<data>
+			I2c7GvZHLSJe8lipephPGBdRsvzwS5IKHwfbJs2x36w=
+			</data>
+		</dict>
 		<key>www/img/servicesnew/gaart.png</key>
 		<dict>
 			<key>hash</key>
@@ -7647,6 +7786,17 @@
 			<key>hash2</key>
 			<data>
 			2XMLVWDtdtG0LxP/2kHh+Uq6fqmeaNmZJaBskAwgGBQ=
+			</data>
+		</dict>
+		<key>www/img/servicesnew/notassigned.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			VYNYoJsrhKs569GzihtcEST7pfU=
+			</data>
+			<key>hash2</key>
+			<data>
+			H6MAbww8Faa92J9Ll5AyiKXojX9dzfx/dXwZo/88QZ0=
 			</data>
 		</dict>
 		<key>www/img/servicesnew/pabeier.png</key>
@@ -7730,22 +7880,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vCvOH/shVZGHXaa/qYRxcUBSeRo=
+			tUumbph2qXu/RYobjw6nZK2SZoU=
 			</data>
 			<key>hash2</key>
 			<data>
-			7n8AqlNleWXmDv54o1rc8Srizp0VnS5lkijNDaE0dA8=
+			yYnzYs3QMngZAut5B2Gc64gX9QEoqzzOxxGaw5lfsRk=
 			</data>
 		</dict>
 		<key>www/js/ipadPlangHandler.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cnMfSFhfQ5Q3WuXYr7grZLsyM+s=
+			Lzo+iDeV3lVMPFRm3VMx82VrAV4=
 			</data>
 			<key>hash2</key>
 			<data>
-			9pjXyJTFaKcUDqYU7BX6YN+JfhPqmBh/DLLI6pkYZjc=
+			hC3A/BzpLuUkyhBGRQLeAjaj8aueZIFgOQ3s1Hh790E=
 			</data>
 		</dict>
 		<key>www/js/jquery-1.11.1.min.js</key>
@@ -7785,11 +7935,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Tjq2C7GbKIwg/DTVvcXPmkohUj8=
+			DGguw1Rc8KagKaC16Bmgwev1ylQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			cfySTMy7R1mWV+KOPtEeD0x9EuDVl0FWOz9B6wwcTR4=
+			2BQf7otqrf/dn6vgwODw7qrklKIx82WvMhP9k8upEGo=
 			</data>
 		</dict>
 		<key>www/js/youtubehandler.js</key>

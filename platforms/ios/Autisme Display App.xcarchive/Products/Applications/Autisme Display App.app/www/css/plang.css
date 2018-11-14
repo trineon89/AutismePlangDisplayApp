@@ -16,6 +16,41 @@ body {
     background-color: rgba(255, 99, 39, 0.5);
 }
 
+#player {
+	min-height:100vh;
+}
+
+@keyframes slide {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -100%;
+  }
+}
+
+#motd_container {
+	position: relative;
+    height: 30px;
+    background-color: #607d8b66;
+    width: 100%;
+    bottom: 30px;
+	display: none;
+	 /* background-repeat: repeat; */
+  /* background-size: auto; */
+  text-align: center;
+}
+
+
+
+.motd {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 14pt;
+	
+	height: 30px;
+    line-height: 30px;
+}
+
 #special_content {
 	height: 486px;
 }
@@ -89,6 +124,8 @@ body {
 }
 
 .KrankCongeHeader {
+	margin-top: 11px;
+    margin-bottom: 10px;
 	text-shadow:none;
 	font-size: 16pt;
     text-align: center;
@@ -168,6 +205,12 @@ body {
 .breet-6 {
 	width: 192px;
 }
+.breet-7 {
+	width: 224px;
+}
+.breet-8 {
+	width: 256px;
+}
 
 .atelier {
 	/*background:#bad380;*/
@@ -237,6 +280,7 @@ span {
 .photos {
 	/* background:#cee5eb; */
 	/* height: 98px; */
+	overflow:auto;
 }
 .atelierphotos {
 	/*background:#cee5eb;*/
