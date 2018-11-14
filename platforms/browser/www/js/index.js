@@ -72,8 +72,8 @@ function WSHandler(ip) {
 	ws.onopen = function () {
 		console.log("Connected. Prepare sending...");
 		// Web Socket is connected, send data using send()
-		// if (device.platform=="Android")
-		if (device.platform=="Android" || device.platform=="browser")
+		if (device.platform=="Android")
+		// if (device.platform=="Android" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_init", 
@@ -93,8 +93,8 @@ function WSHandler(ip) {
 			actualMode="ytplayer";
 		}	
 		*/
-		if (device.platform=="iOS")
-		// if (device.platform=="iOS" || device.platform=="browser")
+		// if (device.platform=="iOS")
+		if (device.platform=="iOS" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_handler", 
@@ -328,8 +328,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 	} else {
 		if (ateliername=="Congé" || ateliername=="Krank" || ateliername=="Formatioun" || ateliername=="Maart")
 		{
-			
-			$('<div/>',{id: usid+"-1", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-x0');
+			$('<div/>',{id: usid+"-1", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-x2');
 			if (fullday==1) { $('<div/>',{class:"numm cldag", text: "Dag"}).appendTo('#'+usid+"-1"); }
 			if (fullday==2) { $('<div/>',{class:"numm clmoies", text: "Moies"}).appendTo('#'+usid+"-1"); }
 			if (fullday==3) { $('<div/>',{class:"numm clmettes", text: "Mëttes"}).appendTo('#'+usid+"-1"); }

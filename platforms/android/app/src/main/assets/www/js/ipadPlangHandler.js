@@ -43,11 +43,27 @@ function showPlangHandlerFunctionv2(serviceJSON) {
 	var theJson = JSON.parse(serviceJSON);
 	
 	var SHTML = '';
+	
 	SHTML+= "<h1 class='title' id='title'>";
 	// https://stackoverflow.com/questions/2812770/add-centered-text-to-the-middle-of-a-hr-like-line (line in title)
 	SHTML+= "<div style='width: 100%; height: 35px; border-bottom: 1px solid #0A328C; text-align: center;'>";
 	SHTML+= "<span style='font-size: 40px; background-color: #F2EEEB; padding: 0 10px;'>Wielt äre Service</span></div></h1><div id='container'>";
 	SHTML+= "<div class='screen'>";
+	ci=0;
+	for (var _i in theJson.Services)
+	{
+		if (theJson.Services[_i].id ==21 || theJson.Services[_i].id ==31) {SHTML+= "</div><hr class='spacer'><div class='screen'>";}
+		if (theJson.Services[_i].id >=20)
+		{
+			if (ci==3) { SHTML+='<break></break>'; }
+			SHTML+= "<div class='service service2' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
+			ci++;
+		} else {
+			SHTML+= "<div class='service' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
+		}
+	}
+	
+	/*
 	for (var _i=0;_i <= 6;_i++)
 	{
 		serviceJS=theJson.Services[_i];
@@ -71,6 +87,7 @@ function showPlangHandlerFunctionv2(serviceJSON) {
 		SHTML+= "<div class='service service2' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
 		ci++;
 	}
+	*/
 	SHTML+="</div></div>";
 	return SHTML;
 }
@@ -446,7 +463,7 @@ function ShowService(servicename)
 	let datum = theJson.Date.substring(0,10);
 	result+="<div class='text'>Datum:"+datum+"</div>";
 	
-	if (singleService.id < 30)
+	if (singleService.id < 30 || singleService.id == 51)
 	{
 		// Ateliers
 		result+="<div class='text'>Encadrants Moies:</div>";
@@ -466,13 +483,15 @@ function ShowService(servicename)
 		//Krank, Congé, Doku, Formatioun, Maart,...
 		result+="<div class='text'>De ganzen Dag:</div>";
 		for (var _i = 0; _i < singleService.Dag.length; _i++) { result+=getPersonBuilderOtherServ(singleService.Dag[_i] , "1") }
-		
-		result+="<div class='text'>Moies:</div>";
-		for (var _i =0;_i < singleService.Moies.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Moies[_i] , "1") }
-		
-		result+="<div class='text'>Mëttes:</div>";
-		for (var _i =0;_i < singleService.Mettes.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Mettes[_i] , "2") }
-		
+		console.log(singleService);
+		if (singleService.id != 99)
+		{
+			result+="<div class='text'>Moies:</div>";
+			for (var _i =0;_i < singleService.Moies.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Moies[_i] , "1") }
+			
+			result+="<div class='text'>Mëttes:</div>";
+			for (var _i =0;_i < singleService.Mettes.length;_i++) { result+=getPersonBuilderOtherServ(singleService.Mettes[_i] , "2") }
+		}
 	}
 	result+="</div>";
 	result+=getTapHoldPopup();
@@ -482,12 +501,13 @@ function ShowService(servicename)
 
 function getUserDataById(theid)
 {
+	console.log("id: "+theid);
 	serviceJSON=storage.getItem('backup');
 	var theJson = JSON.parse(serviceJSON);	
 	var res = null;
 	for (var _i=0;_i <= theJson.Services.length -1;_i++)
 	{		
-		if (theJson.Services[_i].id < 30)
+		if (theJson.Services[_i].id < 30 || theJson.Services[_i].id == 51)
 		{
 			for (var _j =0;_j < theJson.Services[_i].encadrantsMoies.length;_j++)
 			{if(theJson.Services[_i].encadrantsMoies[_j].id == theid) {res=theJson.Services[_i].encadrantsMoies[_j];return res;}}
@@ -498,6 +518,7 @@ function getUserDataById(theid)
 			for (var _j =0;_j < theJson.Services[_i].usagersMettes.length;_j++)
 			{if(theJson.Services[_i].usagersMettes[_j].id == theid) {res=theJson.Services[_i].usagersMettes[_j];return res;}}
 		} else {
+			console.log(theJson.Services[_i]);
 			for (var _j =0;_j < theJson.Services[_i].Dag.length;_j++)
 			{if(theJson.Services[_i].Dag[_j].id == theid) {res=theJson.Services[_i].Dag[_j];return res;}}
 			for (var _j =0;_j < theJson.Services[_i].Moies.length;_j++)
