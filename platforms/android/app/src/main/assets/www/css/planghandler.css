@@ -45,6 +45,40 @@ body {
     color: white;
 }
 
+#search-icon-container {
+	position: absolute;
+    top: 0px;
+    right: 50px;
+    height: 30px;
+    width: 30px;
+	z-index:1;
+	padding:10px;
+	background-color: #F2EEEB;
+}
+
+#search-icon {
+	font-size:24pt;
+	color: #0a328c;
+}
+
+ .css-input { border-color:#cccccc; border-width:2px; border-radius:10px; border-style:solid; font-size:18px; padding:5px; box-shadow: 4px 3px 5px 0px rgba(42,42,42,.33);width:95%;text-align: center; color: gray;  } 
+		 .css-input:focus { outline:none; } 
+
+.search-result-text {
+	font-size: 24pt;
+    color: #5a5a5a;
+}
+
+#search-results {
+	height: 582px;
+    overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+#search-results img {
+	height: 125px;
+}
+
 #config-icon-container {
 	position: absolute;
     top: 0px;
