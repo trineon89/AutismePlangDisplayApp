@@ -15,7 +15,7 @@ ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\and
 INJECTED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-33:12
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\106ad57557d5373b316b4ce892e01309\AndroidManifest.xml:17:1-27:12
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\44ebac237c20cad991f79d7b1188b8f6\AndroidManifest.xml:17:1-27:12
 MERGED from [:CordovaLib] C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:20:1-27:12
 INJECTED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-33:12
 INJECTED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:2:1-33:12
@@ -56,8 +56,8 @@ ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\and
 		ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:4:22-64
 application
 ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:5:5-19:19
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\106ad57557d5373b316b4ce892e01309\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\106ad57557d5373b316b4ce892e01309\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\44ebac237c20cad991f79d7b1188b8f6\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\44ebac237c20cad991f79d7b1188b8f6\AndroidManifest.xml:25:5-20
 	android:supportsRtl
 		ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:5:114-140
 	android:label
@@ -110,12 +110,12 @@ ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\and
 		ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:13:27-69
 uses-sdk
 ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:20:5-74
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\106ad57557d5373b316b4ce892e01309\AndroidManifest.xml:21:5-23:54
-MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\106ad57557d5373b316b4ce892e01309\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\44ebac237c20cad991f79d7b1188b8f6\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\44ebac237c20cad991f79d7b1188b8f6\AndroidManifest.xml:21:5-23:54
 MERGED from [:CordovaLib] C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:25:5-44
 MERGED from [:CordovaLib] C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:25:5-44
 	tools:overrideLibrary
-		ADDED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\106ad57557d5373b316b4ce892e01309\AndroidManifest.xml:23:9-51
+		ADDED from [com.android.support:support-v4:24.1.1] C:\Users\jilladmin\.gradle\caches\transforms-1\files-1.1\support-v4-24.1.1.aar\44ebac237c20cad991f79d7b1188b8f6\AndroidManifest.xml:23:9-51
 	android:targetSdkVersion
 		ADDED from C:\Users\jilladmin\Documents\Git\AutismePlangDisplayApp\platforms\android\app\src\main\AndroidManifest.xml:20:42-71
 	android:minSdkVersion

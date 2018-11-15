@@ -72,8 +72,8 @@ function WSHandler(ip) {
 	ws.onopen = function () {
 		console.log("Connected. Prepare sending...");
 		// Web Socket is connected, send data using send()
-		// if (device.platform=="Android")
-		if (device.platform=="Android" || device.platform=="browser")
+		if (device.platform=="Android")
+		// if (device.platform=="Android" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_init", 
@@ -93,8 +93,8 @@ function WSHandler(ip) {
 			actualMode="ytplayer";
 		}	
 		*/
-		if (device.platform=="iOS")
-		// if (device.platform=="iOS" || device.platform=="browser")
+		// if (device.platform=="iOS")
+		if (device.platform=="iOS" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_handler", 
@@ -345,7 +345,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 	}
 }
 	
-function deUmlaut(value){
+function deUmlaut(value,space=true){
   value = value.toLowerCase();
   value = value.replace(/ä/gi, 'ae');
   value = value.replace(/ö/gi, 'oe');
@@ -359,7 +359,7 @@ function deUmlaut(value){
   value = value.replace(/ë/gi, 'e');
   value = value.replace(/ê/gi, 'e');
   value = value.replace(/â/gi, 'a');
-  value = value.replace(/ /gi, '_');
+  if (space){value = value.replace(/ /gi, '_');}
   value = value.replace(/'/gi, '');
   
   return value;
