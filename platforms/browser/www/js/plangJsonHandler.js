@@ -368,7 +368,8 @@ function showFormatiounMaart(theAtelierjson, sel)
 	
 	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies"); }
 
-	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"2", "clmettes"); }
+	for (var _i in theAtelierjson.Mettes) { 
+		htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); }
 
 	htmlcontent+='</div>';
 	htmlcontent+='</div>';
