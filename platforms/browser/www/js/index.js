@@ -209,6 +209,7 @@ function WSHandler(ip) {
 				appendHandlerPlang(pjson.content.Date);
 				 menuDuJourContainer(pjson.content.Date);
 				 motdCheck(pjson.content.Date);
+				 PubCheck(pjson.content.Date);
 			  }
 			break;
 		  case 'Fullplang' :

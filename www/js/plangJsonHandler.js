@@ -74,8 +74,9 @@ function getPersonBuilderAtelier(json,sel)
 			fdel="";
 			edel="";
 		}
-		
-		SHTML+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')">';
+		let obday = "";
+		if (json.bday!=undefined) { obday=getBday(json.bday); }
+		SHTML+='<div class="photo" id="'+json.id+'-'+sel+'" style="background-image:url('+fdel+json.photo+edel+')">'+obday;
 		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate" && toolateTimerShow(json.info.value)) { SHTML+="<div class='photo-info-append'><div class='photo-info-append-innercontainter'>"+json.info.value+"h</div></div>"; }
 		if (json.photo=="placeholder.png" || fdel=="")
 		{
@@ -83,6 +84,20 @@ function getPersonBuilderAtelier(json,sel)
 		}
 		SHTML+="</div>";
 	return SHTML;
+}
+
+function getBday(date)
+{
+	rmonth= date.substring(5, 7)-1;
+	rday= date.substring(8, 10);
+	let today = new Date();
+	if ((today.getDate() == rday) && (today.getMonth() ==rmonth))
+	// if (1==1)
+	{
+		console.log("Bday :)");
+		return '<div class="confetti"></div><div class="happybday"></div>';
+	}
+	return '';
 }
 
 function getPersonBuilderKrankDoku(json,sel,classsel)
@@ -132,7 +147,7 @@ function buildService(AtelierJSON) {
 				SHTML+='</div><div class="col"></div>';
 				SHTML+='<div class="col" style="flex: 100;">';
 				SHTML+='<div id="info_header"></div>';
-				SHTML+='<div id="special_content"><div id="menu-jour-container"></div><div id="motd_container"></div></div>';
+				SHTML+='<div id="special_content"><div id="menu-jour-container"></div><div id="motd_container"></div><div id="publ_container"></div></div>';
 				SHTML+='</div>';
 			break;
 		default:
@@ -213,6 +228,24 @@ function motdCheck(date)
 		}
 	});
 
+}
+
+function PubCheck(date)
+{
+	$.ajax({
+		type:	"POST",
+		url:	"http://intern.autisme.lu/remote/getPubOfTheDay.ajax.php",
+		data: {date: date},
+		success: function (result) {
+			if (result.result)
+			{
+				$('#publ_container').css("display","block");
+				$('#publ_container').css("background-image","url('https://intern.autisme.lu/uploads/img/pub/"+result.string+"')");
+			}
+			
+		}
+		
+	});
 }
 
 

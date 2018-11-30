@@ -41,7 +41,17 @@ body {
   text-align: center;
 }
 
-
+#publ_container {
+	position: relative;
+    height: 160px;
+    bottom: 161px;
+    right: 1px;
+	display:none;
+    /*background-image: url(https://intern.autisme.lu/uploads/img/pub/flyer_HD_XMAS-recto.png);*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
 
 .motd {
 	font-family: Helvetica,Arial,sans-serif;
@@ -280,8 +290,15 @@ span {
 .photos {
 	/* background:#cee5eb; */
 	/* height: 98px; */
-	overflow:auto;
+	overflow:visible;
+	display: block;
+	clear: both;
 }
+/*
+.photos::after {
+	clear:float;
+}
+*/
 .atelierphotos {
 	/*background:#cee5eb;*/
 	height: 98px;
@@ -329,6 +346,33 @@ span {
 }
 .photos .photo:nth-child(10) {
 	animation-delay: 2.0s;
+}
+
+.happybday {
+	height: 20px;
+    width: 20px;
+    position: absolute;
+    top: -10px;
+    left: -5px;
+    background-image: url(../img/bdayhat.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+}
+
+.confetti {
+	background: url(../img/confetti.svg) repeat-y;
+	animation: moveIt 3s linear infinite;
+	width: 100%;
+    height: 41px;
+	opacity: 0.55;
+}
+
+@keyframes moveIt {
+  0% {background-position-y: 0px;}
+  /* 50% {background-position-y: 41px;} */
+  100% {background-position-y: 38px;}
 }
 
 .trenner {
