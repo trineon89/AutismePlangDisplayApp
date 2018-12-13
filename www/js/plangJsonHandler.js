@@ -1,5 +1,8 @@
 setInterval(function(){resetTooLate(); }, 60000);
 
+var thisdate; 
+var letobj; 
+
 function resetTooLate()
 {
 	$(".photo-info-append").each(function() {
@@ -18,7 +21,8 @@ function resetTooLate()
 
 function updateContent(ContentJSON){
 	document.getElementById('theContent').innerHTML="";
-	
+	letobj=JSON.parse(ContentJSON); 
+	thisdate = letobj.Date; 
 	var content = pJSON(ContentJSON);
 	
 	$('.ateliercontainer').each(function(e){
@@ -110,7 +114,10 @@ function getBday(date)
 {
 	rmonth= date.substring(5, 7)-1;
 	rday= date.substring(8, 10);
-	let today = new Date();
+	// let today = new Date();
+		// console.log(thisdate); 
+	let today = new Date(thisdate); 
+	// console.log("today"+today); 
 	if ((today.getDate() == rday) && (today.getMonth() ==rmonth))
 	// if (1==1)
 	{
