@@ -1,5 +1,8 @@
 setInterval(function(){resetTooLate(); }, 60000);
 
+var thisdate;
+var letobj;
+
 function resetTooLate()
 {
 	$(".photo-info-append").each(function() {
@@ -17,6 +20,8 @@ function resetTooLate()
 }
 
 function updateContent(ContentJSON){
+	letobj=JSON.parse(ContentJSON);
+	thisdate = letobj.Date;
 	var content = pJSON(ContentJSON);
 	document.getElementById('theContent').innerHTML=content;
 	//document.querySelectorAll(".col:last-child").remove();
@@ -90,7 +95,9 @@ function getBday(date)
 {
 	rmonth= date.substring(5, 7)-1;
 	rday= date.substring(8, 10);
-	let today = new Date();
+	// console.log(thisdate);
+	let today = new Date(thisdate);
+	// console.log("today"+today);
 	if ((today.getDate() == rday) && (today.getMonth() ==rmonth))
 	// if (1==1)
 	{
