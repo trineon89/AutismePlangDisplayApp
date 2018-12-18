@@ -1,0 +1,1 @@
+{"plugins":["com.hughisaacs2.cordova.plugins.androidtvplugin","cordova-plugin-whitelist","cordova-plugin-file","cordova-plugin-device","cordova-plugin-android-tv","cordova-plugin-camera","cordova-plugin-network-information"]}

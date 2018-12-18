@@ -3,6 +3,26 @@ body {
 	padding: 0px;
 }
 
+.offlineoverlay {
+    height:100vh;
+    width: 100vw;
+    background-color: rgba(90, 90, 90, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 10000;
+}
+.offlineoverlaytext {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 50pt;
+    text-shadow: none;
+    color: #cfefff;
+    -webkit-text-stroke-width: 2pt;
+    -webkit-text-stroke-color: #313131;
+}
+
 .title {
 	font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
@@ -277,7 +297,7 @@ break {
 }
 
 .styled-select {
-	
+	/**/
 }
 
 .styled-select:before {
