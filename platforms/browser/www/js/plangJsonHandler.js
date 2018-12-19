@@ -1,7 +1,12 @@
 setInterval(function(){resetTooLate(); }, 60000);
 
+<<<<<<< HEAD
 var thisdate; 
 var letobj; 
+=======
+var thisdate;
+var letobj;
+>>>>>>> master
 
 function resetTooLate()
 {
@@ -20,6 +25,7 @@ function resetTooLate()
 }
 
 function updateContent(ContentJSON){
+<<<<<<< HEAD
 	document.getElementById('theContent').innerHTML="";
 	letobj=JSON.parse(ContentJSON); 
 	var content = pJSON(ContentJSON); 
@@ -30,6 +36,12 @@ function updateContent(ContentJSON){
 		$(this).after('<div class="col"></div>');
 	})
 	
+=======
+	letobj=JSON.parse(ContentJSON);
+	thisdate = letobj.Date;
+	var content = pJSON(ContentJSON);
+	document.getElementById('theContent').innerHTML=content;
+>>>>>>> master
 	//document.querySelectorAll(".col:last-child").remove();
 	
 //$('#theContent').children().last().remove();
@@ -126,10 +138,16 @@ function getBday(date)
 {
 	rmonth= date.substring(5, 7)-1;
 	rday= date.substring(8, 10);
+<<<<<<< HEAD
 	// let today = new Date();
 		// console.log(thisdate); 
 	let today = new Date(thisdate); 
 	// console.log("today"+today); 
+=======
+	// console.log(thisdate);
+	let today = new Date(thisdate);
+	// console.log("today"+today);
+>>>>>>> master
 	if ((today.getDate() == rday) && (today.getMonth() ==rmonth))
 	// if (1==1)
 	{
