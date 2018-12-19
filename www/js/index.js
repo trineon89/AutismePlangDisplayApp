@@ -57,6 +57,7 @@ var app = {
 document.addEventListener("offline", onOffline, false);
 document.addEventListener("online", onOnline, false);
 
+var theObj;
 var myId;
 var storage;
 var backupJsonObject;
@@ -97,7 +98,7 @@ function WSHandler(ip) {
 		}	
 		*/
 		if (device.platform=="iOS")
-		// if (device.platform=="iOS" || device.platform=="browser")
+		 // if (device.platform=="iOS" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_handler", 

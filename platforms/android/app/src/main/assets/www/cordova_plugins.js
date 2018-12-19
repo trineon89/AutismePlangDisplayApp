@@ -229,6 +229,15 @@ module.exports = [
     "clobbers": [
       "Connection"
     ]
+  },
+  {
+    "id": "cordova-plugin-printer.Printer",
+    "file": "plugins/cordova-plugin-printer/www/printer.js",
+    "pluginId": "cordova-plugin-printer",
+    "clobbers": [
+      "plugin.printer",
+      "cordova.plugins.printer"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -240,7 +249,8 @@ module.exports.metadata =
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-whitelist": "1.3.3",
-  "cordova-plugin-network-information": "2.0.1"
+  "cordova-plugin-network-information": "2.0.1",
+  "cordova-plugin-printer": "0.7.4-dev"
 };
 // BOTTOM OF METADATA
 });

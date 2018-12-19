@@ -54,6 +54,10 @@ var app = {
     }	
 };
 
+document.addEventListener("offline", onOffline, false);
+document.addEventListener("online", onOnline, false);
+
+var theObj;
 var myId;
 var storage;
 var backupJsonObject;
@@ -94,7 +98,7 @@ function WSHandler(ip) {
 		}	
 		*/
 		if (device.platform=="iOS")
-		// if (device.platform=="iOS" || device.platform=="browser")
+		 // if (device.platform=="iOS" || device.platform=="browser")
 		{
 			var res = {
 					message : "plang_handler", 
@@ -451,4 +455,31 @@ function includeScript(path, cb) {
     node.addEventListener("error", errHandler);
 
     document.body.appendChild(node);
+}
+
+function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN]  = 'Unknown connection';
+    states[Connection.ETHERNET] = 'Ethernet connection';
+    states[Connection.WIFI]     = 'WiFi connection';
+    states[Connection.CELL_2G]  = 'Cell 2G connection';
+    states[Connection.CELL_3G]  = 'Cell 3G connection';
+    states[Connection.CELL_4G]  = 'Cell 4G connection';
+    states[Connection.CELL]     = 'Cell generic connection';
+    states[Connection.NONE]     = 'No network connection';
+
+    alert('Connection type: ' + states[networkState]);
+}
+
+function onOffline() {
+	if (!$('#theContent').hasClass('offlineoverlay')){
+		$('<div/>',{id:"offlineoverlay",class:"offlineoverlay"}).appendTo('#theContent');
+		$('<p/>',{class:"offlineoverlaytext",text:"net mam Reseau verbonn!"}).appendTo('#offlineoverlay');
+	}
+}
+
+function onOnline() {
+		$('#offlineoverlay').remove();
 }

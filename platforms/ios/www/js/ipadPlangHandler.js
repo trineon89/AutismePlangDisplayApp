@@ -1,3 +1,7 @@
+/*
+
+*/
+
 function request_fresh()
 {
 	var res = {
@@ -8,7 +12,6 @@ function request_fresh()
 }
 
 function showPlangHandler(serviceJSON) {
-	// var content = showPlangHandlerFunction(serviceJSON);
 	var content = showPlangHandlerFunctionv2(serviceJSON);
 	content+=getConfig();
 	document.getElementById('theContent').innerHTML=content;
@@ -62,32 +65,6 @@ function showPlangHandlerFunctionv2(serviceJSON) {
 			SHTML+= "<div class='service' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
 		}
 	}
-	
-	/*
-	for (var _i=0;_i <= 6;_i++)
-	{
-		serviceJS=theJson.Services[_i];
-		SHTML+= "<div class='service' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";	
-	}
-	SHTML+= "</div><hr class='spacer'><div class='screen'>";
-	ci=0;
-	for (var _i=7;_i <= 12;_i++)
-	{
-		serviceJS=theJson.Services[_i];
-		if (ci==3) { SHTML+='<break></break>'; }
-		SHTML+= "<div class='service service2' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
-		ci++;
-	}	
-	SHTML+= "</div><hr class='spacer'><div class='screen'>";
-	ci=0;
-	for (var _i=13;_i <= theJson.Services.length -1;_i++)
-	{
-		if (ci==3) { SHTML+='<break></break>'; }
-		serviceJS=theJson.Services[_i];
-		SHTML+= "<div class='service service2' id='"+theJson.Services[_i].name+"'><div id='"+theJson.Services[_i].name+"-a'><img class='service-img' id='"+theJson.Services[_i].name+"-img' src='img/servicesnew/"+deUmlaut(theJson.Services[_i].name)+".png' alt='"+theJson.Services[_i].name+"' /></div></div>";
-		ci++;
-	}
-	*/
 	SHTML+="</div></div>";
 	return SHTML;
 }
@@ -340,6 +317,7 @@ function getTapHoldPopup() {
 	result+="<div class='modalcontent'>";
 	result+="<h1 id='modalTitle'>_PlaceHolder_</h1>";
 	result+="<span id='moveService' class='popupButtons'>An en aneren Service sätzen</span>";
+	//result+="<span id='moveService' class='popupButtons'>An en aneren Service sätzen</span>";
 	result+="<input type='hidden' id='hiddenuserid'>";
 	result+="<input type='hidden' id='hiddenusermoveday'>";
 	result+="</div>";
@@ -465,6 +443,12 @@ function getPersonBuilderAtelier(json,sel)
 		result+="<div class='phphoto flipcard-front'><img src='"+fdel+json.photo+edel+"'></div>";
 		result+="<div class='flipcard-back'><div class='back-info'>"+json.virnumm+" "+json.numm+"</div>";
 		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate") { result+="<div class='back-info-append'>kënnt um "+json.info.value+"h</div>"; }
+		if (!(isEmpty(json.iessenclass))) {
+			result+='<p>'+getMenuNames(json.iessenclass.iessenauswiel)+'</p>';
+			result+='<p>'+(json.iessenclass.service)+'</p>';
+		} else {
+			result+='<p>Keen Iessen haut</p>';
+		}
 		result+="";
 		result+="</div></div></div>";
 	return result;
@@ -484,6 +468,13 @@ function getPersonBuilderOtherServ(json,sel)
 		result+="<div class='phphoto flipcard-front'><img src='"+fdel+json.photo+edel+"'></div>";
 		result+="<div class='flipcard-back'><div class='back-info'>"+json.virnumm+" "+json.numm+"</div>";
 		if (typeof(json.info) !== 'undefined') if (json.info.info=="toolate") { result+="<div class='back-info-append'>kënnt um "+json.info.value+"h</div>"; }
+		//if (!(isEmpty(json.iessenclass)) || json.iessenauswiel!==undefined) {
+		if (!(isEmpty(json.iessenclass))) {
+			result+='<p>'+getMenuNames(json.iessenclass.iessenauswiel)+'</p>';
+			result+='<p>'+(json.iessenclass.service)+'</p>';
+		} else {
+			result+='<p>Keen Iessen haut</p>';
+		}
 		result+="</div></div></div>";
 	return result;
 }
@@ -613,8 +604,6 @@ function FindInString(inp,sc)
 {
 	if (deUmlaut(inp.numm.toLowerCase(),false).search(deUmlaut(sc.toLowerCase(),false))>-1 || deUmlaut(inp.virnumm.toLowerCase(),false).search(deUmlaut(sc.toLowerCase(),false))>-1) {return true} else {return false}
 }
-
-let theObj;
 
 function buildObject(_json,_i,_j,_ser,_per,inp)
 {

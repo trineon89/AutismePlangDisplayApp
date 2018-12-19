@@ -22,12 +22,14 @@ function resetTooLate()
 function updateContent(ContentJSON){
 	document.getElementById('theContent').innerHTML="";
 	letobj=JSON.parse(ContentJSON); 
+	var content = pJSON(ContentJSON); 
 	thisdate = letobj.Date; 
 	
 	$('.ateliercontainer').each(function(e){
 		if (e === $('.ateliercontainer').length-1) return;
 		$(this).after('<div class="col"></div>');
 	})
+	
 	//document.querySelectorAll(".col:last-child").remove();
 	
 //$('#theContent').children().last().remove();
@@ -87,7 +89,7 @@ function buildPersonAtelier(person,selector, sel)
 	if (person.bday!=undefined) {
 		if (getBday(person.bday)) {$('<div/>',{class:"confetti"}).appendTo('#'+person.id+'-'+sel);$('<div/>',{class:"happybday"}).appendTo('#'+person.id+'-'+sel);}
 	}
-	if (typeof(person.info) !== 'undefined') if (person.info.info=="toolate" && toolateTimerShow(json.info.value)) {
+	if (typeof(person.info) !== 'undefined') if (person.info.info=="toolate" && toolateTimerShow(person.info.value)) {
 		$('<div/>',{id:person.id+'-'+sel+'-photo-info-append',class:"photo-info-append"}).appendTo('#'+person.id+'-'+sel);
 			$('<div/>',{class:"photo-info-append-innercontainter",text:person.info.value}).appendTo('#'+person.id+'-'+sel+'-photo-info-append');
 	}
