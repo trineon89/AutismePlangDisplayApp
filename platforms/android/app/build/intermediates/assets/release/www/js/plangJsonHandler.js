@@ -405,7 +405,8 @@ function showDoku(theAtelierjson)
 	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x1',"1"); }
 	
 	for (var _i in theAtelierjson.Moies) { buildPersonAtelier(theAtelierjson.Moies[_i],theAtelierjson.id+'-x1',"1"); }
-	if (theAtelierjson.auerzait == undefined) { } else { }
+	var auerzait;
+	if (theAtelierjson.auerzait == undefined) { auerzait="12-13h"; } else {auerzait = theAtelierjson.auerzait; }
 
 	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x2',"2"); }
 	for (var _i in theAtelierjson.Mettes) { buildPersonAtelier(theAtelierjson.Mettes[_i],theAtelierjson.id+'-x2',"2"); }
