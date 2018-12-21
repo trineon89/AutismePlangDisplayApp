@@ -24,6 +24,9 @@
     },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
     }
   },
   "dependent_plugins": {}

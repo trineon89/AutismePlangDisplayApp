@@ -29,6 +29,7 @@ function updateContent(ContentJSON){
 		if (e === $('.ateliercontainer').length-1) return;
 		$(this).after('<div class="col"></div>');
 	})
+	
 	//document.querySelectorAll(".col:last-child").remove();
 	
 //$('#theContent').children().last().remove();
@@ -85,6 +86,17 @@ function buildPersonAtelier(person,selector, sel)
 		edel="";
 	}
 	$('<div/>',{id:person.id+'-'+sel,class:"photo",style:'background-image:url('+fdel+person.photo+edel+')'}).appendTo('#'+selector);
+	if (person.bday!=undefined) {
+		if (getBday(person.bday)) {$('<div/>',{class:"confetti"}).appendTo('#'+person.id+'-'+sel);$('<div/>',{class:"happybday"}).appendTo('#'+person.id+'-'+sel);}
+	}
+	if (typeof(person.info) !== 'undefined') if (person.info.info=="toolate" && toolateTimerShow(person.info.value)) {
+		$('<div/>',{id:person.id+'-'+sel+'-photo-info-append',class:"photo-info-append"}).appendTo('#'+person.id+'-'+sel);
+			$('<div/>',{class:"photo-info-append-innercontainter",text:person.info.value}).appendTo('#'+person.id+'-'+sel+'-photo-info-append');
+	}
+	if (person.photo=="placeholder.png" || fdel=="")
+	{
+			$('<div/>',{class:"nummplaceholder",text:person.virnumm}).appendTo('#'+person.id+'-'+sel);
+	}
 }
 
 /*	Obsolete
@@ -122,9 +134,11 @@ function getBday(date)
 	// if (1==1)
 	{
 		console.log("Bday :)");
-		return '<div class="confetti"></div><div class="happybday"></div>';
+		// return '<div class="confetti"></div><div class="happybday"></div>';
+		return true;
 	}
-	return '';
+	return false;
+	// return '';
 }
 
 function buildPersonKrankDoku(person, selector, sel, classsel)
@@ -202,25 +216,25 @@ function buildService(AtelierJSON) {
 				// SHTML+='</div>';
 			break;
 		default:
-		$('<div/>',{id:theAtelierjson.name,class:"ateliercontainer breet-"+theAtelierjson.c}).appendTo('#theContent');
-			$('<div/>',{id:theAtelierjson.name+"-atelier",class:"atelier breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-				$('<span/>',{id:theAtelierjson.name+"-helper",class:"helper"}).appendTo('#'+theAtelierjson.name+"-atelier");
-				$('<img/>',{id:theAtelierjson.name+"-atelierimg",class:"atelierimg",src:"img/services/"+deUmlaut(theAtelierjson.name)+".jpg"}).appendTo('#'+theAtelierjson.name+"-atelier");
-			$('<div/>',{id:theAtelierjson.name+"-auer",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-				$('<img/>',{id:theAtelierjson.name+"-auerimg",class:"auerimg",src:"img/sonn.png"}).appendTo('#'+theAtelierjson.name+'-auer');
-				$('<span/>',{id:theAtelierjson.name+"-auerimgspan",text:"9:00"}).appendTo('#'+theAtelierjson.name+'-auer');
-			$('<div/>',{id:theAtelierjson.id+"-e1",class:"photos atelierphotos"}).appendTo('#'+theAtelierjson.name);
-			$('<div/>',{class:"trenner"}).appendTo('#'+theAtelierjson.name);
-			$('<div/>',{id:theAtelierjson.id+"-u1",class:"photos atelierphotos"}).appendTo('#'+theAtelierjson.name);
-			$('<div/>',{id:theAtelierjson.name+"-auer2",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-				$('<img/>',{id:theAtelierjson.name+"-auerimg2",class:"auerimg",src:"img/iessen.png"}).appendTo('#'+theAtelierjson.name+'-auer2');
-				$('<span/>',{id:theAtelierjson.name+"-auerimgspan2",text:theAtelierjson.auerzait}).appendTo('#'+theAtelierjson.name+'-auer2');
-			$('<div/>',{id:theAtelierjson.id+"-e2",class:"photos atelierphotos"}).appendTo('#'+theAtelierjson.name);
-			$('<div/>',{class:"trenner"}).appendTo('#'+theAtelierjson.name);
-			$('<div/>',{id:theAtelierjson.id+"-u2",class:"photos atelierphotos"}).appendTo('#'+theAtelierjson.name);
-			$('<div/>',{id:theAtelierjson.name+"-auer3",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-				$('<img/>',{id:theAtelierjson.name+"-auerimg3",class:"auerimg",src:"img/bus.png"}).appendTo('#'+theAtelierjson.name+'-auer3');
-				$('<span/>',{id:theAtelierjson.name+"-auerimgspan3",text:"16:30"}).appendTo('#'+theAtelierjson.name+'-auer3');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name),class:"ateliercontainer breet-"+theAtelierjson.c}).appendTo('#theContent');
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-atelier",class:"atelier breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-helper",class:"helper"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-atelierimg",class:"atelierimg",src:"img/services/"+deUmlaut(theAtelierjson.name)+".jpg"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg",class:"auerimg",src:"img/sonn.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan",text:"9:00"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+			$('<div/>',{id:theAtelierjson.id+"-e1",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{class:"trenner"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:theAtelierjson.id+"-u1",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer2",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg2",class:"auerimg",src:"img/iessen.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan2",text:theAtelierjson.auerzait}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+			$('<div/>',{id:theAtelierjson.id+"-e2",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{class:"trenner"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:theAtelierjson.id+"-u2",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer3",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg3",class:"auerimg",src:"img/bus.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan3",text:"16:30"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
 		for (var _i in theAtelierjson.encadrantsMoies) { buildPersonAtelier(theAtelierjson.encadrantsMoies[_i], theAtelierjson.id+"-e1","1"); }
 		for (var _i in theAtelierjson.usagersMoies) { buildPersonAtelier(theAtelierjson.usagersMoies[_i],theAtelierjson.id+"-u1","1"); }
 		for (var _i in theAtelierjson.encadrantsMettes) { buildPersonAtelier(theAtelierjson.encadrantsMettes[_i],theAtelierjson.id+"-e2","2"); }
@@ -362,7 +376,7 @@ function menuDuJourContainer(date)
 
 function showExtraContent(theAtelierjson)
 {
-	var htmlcontent='<div class="extracontainer breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
+	var htmlcontent='<div class="extracontainer breet-'+theAtelierjson.c+'" id="'+deUmlaut(theAtelierjson.name)+'">';
 	
 	htmlcontent+='</div>';
 	
@@ -372,22 +386,22 @@ function showExtraContent(theAtelierjson)
 function showDoku(theAtelierjson)
 {
 	// console.log("#showDoku#"+theAtelierjson);
-	$('<div/>',{id:theAtelierjson.name,class:"ateliercontainer breet-"+theAtelierjson.c}).appendTo('#theContent');
-		$('<div/>',{id:theAtelierjson.name+"-atelier",class:"atelier breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-			$('<span/>',{id:theAtelierjson.name+"-helper",class:"helper"}).appendTo('#'+theAtelierjson.name+"-atelier");
-			$('<img/>',{id:theAtelierjson.name+"-atelierimg",class:"atelierimg",src:"img/services/"+deUmlaut(theAtelierjson.name)+".jpg"}).appendTo('#'+theAtelierjson.name+"-atelier");
-		$('<div/>',{id:theAtelierjson.name+"-auer",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-			$('<img/>',{id:theAtelierjson.name+"-auerimg",class:"auerimg",src:"img/sonn.png"}).appendTo('#'+theAtelierjson.name+'-auer');
-			$('<span/>',{id:theAtelierjson.name+"-auerimgspan",text:"9:00"}).appendTo('#'+theAtelierjson.name+'-auer');
-		$('<div/>',{id:theAtelierjson.id+"-x1",class:"photos atelierphotos",style:"height:201px;"}).appendTo('#'+theAtelierjson.name);
+	$('<div/>',{id:deUmlaut(theAtelierjson.name),class:"ateliercontainer breet-"+theAtelierjson.c}).appendTo('#theContent');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-atelier",class:"atelier breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-helper",class:"helper"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-atelierimg",class:"atelierimg",src:"img/services/"+deUmlaut(theAtelierjson.name)+".jpg"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg",class:"auerimg",src:"img/sonn.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan",text:"9:00"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+		$('<div/>',{id:theAtelierjson.id+"-x1",class:"photos atelierphotos",style:"height:201px;"}).appendTo('#'+deUmlaut(theAtelierjson.name));
 
-		$('<div/>',{id:theAtelierjson.name+"-auer2",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-			$('<img/>',{id:theAtelierjson.name+"-auerimg2",class:"auerimg",src:"img/iessen.png"}).appendTo('#'+theAtelierjson.name+'-auer2');
-			$('<span/>',{id:theAtelierjson.name+"-auerimgspan2",text:theAtelierjson.auerzait}).appendTo('#'+theAtelierjson.name+'-auer2');
-		$('<div/>',{id:theAtelierjson.id+"-x2",class:"photos atelierphotos",style:"height:201px;"}).appendTo('#'+theAtelierjson.name);
-		$('<div/>',{id:theAtelierjson.name+"-auer3",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+theAtelierjson.name);
-			$('<img/>',{id:theAtelierjson.name+"-auerimg3",class:"auerimg",src:"img/bus.png"}).appendTo('#'+theAtelierjson.name+'-auer3');
-			$('<span/>',{id:theAtelierjson.name+"-auerimgspan3",text:"16:30"}).appendTo('#'+theAtelierjson.name+'-auer3');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer2",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg2",class:"auerimg",src:"img/iessen.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan2",text:theAtelierjson.auerzait}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+		$('<div/>',{id:theAtelierjson.id+"-x2",class:"photos atelierphotos",style:"height:201px;"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer3",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg3",class:"auerimg",src:"img/bus.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan3",text:"16:30"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
 	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x1',"1"); }
 	
 	for (var _i in theAtelierjson.Moies) { buildPersonAtelier(theAtelierjson.Moies[_i],theAtelierjson.id+'-x1',"1"); }
@@ -400,11 +414,11 @@ function showDoku(theAtelierjson)
 
 function showCongeKrank(theAtelierjson, sel)
 {
-	$('<div/>',{id:theAtelierjson.name,class:sel+'container breet-'+theAtelierjson.c}).appendTo('#theContent');
-		$('<div/>',{id:theAtelierjson.name+"header"}).appendTo('#'+theAtelierjson.name);
-			$('<p/>',{class:"KrankCongeHeader",text:theAtelierjson.name}).appendTo('#'+theAtelierjson.name+"header");
-		$('<div/>',{id:theAtelierjson.id+'-x0',class:"photos"}).appendTo('#'+theAtelierjson.name);
-		$('<div/>',{id:theAtelierjson.id+'-x2',class:"photos",style:"border-top-color:#b5b5b5;border-top-width:5px;border-top-style: solid;padding-top: 1px;margin-top: 1px;"}).appendTo('#'+theAtelierjson.name);
+	$('<div/>',{id:deUmlaut(theAtelierjson.name),class:sel+'container breet-'+theAtelierjson.c}).appendTo('#theContent');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"header"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<p/>',{class:"KrankCongeHeader",text:theAtelierjson.name}).appendTo('#'+deUmlaut(theAtelierjson.name)+"header");
+		$('<div/>',{id:theAtelierjson.id+'-x0',class:"photos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+		$('<div/>',{id:theAtelierjson.id+'-x2',class:"photos",style:"border-top-color:#b5b5b5;border-top-width:5px;border-top-style: solid;padding-top: 1px;margin-top: 1px;"}).appendTo('#'+deUmlaut(theAtelierjson.name));
 	for (var _i in theAtelierjson.Dag) { 
 		if (theAtelierjson.Dag[_i].isencadrant) {
 			buildPersonKrankDoku(theAtelierjson.Dag[_i],theAtelierjson.id+'-x0',"1", "cldag");
@@ -430,10 +444,10 @@ function showCongeKrank(theAtelierjson, sel)
 
 function showFormatiounMaart(theAtelierjson, sel)
 {
-	$('<div/>',{id:theAtelierjson.name,class:sel+'container breet-'+theAtelierjson.c}).appendTo('#float-wrapc');
-		$('<div/>',{id:theAtelierjson.name+"header"}).appendTo('#'+theAtelierjson.name);
-			$('<p/>',{class:"KrankCongeHeader",text:theAtelierjson.name}).appendTo('#'+theAtelierjson.name+"header");
-		$('<div/>',{id:theAtelierjson.id+'-x0',class:"photos"}).appendTo('#'+theAtelierjson.name);
+	$('<div/>',{id:deUmlaut(theAtelierjson.name),class:sel+'container breet-'+theAtelierjson.c}).appendTo('#float-wrapc');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"header"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<p/>',{class:"KrankCongeHeader",text:theAtelierjson.name}).appendTo('#'+deUmlaut(theAtelierjson.name)+"header");
+		$('<div/>',{id:theAtelierjson.id+'-x0',class:"photos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
 	for (var _i in theAtelierjson.Dag) { buildPersonKrankDoku(theAtelierjson.Dag[_i],theAtelierjson.id+'-x0',"1", "cldag"); }
 	for (var _i in theAtelierjson.Moies) { buildPersonKrankDoku(theAtelierjson.Moies[_i],theAtelierjson.id+'-x0',"1", "clmoies"); }
 	for (var _i in theAtelierjson.Mettes) { 

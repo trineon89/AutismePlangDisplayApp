@@ -1,7 +1,12 @@
 setInterval(function(){resetTooLate(); }, 60000);
 
+<<<<<<< HEAD
+var thisdate; 
+var letobj; 
+=======
 var thisdate;
 var letobj;
+>>>>>>> master
 
 function resetTooLate()
 {
@@ -20,17 +25,31 @@ function resetTooLate()
 }
 
 function updateContent(ContentJSON){
+<<<<<<< HEAD
+	document.getElementById('theContent').innerHTML="";
+	letobj=JSON.parse(ContentJSON); 
+	var content = pJSON(ContentJSON); 
+	thisdate = letobj.Date; 
+	
+	$('.ateliercontainer').each(function(e){
+		if (e === $('.ateliercontainer').length-1) return;
+		$(this).after('<div class="col"></div>');
+	})
+	
+=======
 	letobj=JSON.parse(ContentJSON);
 	thisdate = letobj.Date;
 	var content = pJSON(ContentJSON);
 	document.getElementById('theContent').innerHTML=content;
+>>>>>>> master
 	//document.querySelectorAll(".col:last-child").remove();
 	
-	$('#theContent').children().last().remove();
+//$('#theContent').children().last().remove();
 }
 
 function pJSON(serviceJSON) {
 	var theJson = JSON.parse(serviceJSON);
+	
 	var SHTML = '';
 	for (var _i=0;_i <= theJson.Services.length -1;_i++)
 	{
@@ -69,6 +88,30 @@ function plangpaddingZero(i)
     return i;
 }
 
+function buildPersonAtelier(person,selector, sel)
+{
+	//if (person.bday!=undefined) { obday=getBday(person.bday); }
+	var fdel="\'img/personal/"; var edel="\'";
+	if (person.photo.substring(0,4)=="data" || person.photo.substring(0,4)=="http")
+	{
+		fdel="";
+		edel="";
+	}
+	$('<div/>',{id:person.id+'-'+sel,class:"photo",style:'background-image:url('+fdel+person.photo+edel+')'}).appendTo('#'+selector);
+	if (person.bday!=undefined) {
+		if (getBday(person.bday)) {$('<div/>',{class:"confetti"}).appendTo('#'+person.id+'-'+sel);$('<div/>',{class:"happybday"}).appendTo('#'+person.id+'-'+sel);}
+	}
+	if (typeof(person.info) !== 'undefined') if (person.info.info=="toolate" && toolateTimerShow(person.info.value)) {
+		$('<div/>',{id:person.id+'-'+sel+'-photo-info-append',class:"photo-info-append"}).appendTo('#'+person.id+'-'+sel);
+			$('<div/>',{class:"photo-info-append-innercontainter",text:person.info.value}).appendTo('#'+person.id+'-'+sel+'-photo-info-append');
+	}
+	if (person.photo=="placeholder.png" || fdel=="")
+	{
+			$('<div/>',{class:"nummplaceholder",text:person.virnumm}).appendTo('#'+person.id+'-'+sel);
+	}
+}
+
+/*	Obsolete
 function getPersonBuilderAtelier(json,sel)
 {
 	SHTML="";
@@ -90,23 +133,50 @@ function getPersonBuilderAtelier(json,sel)
 		SHTML+="</div>";
 	return SHTML;
 }
-
+*/
 function getBday(date)
 {
 	rmonth= date.substring(5, 7)-1;
 	rday= date.substring(8, 10);
+<<<<<<< HEAD
+	// let today = new Date();
+		// console.log(thisdate); 
+	let today = new Date(thisdate); 
+	// console.log("today"+today); 
+=======
 	// console.log(thisdate);
 	let today = new Date(thisdate);
 	// console.log("today"+today);
+>>>>>>> master
 	if ((today.getDate() == rday) && (today.getMonth() ==rmonth))
 	// if (1==1)
 	{
 		console.log("Bday :)");
-		return '<div class="confetti"></div><div class="happybday"></div>';
+		// return '<div class="confetti"></div><div class="happybday"></div>';
+		return true;
 	}
-	return '';
+	return false;
+	// return '';
 }
 
+function buildPersonKrankDoku(person, selector, sel, classsel)
+{
+	var fdel="\'img/personal/";
+	var htmlcontent="";
+	var edel="\'";
+	if (person.photo.substring(0,4)=="data" || person.photo.substring(0,4)=="http")
+	{
+		fdel="";
+		edel="";
+	}
+	if (classsel == 'cldag') {htmlcontent='Dag';}
+	if (classsel == 'clmoies') {htmlcontent='Moies';}
+	if (classsel == 'clmettes') {htmlcontent='Mëttes';}
+	$('<div/>',{id:person.id+'-'+sel,class:"photo",style:'background-image:url('+fdel+person.photo+edel+')'}).appendTo('#'+selector);
+		$('<div/>',{class:"numm "+classsel,text:htmlcontent}).appendTo('#'+person.id+'-'+sel);
+}
+
+/* OBSOLETE
 function getPersonBuilderKrankDoku(json,sel,classsel)
 {
 	var fdel="\'img/personal/";
@@ -126,7 +196,7 @@ function getPersonBuilderKrankDoku(json,sel,classsel)
 		htmlcontent+='</div></div>';
 	return htmlcontent;
 }
-
+*/
 function buildService(AtelierJSON) {	
 	var theAtelierjson = AtelierJSON;
 	var SHTML ='';
@@ -143,50 +213,50 @@ function buildService(AtelierJSON) {
 				SHTML=showCongeKrank(theAtelierjson, 'conge');
 			break;
 		case 33:
-				SHTML='<div class="floatwrap">';
-				SHTML+=showFormatiounMaart(theAtelierjson, 'form')
+				$('<div/>',{id:"float-wrapc",class:"floatwrap"}).appendTo('#theContent');
+				showFormatiounMaart(theAtelierjson, 'form')
 			break;
 		case 34: //Doku	
 				SHTML=showDoku(theAtelierjson);
 			break;
 		case 35:
-				SHTML=showFormatiounMaart(theAtelierjson, 'maart')
-				SHTML+='</div><div class="col"></div>';
-				SHTML+='<div class="col" style="flex: 100;">';
-				SHTML+='<div id="info_header"></div>';
-				SHTML+='<div id="special_content"><div id="menu-jour-container"></div><div id="motd_container"></div><div id="publ_container"></div></div>';
-				SHTML+='</div>';
+				showFormatiounMaart(theAtelierjson, 'maart');
+				$('<div/>',{id:"rightside",class:"col",style:"flex:100;"}).appendTo('#theContent');
+					$('<div/>',{id:"info_header"}).appendTo('#rightside');
+					$('<div/>',{id:"special_content"}).appendTo('#rightside');
+						$('<div/>',{id:"menu-jour-container"}).appendTo('#special_content');
+						$('<div/>',{id:"motd_container"}).appendTo('#special_content');
+						$('<div/>',{id:"publ_container"}).appendTo('#special_content');
+				// SHTML+='</div><div class="col"></div>';
+				// SHTML+='<div class="col" style="flex: 100;">';
+				// SHTML+='<div id="info_header"></div>';
+				// SHTML+='<div id="special_content"><div id="menu-jour-container"></div><div id="motd_container"></div><div id="publ_container"></div></div>';
+				// SHTML+='</div>';
 			break;
 		default:
-
-		SHTML = '<div class="ateliercontainer breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
-		SHTML+= '<div class="atelier breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'"><span class="helper"></span><img src="img/services/'+deUmlaut(theAtelierjson.name)+'.jpg" class="atelierimg" id="atelierimg"></div>';
-		SHTML+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/sonn.png" class="auerimg" id="auerimg"><span>9:00</span></div>';
-		SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-e1">';
-		
-		for (var _i in theAtelierjson.encadrantsMoies) { SHTML+=getPersonBuilderAtelier(theAtelierjson.encadrantsMoies[_i],"1"); }
-		
-		SHTML+= '</div>';
-		SHTML+= '<div class="trenner" id="trenner"></div>';
-		SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-u1">';
-		
-		for (var _i in theAtelierjson.usagersMoies) { SHTML+=getPersonBuilderAtelier(theAtelierjson.usagersMoies[_i],"1"); }
-		
-		SHTML+= '</div>';
-		SHTML+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/iessen.png" class="auerimg" id="auerimg"><span>'+theAtelierjson.auerzait+'</span></div>';
-			SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-e2">';
-		
-		for (var _i in theAtelierjson.encadrantsMettes) { SHTML+=getPersonBuilderAtelier(theAtelierjson.encadrantsMettes[_i],"2"); }
-		
-		SHTML+= '</div>';
-		SHTML+= '<div class="trenner" id="trenner"></div>';
-		SHTML+= '<div class="photos atelierphotos" id="'+theAtelierjson.id+'-u2">';
-		
-		for (var _i in theAtelierjson.usagersMettes) { SHTML+=getPersonBuilderAtelier(theAtelierjson.usagersMettes[_i],"2"); }
-		
-		SHTML+= '</div>';
-		SHTML+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/bus.png" class="auerimg" id="auerimg"><span>16:30</span></div>';
-		SHTML+= '</div>';
+		$('<div/>',{id:deUmlaut(theAtelierjson.name),class:"ateliercontainer breet-"+theAtelierjson.c}).appendTo('#theContent');
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-atelier",class:"atelier breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-helper",class:"helper"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-atelierimg",class:"atelierimg",src:"img/services/"+deUmlaut(theAtelierjson.name)+".jpg"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg",class:"auerimg",src:"img/sonn.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan",text:"9:00"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+			$('<div/>',{id:theAtelierjson.id+"-e1",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{class:"trenner"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:theAtelierjson.id+"-u1",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer2",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg2",class:"auerimg",src:"img/iessen.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan2",text:theAtelierjson.auerzait}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+			$('<div/>',{id:theAtelierjson.id+"-e2",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{class:"trenner"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:theAtelierjson.id+"-u2",class:"photos atelierphotos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer3",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+				$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg3",class:"auerimg",src:"img/bus.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
+				$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan3",text:"16:30"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
+		for (var _i in theAtelierjson.encadrantsMoies) { buildPersonAtelier(theAtelierjson.encadrantsMoies[_i], theAtelierjson.id+"-e1","1"); }
+		for (var _i in theAtelierjson.usagersMoies) { buildPersonAtelier(theAtelierjson.usagersMoies[_i],theAtelierjson.id+"-u1","1"); }
+		for (var _i in theAtelierjson.encadrantsMettes) { buildPersonAtelier(theAtelierjson.encadrantsMettes[_i],theAtelierjson.id+"-e2","2"); }
+		for (var _i in theAtelierjson.usagersMettes) { SHTML+=buildPersonAtelier(theAtelierjson.usagersMettes[_i],theAtelierjson.id+"-u2","2"); }
 	}
 	return SHTML;
 }
@@ -315,7 +385,7 @@ function menuDuJourContainer(date)
 				res+='<p>'+result.al1+'<span class="alternative">allergènes: '+result.alal1+'</span></p>';
 				res+='<h3 class="menu-header3">Alternative 2</h3>';
 				res+='<p>'+result.al2+'<span class="alternative">allergènes: '+result.alal2+'</span></p>';
-				res+='<h3 class="menu-header3">Liste Allergènes</h3><p>1.&nbsp;Arachide | 2.&nbsp;Céléri | 3.&nbsp;Crustacés | 4.&nbsp;Fruits&nbsp;à coque | 5.&nbsp;Gluten | 6.&nbsp;Lait/Lactose | 7.&nbsp;Lupin | 8.&nbsp;Mollusques | 9.&nbsp;Moutarde | 10.&nbsp;Oeufs | 11.&nbsp;Poisson | 12.&nbsp;Sésame | 13.&nbsp;Soja | 14.&nbsp;Anhydride&nbsp;sulfureux&nbsp;et&nbsp;sulfites</p>';
+				res+='<h3 class="menu-header3">Liste Allergènes</h3><p>1.&nbsp;Arachide | 2.&nbsp;Céléri | 3.&nbsp;Crustacés | 4.&nbsp;Fruits&nbsp;à coque | 5.&nbsp;Gluten | 6.&nbsp;Lait/Lactose | 7.&nbsp;Lupin | 8.&nbsp;Mollusques | 9.&nbsp;Moutarde | 10.&nbsp;Œufs | 11.&nbsp;Poisson | 12.&nbsp;Sésame | 13.&nbsp;Soja | 14.&nbsp;Anhydride&nbsp;sulfureux&nbsp;et&nbsp;sulfites</p>';
 				$('#menu-jour-container').html(res);
 			}
 		}
@@ -324,7 +394,7 @@ function menuDuJourContainer(date)
 
 function showExtraContent(theAtelierjson)
 {
-	var htmlcontent='<div class="extracontainer breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
+	var htmlcontent='<div class="extracontainer breet-'+theAtelierjson.c+'" id="'+deUmlaut(theAtelierjson.name)+'">';
 	
 	htmlcontent+='</div>';
 	
@@ -334,87 +404,71 @@ function showExtraContent(theAtelierjson)
 function showDoku(theAtelierjson)
 {
 	// console.log("#showDoku#"+theAtelierjson);
-	htmlcontent = '<div class="ateliercontainer breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
-	htmlcontent+= '<div class="atelier breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'"><span class="helper"></span><img src="img/services/'+deUmlaut(theAtelierjson.name)+'.jpg" class="atelierimg" id="atelierimg"></div>';
-	htmlcontent+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/sonn.png" class="auerimg" id="auerimg"><span>9:00</span></div>';
-	htmlcontent+= '<div class="photos atelierphotos" style="height:201px;" id="'+theAtelierjson.id+'-x1">';
-	
-	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Dag[_i],"1"); }
-	
-	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Moies[_i],"1"); }
-	
-	htmlcontent+= '</div>';
-	var auerzait;
-	if (theAtelierjson.auerzait == undefined) { auerzait="12-13h"; } else {auerzait = theAtelierjson.auerzait; }
-	htmlcontent+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/iessen.png" class="auerimg" id="auerimg"><span>'+auerzait+'</span></div>';
-	htmlcontent+= '<div class="photos atelierphotos" style="height:201px;" id="'+theAtelierjson.id+'-x2">';
-	
-	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Dag[_i],"2"); }
-	
-	for (var _i in theAtelierjson.Mettes) { htmlcontent+=getPersonBuilderAtelier(theAtelierjson.Mettes[_i],"2"); }
+	$('<div/>',{id:deUmlaut(theAtelierjson.name),class:"ateliercontainer breet-"+theAtelierjson.c}).appendTo('#theContent');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-atelier",class:"atelier breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-helper",class:"helper"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-atelierimg",class:"atelierimg",src:"img/services/"+deUmlaut(theAtelierjson.name)+".jpg"}).appendTo('#'+deUmlaut(theAtelierjson.name)+"-atelier");
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg",class:"auerimg",src:"img/sonn.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan",text:"9:00"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer');
+		$('<div/>',{id:theAtelierjson.id+"-x1",class:"photos atelierphotos",style:"height:201px;"}).appendTo('#'+deUmlaut(theAtelierjson.name));
 
-	htmlcontent+= '</div>';
-	htmlcontent+= '<div class="auer breet-'+theAtelierjson.c+'" id="auer"><img src="img/bus.png" class="auerimg" id="auerimg"><span>16:30</span></div>';
-	htmlcontent+= '</div>';
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer2",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg2",class:"auerimg",src:"img/iessen.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan2",text:theAtelierjson.auerzait}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer2');
+		$('<div/>',{id:theAtelierjson.id+"-x2",class:"photos atelierphotos",style:"height:201px;"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"-auer3",class:"auer breet-"+theAtelierjson.c}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<img/>',{id:deUmlaut(theAtelierjson.name)+"-auerimg3",class:"auerimg",src:"img/bus.png"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
+			$('<span/>',{id:deUmlaut(theAtelierjson.name)+"-auerimgspan3",text:"16:30"}).appendTo('#'+deUmlaut(theAtelierjson.name)+'-auer3');
+	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x1',"1"); }
 	
-	return htmlcontent;
+	for (var _i in theAtelierjson.Moies) { buildPersonAtelier(theAtelierjson.Moies[_i],theAtelierjson.id+'-x1',"1"); }
+	if (theAtelierjson.auerzait == undefined) { } else { }
+
+	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x2',"2"); }
+	for (var _i in theAtelierjson.Mettes) { buildPersonAtelier(theAtelierjson.Mettes[_i],theAtelierjson.id+'-x2',"2"); }
 }
 
 function showCongeKrank(theAtelierjson, sel)
 {
-	var htmltmp ="";
-	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
-	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
-	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
+	$('<div/>',{id:deUmlaut(theAtelierjson.name),class:sel+'container breet-'+theAtelierjson.c}).appendTo('#theContent');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"header"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<p/>',{class:"KrankCongeHeader",text:theAtelierjson.name}).appendTo('#'+deUmlaut(theAtelierjson.name)+"header");
+		$('<div/>',{id:theAtelierjson.id+'-x0',class:"photos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+		$('<div/>',{id:theAtelierjson.id+'-x2',class:"photos",style:"border-top-color:#b5b5b5;border-top-width:5px;border-top-style: solid;padding-top: 1px;margin-top: 1px;"}).appendTo('#'+deUmlaut(theAtelierjson.name));
 	for (var _i in theAtelierjson.Dag) { 
 		if (theAtelierjson.Dag[_i].isencadrant) {
-			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag");
+			buildPersonKrankDoku(theAtelierjson.Dag[_i],theAtelierjson.id+'-x0',"1", "cldag");
 		} else {
-			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag");
+			buildPersonKrankDoku(theAtelierjson.Dag[_i],theAtelierjson.id+'-x2',"1", "cldag");
 		}
 	}
-	
 	for (var _i in theAtelierjson.Moies) {
 		if (theAtelierjson.Moies[_i].isencadrant) {
-			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies");
+			buildPersonKrankDoku(theAtelierjson.Moies[_i],theAtelierjson.id+'-x0',"1", "clmoies");
 		} else {
-			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies");
+			buildPersonKrankDoku(theAtelierjson.Moies[_i],theAtelierjson.id+'-x2',"1", "clmoies");
 		}
 	}
-	
 	for (var _i in theAtelierjson.Mettes) { 
 		if (theAtelierjson.Mettes[_i].isencadrant) {
-			htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); 
+			buildPersonKrankDoku(theAtelierjson.Mettes[_i],theAtelierjson.id+'-x0',"2", "clmettes"); 
 		} else {
-			htmltmp+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); 
+			buildPersonKrankDoku(theAtelierjson.Mettes[_i],theAtelierjson.id+'-x2',"2", "clmettes"); 
 		}
 	}
-	
-	htmlcontent+='</div>';
-	htmlcontent+='<div class="photos" id="'+theAtelierjson.id+'-x2" style="border-top-color:#b5b5b5;border-top-width:5px;border-top-style: solid;padding-top: 1px;margin-top: 1px;">';
-	htmlcontent+=htmltmp;
-	htmlcontent+='</div>';
-	htmlcontent+='</div>';
-	
-	return htmlcontent;
 }
 
 function showFormatiounMaart(theAtelierjson, sel)
 {
-	var htmlcontent='<div class="'+sel+'container breet-'+theAtelierjson.c+'" id="'+theAtelierjson.name+'">';
-	htmlcontent+='<div class="header"><p class="KrankCongeHeader">'+theAtelierjson.name+'</p></div>';
-	htmlcontent+= '<div class="photos" id="'+theAtelierjson.id+'-x0">';
-	for (var _i in theAtelierjson.Dag) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Dag[_i],"1", "cldag"); }
-	
-	for (var _i in theAtelierjson.Moies) { htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Moies[_i],"1", "clmoies"); }
-
+	$('<div/>',{id:deUmlaut(theAtelierjson.name),class:sel+'container breet-'+theAtelierjson.c}).appendTo('#float-wrapc');
+		$('<div/>',{id:deUmlaut(theAtelierjson.name)+"header"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+			$('<p/>',{class:"KrankCongeHeader",text:theAtelierjson.name}).appendTo('#'+deUmlaut(theAtelierjson.name)+"header");
+		$('<div/>',{id:theAtelierjson.id+'-x0',class:"photos"}).appendTo('#'+deUmlaut(theAtelierjson.name));
+	for (var _i in theAtelierjson.Dag) { buildPersonKrankDoku(theAtelierjson.Dag[_i],theAtelierjson.id+'-x0',"1", "cldag"); }
+	for (var _i in theAtelierjson.Moies) { buildPersonKrankDoku(theAtelierjson.Moies[_i],theAtelierjson.id+'-x0',"1", "clmoies"); }
 	for (var _i in theAtelierjson.Mettes) { 
-		htmlcontent+=getPersonBuilderKrankDoku(theAtelierjson.Mettes[_i],"2", "clmettes"); }
-
-	htmlcontent+='</div>';
-	htmlcontent+='</div>';
-	
-	return htmlcontent;
+		buildPersonKrankDoku(theAtelierjson.Mettes[_i],theAtelierjson.id+'-x0',"2", "clmettes"); }
 }
 
 function appendHandlerPlang(date=null)
