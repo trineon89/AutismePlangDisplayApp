@@ -1,12 +1,7 @@
 setInterval(function(){resetTooLate(); }, 60000);
 
-<<<<<<< HEAD
 var thisdate; 
 var letobj; 
-=======
-var thisdate;
-var letobj;
->>>>>>> master
 
 function resetTooLate()
 {
@@ -25,23 +20,16 @@ function resetTooLate()
 }
 
 function updateContent(ContentJSON){
-<<<<<<< HEAD
 	document.getElementById('theContent').innerHTML="";
 	letobj=JSON.parse(ContentJSON); 
-	var content = pJSON(ContentJSON); 
 	thisdate = letobj.Date; 
+	var content = pJSON(ContentJSON);
 	
 	$('.ateliercontainer').each(function(e){
 		if (e === $('.ateliercontainer').length-1) return;
 		$(this).after('<div class="col"></div>');
 	})
 	
-=======
-	letobj=JSON.parse(ContentJSON);
-	thisdate = letobj.Date;
-	var content = pJSON(ContentJSON);
-	document.getElementById('theContent').innerHTML=content;
->>>>>>> master
 	//document.querySelectorAll(".col:last-child").remove();
 	
 //$('#theContent').children().last().remove();
@@ -138,16 +126,10 @@ function getBday(date)
 {
 	rmonth= date.substring(5, 7)-1;
 	rday= date.substring(8, 10);
-<<<<<<< HEAD
 	// let today = new Date();
 		// console.log(thisdate); 
 	let today = new Date(thisdate); 
 	// console.log("today"+today); 
-=======
-	// console.log(thisdate);
-	let today = new Date(thisdate);
-	// console.log("today"+today);
->>>>>>> master
 	if ((today.getDate() == rday) && (today.getMonth() ==rmonth))
 	// if (1==1)
 	{
@@ -423,7 +405,8 @@ function showDoku(theAtelierjson)
 	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x1',"1"); }
 	
 	for (var _i in theAtelierjson.Moies) { buildPersonAtelier(theAtelierjson.Moies[_i],theAtelierjson.id+'-x1',"1"); }
-	if (theAtelierjson.auerzait == undefined) { } else { }
+	var auerzait;
+	if (theAtelierjson.auerzait == undefined) { auerzait="12-13h"; } else {auerzait = theAtelierjson.auerzait; }
 
 	for (var _i in theAtelierjson.Dag) { buildPersonAtelier(theAtelierjson.Dag[_i],theAtelierjson.id+'-x2',"2"); }
 	for (var _i in theAtelierjson.Mettes) { buildPersonAtelier(theAtelierjson.Mettes[_i],theAtelierjson.id+'-x2',"2"); }
