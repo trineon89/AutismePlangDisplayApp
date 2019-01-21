@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lu.autisme.displayclient"
     android:hardwareAccelerated="true"
-    android:versionCode="924"
-    android:versionName="0.9.24" >
+    android:versionCode="926"
+    android:versionName="0.9.26" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -88,6 +88,11 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/camera_provider_paths" />
         </provider>
+
+        <activity
+            android:name="de.appplant.cordova.plugin.printer.ui.SelectPrinterActivity"
+            android:exported="false"
+            android:label="Printer" />
     </application>
 
 </manifest>

@@ -22,8 +22,8 @@ function resetTooLate()
 function updateContent(ContentJSON){
 	document.getElementById('theContent').innerHTML="";
 	letobj=JSON.parse(ContentJSON); 
-	var content = pJSON(ContentJSON); 
 	thisdate = letobj.Date; 
+	var content = pJSON(ContentJSON);
 	
 	$('.ateliercontainer').each(function(e){
 		if (e === $('.ateliercontainer').length-1) return;
@@ -354,7 +354,7 @@ function menuDuJourContainer(date)
 {
 	$.ajax({
 		type:	"POST",
-		url:	"http://intern.autisme.lu/remote/getMenuOfTheDay.ajax.php",
+		url:	"https://intern.autisme.lu/remote/getMenuOfTheDay.ajax.php",
 		data: {date: date},
 		success: function (result) {
 			if (result.result)

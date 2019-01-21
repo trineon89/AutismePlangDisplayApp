@@ -250,7 +250,7 @@ module.exports.metadata =
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-network-information": "2.0.1",
-  "cordova-plugin-printer": "0.7.4-dev"
+  "cordova-plugin-printer": "0.7.3"
 };
 // BOTTOM OF METADATA
 });

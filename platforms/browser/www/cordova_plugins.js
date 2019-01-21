@@ -222,6 +222,38 @@ module.exports = [
         "id": "cordova-plugin-camera.CameraProxy",
         "pluginId": "cordova-plugin-camera",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/network.js",
+        "id": "cordova-plugin-network-information.network",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "navigator.connection",
+            "navigator.network.connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+        "id": "cordova-plugin-network-information.Connection",
+        "pluginId": "cordova-plugin-network-information",
+        "clobbers": [
+            "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-network-information/src/browser/network.js",
+        "id": "cordova-plugin-network-information.NetworkInfoProxy",
+        "pluginId": "cordova-plugin-network-information",
+        "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-printer/www/printer.js",
+        "id": "cordova-plugin-printer.Printer",
+        "pluginId": "cordova-plugin-printer",
+        "clobbers": [
+            "plugin.printer",
+            "cordova.plugins.printer"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -232,7 +264,9 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.3",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-android-tv": "1.0.0",
-    "cordova-plugin-camera": "4.0.3"
+    "cordova-plugin-camera": "4.0.3",
+    "cordova-plugin-network-information": "2.0.1",
+    "cordova-plugin-printer": "0.7.3"
 }
 // BOTTOM OF METADATA
 });
