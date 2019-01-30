@@ -1,63 +1,26 @@
-<?xml version='1.0' encoding='utf-8'?>
-<<<<<<< Updated upstream
-<widget id="lu.autisme.displayclient" version="0.9.26" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-=======
-<widget id="lu.autisme.displayclient" version="0.9.14" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
->>>>>>> Stashed changes
-    <feature name="Camera">
-        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
-    </feature>
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="File">
-        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
-        <param name="onload" value="true" />
-    </feature>
-    <allow-navigation href="cdvfile:*" />
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="NetworkStatus">
-        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
-    </feature>
-    <feature name="Printer">
-        <param name="android-package" value="de.appplant.cordova.plugin.printer.Printer" />
-    </feature>
-    <name>Autisme Display App</name>
-    <description>
-        Autisme Display Manager
-    </description>
-    <author email="jill.staudt@autisme.lu" href="http://www.autisme.lu">
-        Staudt Jill
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <allow-navigation href="*youtube*" />
-    <allow-navigation href="*ytimg*" />
-    <allow-navigation href="*youtube-nocookie*" />
-    <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
-        <string>need camera access to take pictures</string>
-    </edit-config>
-    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryUsageDescription">
-        <string>need photo library access to get pictures from there</string>
-    </edit-config>
-    <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
-        <string>need location access to find things nearby</string>
-    </edit-config>
-    <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
-        <string>need photo library access to save pictures there</string>
-    </edit-config>
-    <allow-intent href="market:*" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+-->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        id        = "io.cordova.helloCordova"
+        version   = "2.0.0">
+
+    <!-- Preferences for Android -->
     <preference name="loglevel" value="DEBUG" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="AllowInlineMediaPlayback" value="true" />
-    <preference name="MediaPlaybackRequiresUserAction" value="false" />
 </widget>
