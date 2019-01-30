@@ -354,7 +354,7 @@ function menuDuJourContainer(date)
 {
 	$.ajax({
 		type:	"POST",
-		url:	"http://intern.autisme.lu/remote/getMenuOfTheDay.ajax.php",
+		url:	"https://intern.autisme.lu/remote/getMenuOfTheDay.ajax.php",
 		data: {date: date},
 		success: function (result) {
 			if (result.result)
