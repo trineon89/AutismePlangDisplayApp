@@ -17,7 +17,7 @@ function showPlangHandler(serviceJSON) {
 function getConfig() {
 	var shtml = "";
 	shtml+='<div id="reconnect-button-container"><i style="font-size:24pt;color:#0a328c;" class="fas fa-sync"></div>';
-	shtml+='<div id="config-icon-container"><div id="config-icon" class="config-icon-autisme"></div></div>';
+	shtml+='<div id="search-icon-container"><div id="search-icon" class="search-icon fas fa-search"></div></div><div id="config-icon-container"><div id="config-icon" class="config-icon-autisme"></div></div>';
 	shtml+='<div id="config-container">';
 	shtml+='<div class="config-innercontainer">';
 	shtml+='<i id="1-yt" class="modesel fab fa-youtube"> Plang 1 -> Youtube-Mode</i><br /><i id="1-plang" class="modesel far fa-address-book"> Plang 1 -> Plang-Mode</i>';
@@ -120,6 +120,8 @@ function appendEventHandlers()
 	
 	$("#config-icon").bind("click", function(ev) { getConnectedScreens(); popupConfig(); });
 	
+	$("#search-icon").bind("click", function(ev) { popupSearch(); });
+	
 	$("#1-yt").bind("click", function(ev) { setModeTo("ytplayer", 1); });
 	$("#1-plang").bind("click", function(ev) { setModeTo("plang", 1); });
 	
@@ -161,6 +163,51 @@ function setModeTo(mode, screenid)
 	ws.send(JSON.stringify(res));
 	
 	$('#phmodalModeSel').remove();
+}
+
+function popupSearch()
+{
+	document.getElementById("config-container").style.display = "block";
+	$('.config-innercontainer').html("");
+	$('<input/>',{id: "search-inp", text:"search-inp",name:"search-inp",class:"css-input"}).appendTo('.config-innercontainer');
+	$('<div/>',{id: "search-results",name:"search-results",class:""}).appendTo('.config-innercontainer');
+	$("#search-inp").bind("input", function(ev)  {OnSearchType();} );
+	$("#search-inp").focus();
+}
+
+function OnSearchType()
+{
+	console.log(document.getElementById("search-inp").value);
+	if (document.getElementById("search-inp").value.length>=1)
+	{
+		let tmp=getUsersByInput(document.getElementById("search-inp").value);
+		let htmlout=buildSearchResults(tmp);
+		$('#search-results').html(htmlout);
+	}
+}
+
+function buildSearchResults(obj)
+{
+	console.log(obj);
+	
+	let res="";
+	for (var _i in obj.services)
+	{
+		res+='<div class="search-result-text">'+obj.services[_i].numm+'</div>';
+		for (var _j in obj.services[_i].personal)
+		{
+			// res+='<div class="search-results">'+obj.services[_i].personal[_j].virnumm+' '+obj.services[_i].personal[_j].numm+'</div>';
+			var fdel="img/personal/";
+			var edel="";
+			if (obj.services[_i].personal[_j].photo.substring(0,4)=="data" || obj.services[_i].personal[_j].photo.substring(0,4)=="http")
+			{
+				fdel="";
+				edel="";
+			}
+			res+="<img src='"+fdel+obj.services[_i].personal[_j].photo+edel+"'>";
+		}
+	}
+	return res;
 }
 
 function popupConfig()
@@ -501,7 +548,6 @@ function ShowService(servicename)
 
 function getUserDataById(theid)
 {
-	console.log("id: "+theid);
 	serviceJSON=storage.getItem('backup');
 	var theJson = JSON.parse(serviceJSON);	
 	var res = null;
@@ -518,7 +564,6 @@ function getUserDataById(theid)
 			for (var _j =0;_j < theJson.Services[_i].usagersMettes.length;_j++)
 			{if(theJson.Services[_i].usagersMettes[_j].id == theid) {res=theJson.Services[_i].usagersMettes[_j];return res;}}
 		} else {
-			console.log(theJson.Services[_i]);
 			for (var _j =0;_j < theJson.Services[_i].Dag.length;_j++)
 			{if(theJson.Services[_i].Dag[_j].id == theid) {res=theJson.Services[_i].Dag[_j];return res;}}
 			for (var _j =0;_j < theJson.Services[_i].Moies.length;_j++)
@@ -529,3 +574,87 @@ function getUserDataById(theid)
 	}
 	// return res;
 }
+
+function getUsersByInput(inpstr)
+{
+	serviceJSON=storage.getItem('backup');
+	var theJson = JSON.parse(serviceJSON);
+	theObj={services:[]};
+	for (var _i=0;_i <= theJson.Services.length -1;_i++)
+	{
+		if (theJson.Services[_i].id < 30 || theJson.Services[_i].id == 51)
+		{
+			for (var _j =0;_j < theJson.Services[_i].encadrantsMoies.length;_j++) {
+				if (FindInString(theJson.Services[_i].encadrantsMoies[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].encadrantsMoies[_j],"moies"); } }
+			for (var _j =0;_j < theJson.Services[_i].encadrantsMettes.length;_j++) {
+				if (FindInString(theJson.Services[_i].encadrantsMettes[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].encadrantsMettes[_j],"mettes"); } }
+			for (var _j =0;_j < theJson.Services[_i].usagersMoies.length;_j++) {
+				if (FindInString(theJson.Services[_i].usagersMoies[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].usagersMoies[_j],"moies"); } }
+			for (var _j =0;_j < theJson.Services[_i].usagersMettes.length;_j++) {
+				if (FindInString(theJson.Services[_i].usagersMettes[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].usagersMettes[_j],"mettes"); } }
+		} else {
+			// console.log(theJson.Services[_i]);
+			for (var _j =0;_j < theJson.Services[_i].Dag.length;_j++) {
+				if (FindInString(theJson.Services[_i].Dag[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].Dag[_j],"dag"); } }
+			if (theJson.Services[_i].id != 99)
+			{
+				for (var _j =0;_j < theJson.Services[_i].Moies.length;_j++) {
+					if (FindInString(theJson.Services[_i].Moies[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].Moies[_j],"mettes"); } }
+				for (var _j =0;_j < theJson.Services[_i].Mettes.length;_j++) {
+					if (FindInString(theJson.Services[_i].Mettes[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].Mettes[_j],"moies"); } }
+			}
+		}
+	}
+	console.log(theObj);
+	return theObj;
+}
+
+function FindInString(inp,sc)
+{
+	if (deUmlaut(inp.numm.toLowerCase(),false).search(deUmlaut(sc.toLowerCase(),false))>-1 || deUmlaut(inp.virnumm.toLowerCase(),false).search(deUmlaut(sc.toLowerCase(),false))>-1) {return true} else {return false}
+}
+
+let theObj;
+
+function buildObject(_json,_i,_j,_ser,_per,inp)
+{
+	/*
+	
+	{
+		"Services" : [
+			{
+				"name" : "CDJ",
+				"id"   : 11,
+				"personal" : [
+					"id" : 39,
+					"numm" : "ABC",
+					"virnumm" : "fkefl",
+					"photo" : "oefjejof.jpg",
+					"dag" : false,
+					"moies" : false,
+					"mettes" : true
+				]
+			}
+		]
+	}
+	*/
+	let _serv = theObj.services.find(_serv => _serv.id == _ser.id);
+	
+	if (_serv==undefined) 
+	{
+		theObj.services.push({id:_ser.id, numm:_ser.name,personal:[]});
+		_serv = theObj.services.find(_serv => _serv.id == _ser.id);
+	} 
+	let _pers = _serv.personal.find(_pers => _pers.id == _per.id);
+	if (_pers==undefined)
+	{
+		_serv.personal.push({id:_per.id, numm:_per.numm, virnumm:_per.virnumm,photo:_per.photo,isencadrant:_per.isencadrant, moies:false, mettes:false});
+		_pers = _serv.personal.find(_pers => _pers.id == _per.id);
+	}
+	if (inp=="dag")
+	{
+		_pers['moies']=true;
+		_pers['mettes']=true;
+	} else { _pers[inp]=true; }
+}
+
