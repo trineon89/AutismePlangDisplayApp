@@ -9,9 +9,9 @@
 		<key>CFBundleIdentifier</key>
 		<string>lu.autisme.displayclient</string>
 		<key>CFBundleShortVersionString</key>
-		<string>0.9.13</string>
+		<string>0.9.14</string>
 		<key>CFBundleVersion</key>
-		<string>0.9.13</string>
+		<string>0.9.14</string>
 		<key>SigningIdentity</key>
 		<string>iPhone Developer: Marc De Geest (R65GF5MLF8)</string>
 		<key>Team</key>
@@ -20,7 +20,7 @@
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2018-11-14T10:29:26Z</date>
+	<date>2018-11-14T14:27:12Z</date>
 	<key>Name</key>
 	<string>Autisme Display App</string>
 	<key>SchemeName</key>

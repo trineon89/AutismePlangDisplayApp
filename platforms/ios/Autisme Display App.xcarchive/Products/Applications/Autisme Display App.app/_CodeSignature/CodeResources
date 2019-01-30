@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		D784n5kqhYGpzxpCFORwhp7RSkI=
+		stZTanKL44qaj9cqxcNUtWDkAiU=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		3qshz1Qj8UweTmUx0928JiYLues=
+		bxNyXc8lW6hPTlMxttWo1sv5GNo=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		fXnwm0fOgjSI8wvd0D4PAvLEr9M=
+		29tvVckgFjd0CqkKqUeQEppu4Bk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		p506sKy7o6HRnahI7aCuruZ8ARk=
+		7qEPhqu4LW5ojfh+NkpnxzsEibs=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		c+tcfonpvxF8bnqJrzUmFjtpqog=
+		oq3/Nn0spzzbjE6eZY9UWahogjU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		xo3hKNwhrXVgNQkVfYw7csJ9tow=
+		MgS525n6ygvdUx3VDfUr2wzjDco=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -1082,7 +1082,7 @@
 		</data>
 		<key>www/css/planghandler.css</key>
 		<data>
-		Ay7LcUQkF4zwC81f6mDF4159ngM=
+		/9lDCqlqdtt5UicY5xZzMha4nvo=
 		</data>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
 		<data>
@@ -2040,7 +2040,7 @@
 		<data>
 		48MN6c49I1xMAj3u2BWifNKz274=
 		</data>
-		<key>www/img/servicesnew/notassigned.png</key>
+		<key>www/img/servicesnew/net_zougedeelt.png</key>
 		<data>
 		VYNYoJsrhKs569GzihtcEST7pfU=
 		</data>
@@ -2074,11 +2074,11 @@
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		tUumbph2qXu/RYobjw6nZK2SZoU=
+		dUlEkeH1eH+WZXCICu1FAbqI7Xg=
 		</data>
 		<key>www/js/ipadPlangHandler.js</key>
 		<data>
-		Lzo+iDeV3lVMPFRm3VMx82VrAV4=
+		mvOgVAe5K2D7jBxkDuSn+F7qZR4=
 		</data>
 		<key>www/js/jquery-1.11.1.min.js</key>
 		<data>
@@ -2435,22 +2435,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D784n5kqhYGpzxpCFORwhp7RSkI=
+			stZTanKL44qaj9cqxcNUtWDkAiU=
 			</data>
 			<key>hash2</key>
 			<data>
-			+rap91tPmNs8nLL2VnL4D7T2cN3I0U6LUUm/mpfkCdA=
+			t5IprdveadxUgn3+/buQ54YsStHZ7hnYWGynDqdPkP4=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			3qshz1Qj8UweTmUx0928JiYLues=
+			bxNyXc8lW6hPTlMxttWo1sv5GNo=
 			</data>
 			<key>hash2</key>
 			<data>
-			WuZqCPw/uRhtYWB8RjoWVLq1HRu55flyuwcn6fbw6IE=
+			QJcci0p24nGjHfNKb+H/MPAVaRsl0lsRC4Yni6fxcbk=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -2468,11 +2468,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fXnwm0fOgjSI8wvd0D4PAvLEr9M=
+			29tvVckgFjd0CqkKqUeQEppu4Bk=
 			</data>
 			<key>hash2</key>
 			<data>
-			6Azhrr04A0op8gt36j+Pb3ElqaO/tINZyGfutnNQ+Bc=
+			ciR8PKjdNrXcJ98aB0CHV7zvoXE1RFfrIqYMR1b2DN4=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2655,22 +2655,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			c+tcfonpvxF8bnqJrzUmFjtpqog=
+			oq3/Nn0spzzbjE6eZY9UWahogjU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Z4zYSv4ad92AbTZ79XS2q21z9bcFHzfmeD3iTiNS5dQ=
+			epWmqTIuZl9YTFXdUr6rCR+927IAgBhsy/xL5bcZfRQ=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xo3hKNwhrXVgNQkVfYw7csJ9tow=
+			MgS525n6ygvdUx3VDfUr2wzjDco=
 			</data>
 			<key>hash2</key>
 			<data>
-			+22rF33gXi4DQDv33uc49geDqjSWAZQy17rdiQh5ly4=
+			2KhKutT/O5yWcZ8dD5HR3vrPH1fFj62KnvC/tWTsX8M=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -5152,11 +5152,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ay7LcUQkF4zwC81f6mDF4159ngM=
+			/9lDCqlqdtt5UicY5xZzMha4nvo=
 			</data>
 			<key>hash2</key>
 			<data>
-			hyWPjLL57knTC1GmY/vo69HUyCii/x+nHSZ/1uXq2fo=
+			gIoHb3OTS+05Okyx7AYdSJZT6xZlnLbYTBBkkUF1FDY=
 			</data>
 		</dict>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
@@ -7788,7 +7788,7 @@
 			2XMLVWDtdtG0LxP/2kHh+Uq6fqmeaNmZJaBskAwgGBQ=
 			</data>
 		</dict>
-		<key>www/img/servicesnew/notassigned.png</key>
+		<key>www/img/servicesnew/net_zougedeelt.png</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -7880,22 +7880,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tUumbph2qXu/RYobjw6nZK2SZoU=
+			dUlEkeH1eH+WZXCICu1FAbqI7Xg=
 			</data>
 			<key>hash2</key>
 			<data>
-			yYnzYs3QMngZAut5B2Gc64gX9QEoqzzOxxGaw5lfsRk=
+			LomiQJm4Ws76AfF9Xx+MOVIgZsKGzyotbYGjYU/VhTo=
 			</data>
 		</dict>
 		<key>www/js/ipadPlangHandler.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Lzo+iDeV3lVMPFRm3VMx82VrAV4=
+			mvOgVAe5K2D7jBxkDuSn+F7qZR4=
 			</data>
 			<key>hash2</key>
 			<data>
-			hC3A/BzpLuUkyhBGRQLeAjaj8aueZIFgOQ3s1Hh790E=
+			DnbzkZzN+mat9C5Hpg0/WPA6XDZuIB8S8x5vOkhQDiQ=
 			</data>
 		</dict>
 		<key>www/js/jquery-1.11.1.min.js</key>
