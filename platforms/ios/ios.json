@@ -27,10 +27,6 @@
             {
               "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"Printer\"><param name=\"ios-package\" value=\"APPPrinter\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -93,9 +89,6 @@
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "lu.autisme.displayclient"
-    },
-    "cordova-plugin-printer": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     }
   },
@@ -330,15 +323,6 @@
       "clobbers": [
         "Connection"
       ]
-    },
-    {
-      "id": "cordova-plugin-printer.Printer",
-      "file": "plugins/cordova-plugin-printer/www/printer.js",
-      "pluginId": "cordova-plugin-printer",
-      "clobbers": [
-        "plugin.printer",
-        "cordova.plugins.printer"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -348,7 +332,6 @@
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-android-tv": "1.0.0",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-network-information": "2.0.1",
-    "cordova-plugin-printer": "0.7.3"
+    "cordova-plugin-network-information": "2.0.1"
   }
 }

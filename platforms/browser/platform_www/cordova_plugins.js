@@ -245,15 +245,6 @@ module.exports = [
         "id": "cordova-plugin-network-information.NetworkInfoProxy",
         "pluginId": "cordova-plugin-network-information",
         "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-printer/www/printer.js",
-        "id": "cordova-plugin-printer.Printer",
-        "pluginId": "cordova-plugin-printer",
-        "clobbers": [
-            "plugin.printer",
-            "cordova.plugins.printer"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -265,8 +256,7 @@ module.exports.metadata =
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-android-tv": "1.0.0",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-network-information": "2.0.1",
-    "cordova-plugin-printer": "0.7.3"
+    "cordova-plugin-network-information": "2.0.1"
 }
 // BOTTOM OF METADATA
 });

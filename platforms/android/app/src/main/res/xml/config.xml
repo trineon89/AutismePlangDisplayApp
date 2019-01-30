@@ -18,9 +18,6 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="Printer">
-        <param name="android-package" value="de.appplant.cordova.plugin.printer.Printer" />
-    </feature>
     <name>Autisme Display App</name>
     <description>
         Autisme Display Manager

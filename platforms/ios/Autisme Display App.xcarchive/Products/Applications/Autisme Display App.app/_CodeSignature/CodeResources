@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		stZTanKL44qaj9cqxcNUtWDkAiU=
+		Fjnb+02DopFF6XFRo7TcIWI7Adk=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		bxNyXc8lW6hPTlMxttWo1sv5GNo=
+		xO6FArDKtV0r4b8ypOhTFjpSrMs=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		29tvVckgFjd0CqkKqUeQEppu4Bk=
+		Dzw5/1VT/Dh6nnlq/1OmRFD6Lj8=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7qEPhqu4LW5ojfh+NkpnxzsEibs=
+		MsLFUCrALRUtTb8f7YGKMvYX8eM=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		oq3/Nn0spzzbjE6eZY9UWahogjU=
+		SIcbJaq+4Vrl2nEDOiB7j963/ZY=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		MgS525n6ygvdUx3VDfUr2wzjDco=
+		7oPm//ujksQbsVeianeHXoYMmgQ=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -206,7 +206,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		YAWN7pjPpawOT6Wd17xxnsynltQ=
+		etSO29JNdUYuiUJly+UOQaKBdUE=
 		</data>
 		<key>www/css/fontawesome/all.min.css</key>
 		<data>
@@ -1078,11 +1078,11 @@
 		</data>
 		<key>www/css/plang.css</key>
 		<data>
-		SvBMIxinJs43N81hYLWII3gg2nw=
+		DHIZav5Q0EKfUfQpUrGe2DxD48g=
 		</data>
 		<key>www/css/planghandler.css</key>
 		<data>
-		/9lDCqlqdtt5UicY5xZzMha4nvo=
+		F472gFJEUzg86sHKrbMucmRt3Vc=
 		</data>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
 		<data>
@@ -1148,9 +1148,17 @@
 		<data>
 		LByGKjrLpXVtkd5JCnMJDV+OjnI=
 		</data>
+		<key>www/img/bdayhat.svg</key>
+		<data>
+		ks8XJHSb4Vw1wUvfJw34EFRTbBU=
+		</data>
 		<key>www/img/bus.png</key>
 		<data>
 		LJ093cdQK3BTEcdvV6/N9ziAlDA=
+		</data>
+		<key>www/img/confetti.svg</key>
+		<data>
+		Y2KP3SS4XXE6vpj63SdgT/30IQ8=
 		</data>
 		<key>www/img/iessen.png</key>
 		<data>
@@ -1234,7 +1242,7 @@
 		</data>
 		<key>www/img/personal/cheche-laetitia.jpg</key>
 		<data>
-		w8s1CAzGMGRTFwV9OwTo+zlupwE=
+		y4MtlK5MMfTsxD4TP9xMsDwFsf4=
 		</data>
 		<key>www/img/personal/claudia-ribeiro.jpg</key>
 		<data>
@@ -1259,6 +1267,10 @@
 		<key>www/img/personal/cordobes-kevin.jpg</key>
 		<data>
 		6te1A+w6gt6amc5ybwDR2rIIqSQ=
+		</data>
+		<key>www/img/personal/da-conceicao-soraya.jpg</key>
+		<data>
+		4VNuBeG1zOcGtYtetsaDgeg5n3k=
 		</data>
 		<key>www/img/personal/dallo-stefanie.jpg</key>
 		<data>
@@ -1342,7 +1354,7 @@
 		</data>
 		<key>www/img/personal/fernandez-jessica.jpg</key>
 		<data>
-		8B7Fa6Yu3i8YsyUX78dFqtw6N3c=
+		p58TXHZ7Fo14Q30jfGanUUnnDs0=
 		</data>
 		<key>www/img/personal/ferres-joe.jpg</key>
 		<data>
@@ -1375,6 +1387,10 @@
 		<key>www/img/personal/gargano-michel.jpg</key>
 		<data>
 		7zNdhEx1bdUSy8xIadTOVqttc3U=
+		</data>
+		<key>www/img/personal/geditz-jenny.jpg</key>
+		<data>
+		SP2MS90Mm4mfxlRp+cbz09id4bw=
 		</data>
 		<key>www/img/personal/gilson-carole.jpg</key>
 		<data>
@@ -1422,7 +1438,7 @@
 		</data>
 		<key>www/img/personal/harmelin-yannick.jpg</key>
 		<data>
-		nBiQV/Nj3uwwJ/0y8cBX1fi+Lt8=
+		ce3JS6VYabdhCK7//0SREpKFI8g=
 		</data>
 		<key>www/img/personal/hartman-gregory.jpg</key>
 		<data>
@@ -1468,7 +1484,7 @@
 		<data>
 		DnyXxCkg8FeZ+9MXwp9fthdd4Hs=
 		</data>
-		<key>www/img/personal/hutardo-miguel angelo.jpg</key>
+		<key>www/img/personal/hutardo-miguel-angelo.jpg</key>
 		<data>
 		jrVh3ka6eTxCi5vvOT8h6N5exLE=
 		</data>
@@ -1542,7 +1558,7 @@
 		</data>
 		<key>www/img/personal/leardini-jerome.jpg</key>
 		<data>
-		qkHId0YyJE3ht43CZAGiVZjhqlY=
+		4z0wDl9rjrlCjnc5hBU2fRRceqU=
 		</data>
 		<key>www/img/personal/linster-patrick.jpg</key>
 		<data>
@@ -1562,7 +1578,7 @@
 		</data>
 		<key>www/img/personal/losch-margreitchen.jpg</key>
 		<data>
-		hZ6UdfWdkT1agFizJfumX3HhDtU=
+		Bs+8jko4U+KM5RBrPkW9CC5lf8M=
 		</data>
 		<key>www/img/personal/lux-martine.jpg</key>
 		<data>
@@ -1578,7 +1594,7 @@
 		</data>
 		<key>www/img/personal/martins-de-pina-dylan.jpg</key>
 		<data>
-		+QJCGPh3yshwKK8MVB5Y5Irj7XY=
+		FQOGcGPyx99HrXlD0i6PCb0iYHA=
 		</data>
 		<key>www/img/personal/martiny-luc.jpg</key>
 		<data>
@@ -1704,6 +1720,10 @@
 		<data>
 		eExALsA3lEk/hV5smZ7QneS2zW0=
 		</data>
+		<key>www/img/personal/reuland-joelle.jpg</key>
+		<data>
+		pvmnAyrgvLgEEEAzbKv9ay4g79I=
+		</data>
 		<key>www/img/personal/reuter-kevin.jpg</key>
 		<data>
 		q34qQwqXoWQhWrqU02DqgANPUck=
@@ -1759,6 +1779,10 @@
 		<key>www/img/personal/schmitz-sabrina.jpg</key>
 		<data>
 		3oDa18kwjx1GsMoE7QHcsWBShbI=
+		</data>
+		<key>www/img/personal/schneider-sabrina.jpg</key>
+		<data>
+		NAPa2TRpSqp4o0OEnGVrSg+M/SU=
 		</data>
 		<key>www/img/personal/schroeder-tom.jpg</key>
 		<data>
@@ -1828,6 +1852,10 @@
 		<data>
 		RhOCPku3wnf/2mPzv9E1fxEAHpw=
 		</data>
+		<key>www/img/personal/theisen-carole.jpg</key>
+		<data>
+		S67jlYOB92HXzCeRet+XotwnRRU=
+		</data>
 		<key>www/img/personal/theissen-vanessa.jpg</key>
 		<data>
 		svFQWunuh+sbcbtqHQEgitx3kl4=
@@ -1868,6 +1896,10 @@
 		<data>
 		a15mS5SUOPM6xtG0AzG6SnN3Pa0=
 		</data>
+		<key>www/img/personal/weber-dennis.jpg</key>
+		<data>
+		ohTWNahaj2zU9Jzr5nttI6oV1j4=
+		</data>
 		<key>www/img/personal/weidert-claudine.jpg</key>
 		<data>
 		wkFO2itaJwZB9VI1Al06H7ct8qA=
@@ -1890,7 +1922,7 @@
 		</data>
 		<key>www/img/personal/zenner-gilles.jpg</key>
 		<data>
-		HsMyyxvcpjYwIG0haQyOs3VJq6M=
+		Q/I60RqqfUWUMfkami6COnm8XhE=
 		</data>
 		<key>www/img/personal/zimmer-joel.jpg</key>
 		<data>
@@ -1902,7 +1934,7 @@
 		</data>
 		<key>www/img/services/apaken.jpg</key>
 		<data>
-		yDwLZe7mdXEJXbUBUbUqgLBCqYo=
+		bV1QJuT433ZZWrCFoooiNMXyAxw=
 		</data>
 		<key>www/img/services/backoffice.jpg</key>
 		<data>
@@ -2066,19 +2098,23 @@
 		</data>
 		<key>www/index.html</key>
 		<data>
-		OVLDEhmfyZ/VdT0jdHTtu44I/cU=
+		5/HQHrd/UmUTLH4rAVASc5oESis=
 		</data>
 		<key>www/js/fastclick.js</key>
 		<data>
 		tISBJl2XE/ZIcrZZfbYgvpzY+bM=
 		</data>
+		<key>www/js/helperfunctions.js</key>
+		<data>
+		jsG8fMkfzdrKBCQ9ZQyMmWSJIpE=
+		</data>
 		<key>www/js/index.js</key>
 		<data>
-		dUlEkeH1eH+WZXCICu1FAbqI7Xg=
+		lpyocX7mCkVErGTd/gpuZn2+9oE=
 		</data>
 		<key>www/js/ipadPlangHandler.js</key>
 		<data>
-		mvOgVAe5K2D7jBxkDuSn+F7qZR4=
+		fMmoprpDM+xsrfUwlrY5d4ybzdY=
 		</data>
 		<key>www/js/jquery-1.11.1.min.js</key>
 		<data>
@@ -2094,7 +2130,7 @@
 		</data>
 		<key>www/js/plangJsonHandler.js</key>
 		<data>
-		DGguw1Rc8KagKaC16Bmgwev1ylQ=
+		TshUrM99GXN8KEpEQ2bkCIs8qCQ=
 		</data>
 		<key>www/js/youtubehandler.js</key>
 		<data>
@@ -2207,6 +2243,14 @@
 		<key>www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js</key>
 		<data>
 		p7A9a+/7es1E4aKJPkx0j6eQwuw=
+		</data>
+		<key>www/plugins/cordova-plugin-network-information/www/Connection.js</key>
+		<data>
+		eFkXRtFkv02NAgFnyI+/4nqBHjM=
+		</data>
+		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
+		<data>
+		lbbWdv+iqfYJ9YIXXbdxSn8svrQ=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -2435,22 +2479,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			stZTanKL44qaj9cqxcNUtWDkAiU=
+			Fjnb+02DopFF6XFRo7TcIWI7Adk=
 			</data>
 			<key>hash2</key>
 			<data>
-			t5IprdveadxUgn3+/buQ54YsStHZ7hnYWGynDqdPkP4=
+			LutthcFGZn6qkSBHGcb2hiBU5neQbirlTeA+WvIDi78=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bxNyXc8lW6hPTlMxttWo1sv5GNo=
+			xO6FArDKtV0r4b8ypOhTFjpSrMs=
 			</data>
 			<key>hash2</key>
 			<data>
-			QJcci0p24nGjHfNKb+H/MPAVaRsl0lsRC4Yni6fxcbk=
+			r9Vw4EULq+ukB418IwddrUmSLBj5osTnqxzrsBJCOFA=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -2468,11 +2512,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			29tvVckgFjd0CqkKqUeQEppu4Bk=
+			Dzw5/1VT/Dh6nnlq/1OmRFD6Lj8=
 			</data>
 			<key>hash2</key>
 			<data>
-			ciR8PKjdNrXcJ98aB0CHV7zvoXE1RFfrIqYMR1b2DN4=
+			CRTTM9P7bRnYd6F0FqQPq8H/CPlz9b9I5pNRJIv/Kf8=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2655,22 +2699,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			oq3/Nn0spzzbjE6eZY9UWahogjU=
+			SIcbJaq+4Vrl2nEDOiB7j963/ZY=
 			</data>
 			<key>hash2</key>
 			<data>
-			epWmqTIuZl9YTFXdUr6rCR+927IAgBhsy/xL5bcZfRQ=
+			XNCblICkXKZ4YeFAyNSHblC80UoMWrIdaYdUVQFXSTA=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			MgS525n6ygvdUx3VDfUr2wzjDco=
+			7oPm//ujksQbsVeianeHXoYMmgQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			2KhKutT/O5yWcZ8dD5HR3vrPH1fFj62KnvC/tWTsX8M=
+			QUO8G74uBiuCND4aExRBWUrtfXzkgvvowa49FYS8vpA=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -2743,11 +2787,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YAWN7pjPpawOT6Wd17xxnsynltQ=
+			etSO29JNdUYuiUJly+UOQaKBdUE=
 			</data>
 			<key>hash2</key>
 			<data>
-			4P17Q8UNzEr0KzXqNK+FOyNzM+uS9NHb5EWdASo8Nvc=
+			NRWySrdz8A454d2t2qfDlnrnbSG607+rKYJirwnrc9Y=
 			</data>
 		</dict>
 		<key>www/css/fontawesome/all.min.css</key>
@@ -5141,22 +5185,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SvBMIxinJs43N81hYLWII3gg2nw=
+			DHIZav5Q0EKfUfQpUrGe2DxD48g=
 			</data>
 			<key>hash2</key>
 			<data>
-			QlF0uiL6nZvZrC29uIe2D9pRnboYTYvYZ0CXz9aZtBE=
+			1a4BPOVOXRGJQ/fH1fLLfrqb41gN2/rce5hS4u/Zabw=
 			</data>
 		</dict>
 		<key>www/css/planghandler.css</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/9lDCqlqdtt5UicY5xZzMha4nvo=
+			F472gFJEUzg86sHKrbMucmRt3Vc=
 			</data>
 			<key>hash2</key>
 			<data>
-			gIoHb3OTS+05Okyx7AYdSJZT6xZlnLbYTBBkkUF1FDY=
+			bR281NuavljvNJpIt+wDtnKuF5MHYFWajFVIvLUJR/M=
 			</data>
 		</dict>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
@@ -5335,6 +5379,17 @@
 			L0lOgCT/QoX5iQSDcFJOc+9BYZjJYOmkcNaRNONpL1E=
 			</data>
 		</dict>
+		<key>www/img/bdayhat.svg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ks8XJHSb4Vw1wUvfJw34EFRTbBU=
+			</data>
+			<key>hash2</key>
+			<data>
+			UAz5ujRV7yS9lpV4839K0eiTNOZbvX3jZOknKkp1BGk=
+			</data>
+		</dict>
 		<key>www/img/bus.png</key>
 		<dict>
 			<key>hash</key>
@@ -5344,6 +5399,17 @@
 			<key>hash2</key>
 			<data>
 			Js9Cy61B1gnVi4L8qmC7RuiUSvtnH8E8PHPy1h5bbIg=
+			</data>
+		</dict>
+		<key>www/img/confetti.svg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Y2KP3SS4XXE6vpj63SdgT/30IQ8=
+			</data>
+			<key>hash2</key>
+			<data>
+			SVYi01O1+oB9GV0lIZE5fu51msPRpgawSEq+UJZx+nk=
 			</data>
 		</dict>
 		<key>www/img/iessen.png</key>
@@ -5570,11 +5636,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			w8s1CAzGMGRTFwV9OwTo+zlupwE=
+			y4MtlK5MMfTsxD4TP9xMsDwFsf4=
 			</data>
 			<key>hash2</key>
 			<data>
-			AdsvHzgjjyGRsJY5VjMi4lVr8ykFO57NuBFQWPK0hbk=
+			h9df8xVgRhpZUzZilPwdILYWFS69ok3RVwfDw4oYlYc=
 			</data>
 		</dict>
 		<key>www/img/personal/claudia-ribeiro.jpg</key>
@@ -5641,6 +5707,17 @@
 			<key>hash2</key>
 			<data>
 			hiv4QT86ECkOLUwcV/x+nDeSUkFEKra60CwnzMhAM7g=
+			</data>
+		</dict>
+		<key>www/img/personal/da-conceicao-soraya.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4VNuBeG1zOcGtYtetsaDgeg5n3k=
+			</data>
+			<key>hash2</key>
+			<data>
+			MF3D/MUuzNW7ZmedAT6Hj6mBBP2kcKFOMCsO6mQSd3Y=
 			</data>
 		</dict>
 		<key>www/img/personal/dallo-stefanie.jpg</key>
@@ -5867,11 +5944,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			8B7Fa6Yu3i8YsyUX78dFqtw6N3c=
+			p58TXHZ7Fo14Q30jfGanUUnnDs0=
 			</data>
 			<key>hash2</key>
 			<data>
-			0rBCoQWl/hKTf0n29M49mxaD+dv3uFUmDfdAIMf1PvA=
+			CNJC7BltSRC1P4f5YJe5yLuOmVCdf5njXNhbOhcdvsk=
 			</data>
 		</dict>
 		<key>www/img/personal/ferres-joe.jpg</key>
@@ -5960,6 +6037,17 @@
 			<key>hash2</key>
 			<data>
 			P19Ly/PJJz8QRcaFyo+HPv9Dc79mQooWNNvPJJLPZLU=
+			</data>
+		</dict>
+		<key>www/img/personal/geditz-jenny.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			SP2MS90Mm4mfxlRp+cbz09id4bw=
+			</data>
+			<key>hash2</key>
+			<data>
+			O5I9H1UdMkDoLkyfuj9UAMgWyGoYZfFV8f5l/YSFPSs=
 			</data>
 		</dict>
 		<key>www/img/personal/gilson-carole.jpg</key>
@@ -6087,11 +6175,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nBiQV/Nj3uwwJ/0y8cBX1fi+Lt8=
+			ce3JS6VYabdhCK7//0SREpKFI8g=
 			</data>
 			<key>hash2</key>
 			<data>
-			c5Wl4+lW9hBsQkZIph4oBG0NWcWrt2lF3a78+Ee+tkg=
+			1gKkXoSgJwCGGzPZt4nlTteI9CKNUbt0E8UgRnpWfl4=
 			</data>
 		</dict>
 		<key>www/img/personal/hartman-gregory.jpg</key>
@@ -6215,7 +6303,7 @@
 			kB+Cea95XTVLe97RMEGTPQwFL6lozAb0449HI4PrmnM=
 			</data>
 		</dict>
-		<key>www/img/personal/hutardo-miguel angelo.jpg</key>
+		<key>www/img/personal/hutardo-miguel-angelo.jpg</key>
 		<dict>
 			<key>hash</key>
 			<data>
@@ -6417,11 +6505,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			qkHId0YyJE3ht43CZAGiVZjhqlY=
+			4z0wDl9rjrlCjnc5hBU2fRRceqU=
 			</data>
 			<key>hash2</key>
 			<data>
-			4VclYs5juWqkheLu87BmIk/m548IDDw4ArA2zuAnzOg=
+			UZi6yWPmKxhGguQfYaymhrZ9+0WiwhEEdXLEl0p79xY=
 			</data>
 		</dict>
 		<key>www/img/personal/linster-patrick.jpg</key>
@@ -6472,11 +6560,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			hZ6UdfWdkT1agFizJfumX3HhDtU=
+			Bs+8jko4U+KM5RBrPkW9CC5lf8M=
 			</data>
 			<key>hash2</key>
 			<data>
-			zJaQRPmv5xwi8etS/+GjqaAk3+8g/MZahRh0xuFbzVE=
+			P6sfVw9D1mhoklY1WVafpJHHSNpOMGro3G8+ZWvrW9s=
 			</data>
 		</dict>
 		<key>www/img/personal/lux-martine.jpg</key>
@@ -6516,11 +6604,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+QJCGPh3yshwKK8MVB5Y5Irj7XY=
+			FQOGcGPyx99HrXlD0i6PCb0iYHA=
 			</data>
 			<key>hash2</key>
 			<data>
-			70H5+r3plzvkGSyWspnikYOCXaAjLcpfDxEm5de2VrI=
+			fSjg0Um6wZDEcBTZ4/ZZ39UZAJerCRoef05c+OFOYvg=
 			</data>
 		</dict>
 		<key>www/img/personal/martiny-luc.jpg</key>
@@ -6864,6 +6952,17 @@
 			5hFchwlSik64aOFu33T/o28gxFuXhaGSdIXbMEAdMnY=
 			</data>
 		</dict>
+		<key>www/img/personal/reuland-joelle.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			pvmnAyrgvLgEEEAzbKv9ay4g79I=
+			</data>
+			<key>hash2</key>
+			<data>
+			voV23uw4nlCKv9CJ3dy2PGi8ptaGNashEBIZFj27MvA=
+			</data>
+		</dict>
 		<key>www/img/personal/reuter-kevin.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7016,6 +7115,17 @@
 			<key>hash2</key>
 			<data>
 			C5yW03lp/ZeyXlYYNvFhGe95Qg4FfRJEauI5bNzFJJU=
+			</data>
+		</dict>
+		<key>www/img/personal/schneider-sabrina.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NAPa2TRpSqp4o0OEnGVrSg+M/SU=
+			</data>
+			<key>hash2</key>
+			<data>
+			1bs17wkNyfJztrEnBttS+a2nuRRx60a0YvqCJ+QLadQ=
 			</data>
 		</dict>
 		<key>www/img/personal/schroeder-tom.jpg</key>
@@ -7205,6 +7315,17 @@
 			ZrxIS5BJI85no9+AXY+l5fXfF6YSB6mTjcIjQNBpCfc=
 			</data>
 		</dict>
+		<key>www/img/personal/theisen-carole.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			S67jlYOB92HXzCeRet+XotwnRRU=
+			</data>
+			<key>hash2</key>
+			<data>
+			Be0cK/Uos20zRO2OgLZF3J/3/oPBx9fH9vkkttjG5zI=
+			</data>
+		</dict>
 		<key>www/img/personal/theissen-vanessa.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7315,6 +7436,17 @@
 			bt32VKi+UX/5ui6IMjD0P+YgKCkvLsPPEoxpjtQVwdQ=
 			</data>
 		</dict>
+		<key>www/img/personal/weber-dennis.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ohTWNahaj2zU9Jzr5nttI6oV1j4=
+			</data>
+			<key>hash2</key>
+			<data>
+			y/0Dz+Oxtu26mCpYwJH5fMYIL69VHKZxDXJQB2K1k2I=
+			</data>
+		</dict>
 		<key>www/img/personal/weidert-claudine.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7374,11 +7506,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HsMyyxvcpjYwIG0haQyOs3VJq6M=
+			Q/I60RqqfUWUMfkami6COnm8XhE=
 			</data>
 			<key>hash2</key>
 			<data>
-			PB4AW+246FLo/mscSwTJeczlac/Ek5Ir3c3aQsQI1nw=
+			mbkaVcmmCuWlKITi13D8snQ+wWx7XPkvHUufCLD0nx8=
 			</data>
 		</dict>
 		<key>www/img/personal/zimmer-joel.jpg</key>
@@ -7407,11 +7539,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yDwLZe7mdXEJXbUBUbUqgLBCqYo=
+			bV1QJuT433ZZWrCFoooiNMXyAxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			YrUXR/x6IUtu3Eqm+8tsKldA6arRZlT2+VJ+FUY827Y=
+			klJQ8yuvWIn7Igr3uWwj5iX6EW2gSa9CX/bao8XQzK4=
 			</data>
 		</dict>
 		<key>www/img/services/backoffice.jpg</key>
@@ -7858,11 +7990,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OVLDEhmfyZ/VdT0jdHTtu44I/cU=
+			5/HQHrd/UmUTLH4rAVASc5oESis=
 			</data>
 			<key>hash2</key>
 			<data>
-			6UACESu9og2u06fbds8VNLmZO+5sLij6hWeeRvuWlU4=
+			8Qyb99jhbnCaZ7QpVlFJObsihCPc2I3SqAlSko+Njds=
 			</data>
 		</dict>
 		<key>www/js/fastclick.js</key>
@@ -7876,26 +8008,37 @@
 			tIKdxXxboR98bjgJv5N92HioBFE3Gn8+BCPHL74ogdA=
 			</data>
 		</dict>
+		<key>www/js/helperfunctions.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			jsG8fMkfzdrKBCQ9ZQyMmWSJIpE=
+			</data>
+			<key>hash2</key>
+			<data>
+			6S/JI7SNmncSmRCQDrnUwroFxFNA6lQDLjM4yj6c8BI=
+			</data>
+		</dict>
 		<key>www/js/index.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dUlEkeH1eH+WZXCICu1FAbqI7Xg=
+			lpyocX7mCkVErGTd/gpuZn2+9oE=
 			</data>
 			<key>hash2</key>
 			<data>
-			LomiQJm4Ws76AfF9Xx+MOVIgZsKGzyotbYGjYU/VhTo=
+			gMlSvpD4cz980pBWiaSnC+FO4ymk/Wht6JYKpX6celY=
 			</data>
 		</dict>
 		<key>www/js/ipadPlangHandler.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mvOgVAe5K2D7jBxkDuSn+F7qZR4=
+			fMmoprpDM+xsrfUwlrY5d4ybzdY=
 			</data>
 			<key>hash2</key>
 			<data>
-			DnbzkZzN+mat9C5Hpg0/WPA6XDZuIB8S8x5vOkhQDiQ=
+			g0czozxrVBC2mR/NHE2lszpTxUFJ2jgzuGBLo6DjtTs=
 			</data>
 		</dict>
 		<key>www/js/jquery-1.11.1.min.js</key>
@@ -7935,11 +8078,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DGguw1Rc8KagKaC16Bmgwev1ylQ=
+			TshUrM99GXN8KEpEQ2bkCIs8qCQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			2BQf7otqrf/dn6vgwODw7qrklKIx82WvMhP9k8upEGo=
+			o5/1/Z+/34/gFpX+K7LTzAFt4M61a5Y+m7n8r9Jw1O0=
 			</data>
 		</dict>
 		<key>www/js/youtubehandler.js</key>
@@ -8248,6 +8391,28 @@
 			<key>hash2</key>
 			<data>
 			2r19nzz0vvRYaDlexf+ZC0go3w4I74oCafncQ2Noe3U=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-network-information/www/Connection.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			eFkXRtFkv02NAgFnyI+/4nqBHjM=
+			</data>
+			<key>hash2</key>
+			<data>
+			xcTT1VQ1B43gprpg0dBgmDlL2grVMuBeTalDsgusxuE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lbbWdv+iqfYJ9YIXXbdxSn8svrQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			mQIc+Vzy6X9FsCMCY6E19vLl165ea4NWQQFIqEgO5+o=
 			</data>
 		</dict>
 	</dict>
