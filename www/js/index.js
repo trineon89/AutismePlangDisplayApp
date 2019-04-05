@@ -34,10 +34,13 @@ var app = {
 		storage = window.localStorage;
 
 		Init();
-		
-		WSHandler(serverip);
-		
-		FastClick.attach(document.body);
+		try{
+			WSHandler(serverip);
+		} catch (e)
+		{
+			$("body").html("<h1>NO WSHANDLER</h1>");
+		}
+			FastClick.attach(document.body);
 		//initFS();
     },
 
@@ -66,6 +69,7 @@ var ws;
 // var serverip="192.168.1.173";
 // var serverip="192.168.1.217";
 var serverip="192.168.11.28";
+// var serverip="192.168.1.28";
 var actualMode=null;
 var screens;
 

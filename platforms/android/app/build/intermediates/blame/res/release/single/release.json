@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-ldpi_screen.png.flat",
-        "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\drawable-port-ldpi\\screen.png"
-    },
-    {
         "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-hdpi_screen.png.flat",
         "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-ldpi_screen.png.flat",
+        "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\drawable-port-ldpi\\screen.png"
     },
     {
         "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jill\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_icon.png.flat",
         "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jill\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
     },
     {
-        "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-xxxhdpi_screen.png.flat",
-        "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
-    },
-    {
         "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jill\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-xhdpi_screen.png.flat",
         "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jill\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-port-xxxhdpi_screen.png.flat",
+        "source": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jilladmin\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
     },
     {
         "merged": "C:\\Users\\infomedia\\My Docs\\cordova apps\\AutismePlangDisplayApp\\C:\\Users\\jill\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout_select_printer_activity.xml.flat",
