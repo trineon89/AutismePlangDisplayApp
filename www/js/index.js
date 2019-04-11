@@ -304,7 +304,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 
 	var fdel="\'img/personal/";
 	var edel="\'";
-	if (userdata.photo.substring(0,4)=="data")
+	if (userdata.photo.substring(0,4)=="data" || userdata.photo.substring(0,4)=="http")
 	{
 		fdel="";
 		edel="";

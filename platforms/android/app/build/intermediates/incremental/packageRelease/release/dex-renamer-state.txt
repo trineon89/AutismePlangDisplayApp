@@ -1,4 +1,4 @@
-#Fri Apr 05 15:53:14 CEST 2019
+#Thu Apr 11 09:01:05 CEST 2019
 base.0=C\:\\Users\\jill\\Documents\\Git\\AutismePlangDisplayApp\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
 path.0=classes.dex
 renamed.0=classes.dex
