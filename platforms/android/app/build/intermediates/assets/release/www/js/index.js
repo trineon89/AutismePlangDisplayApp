@@ -65,11 +65,7 @@ var myId;
 var storage;
 var backupJsonObject;
 var ws;
-// var serverip="192.168.188.28";
-// var serverip="192.168.1.173";
-// var serverip="192.168.1.217";
 var serverip="192.168.11.28";
-// var serverip="192.168.1.28";
 var actualMode=null;
 var screens;
 
@@ -328,7 +324,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 				if (fullday==1 || fullday==3) $('<div/>',{id: usid+"-2", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-x2');
 			}
 			
-			if (userdata.photo=="placeholder.png" || fdel=="")
+			if (userdata.photo=="placeholder.png" || userdata.photo.substring(0,4)=="data")
 			{
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-1");
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-2");
@@ -345,7 +341,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 			if (fullday==1 || fullday==2) $('<div/>',{id: usid+"-1", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-u1');
 			if (fullday==1 || fullday==3) $('<div/>',{id: usid+"-2", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-u2');
 			
-			if (userdata.photo=="placeholder.png" || fdel=="")
+			if (userdata.photo=="placeholder.png" || userdata.photo.substring(0,4)=="data")
 			{
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-1");
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-2");

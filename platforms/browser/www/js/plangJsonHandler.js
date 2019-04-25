@@ -1,7 +1,30 @@
 setInterval(function(){resetTooLate(); }, 60000);
+setInterval(function(){ showInformationOverlay(); }, 1000);
 
-var thisdate; 
-var letobj; 
+var thisdate;
+var letobj;
+
+function showInformationOverlay()
+{
+	//if (myId=="qvhjjn")
+	if (myId=="szdddmpdst")
+	{
+		var today = new Date();
+		if (today.getHours() >= 16 && today.getMinutes() >= 35 && (today.getDate()==25 && today.getFullYear()==2019 && today.getMonth()==3) )
+		{
+			if($('#informationoverlay').length <= 0)
+			{
+				$('<div/>',{id:'informationoverlay',class:'informationoverlay'}).appendTo('body');
+				$('<div/>',{id:'informationoverlay-content'}).appendTo('#informationoverlay');
+					$('<div/>',{id:'informationoverlay-logo'}).appendTo('#informationoverlay-content');
+					$('<div/>',{id:'informationoverlay-textcontainer'}).appendTo('#informationoverlay-content');
+						$('<div/>',{id:'informationoverlay-textcontainer-container'}).appendTo('#informationoverlay-textcontainer');
+							$('<h1/>',{id:'informationoverlay-text',text:'Assemblée Générale'}).appendTo('#informationoverlay-textcontainer-container');
+						$('<div/>',{id:'informationoverlay-arrowcontainer'}).appendTo('#informationoverlay-textcontainer');
+			}
+		}
+	}
+}
 
 function resetTooLate()
 {
