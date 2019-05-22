@@ -46,7 +46,7 @@ class LostAndFound {
     sync()
     {
         var that = this;
-        this.IntervalId = setInterval(function(){that.checkUpdate();}, 6000);
+        this.IntervalId = setInterval(function(){that.checkUpdate();}, 60000);
     }
 
     appendSlider()
