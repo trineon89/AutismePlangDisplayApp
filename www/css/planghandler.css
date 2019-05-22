@@ -221,6 +221,7 @@ break {
     background: rgba(0,0,0, .8);
     color: #fff;
     margin:0;
+    text-shadow: none;
 }
 
   .rslides li {

@@ -46,7 +46,7 @@ class LostAndFound {
     sync()
     {
         var that = this;
-        this.IntervalId = setInterval(function(){that.checkUpdate();}, 60000);
+        this.IntervalId = setInterval(function(){that.checkUpdate();}, 6000);
     }
 
     appendSlider()
@@ -59,6 +59,7 @@ class LostAndFound {
     checkUpdate() {
         var that = this;
         //console.log(this);
+        console.log("LAF: checking for update");
         $.ajax({
 			type:	"POST",
 			url:	"https://intern.autisme.lu/remote/getLaf.ajax.php",
@@ -69,13 +70,20 @@ class LostAndFound {
                     if (result.count>0)
                     {
                         //console.log(result.items);
+                        
                         if (JSON.stringify(that.Objects) == JSON.stringify(result.items))
                         {
                             //console.log("no change");
+                            console.log("LAF: no update");
                         } else {
+                            console.log("LAF: update found");
                             that.Objects = result.items;
                             that.update();
                         }
+                    } else {
+                        that.Objects={};
+                        that.update();
+                        console.log("LAF: result 0");
                     }
 				}
 			}
