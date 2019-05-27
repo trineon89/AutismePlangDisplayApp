@@ -431,6 +431,14 @@ function OnGotUpdate(id)
 		document.getElementById(id+"-1").removeChild(thesvg);
 		next();
 	});
+
+	if ($("#formatioun .photos").children().length==0 && $("#maart .photos").children().length==0)
+	{
+		$("#float-wrapc").css("display","none");
+	} else {
+		$("#float-wrapc").css("display","block");
+	}
+
 }
 
 function includeScript(path, cb) {

@@ -4,6 +4,10 @@ setInterval(function(){ showInformationOverlay(); }, 1000);
 var thisdate;
 var letobj;
 
+includeScript("js/classes/lostandfound.class.js", function () {});
+
+let laf;
+
 function showInformationOverlay()
 {
 	//if (myId=="qvhjjn")
@@ -51,7 +55,27 @@ function updateContent(ContentJSON){
 	$('.ateliercontainer').each(function(e){
 		if (e === $('.ateliercontainer').length-1) return;
 		$(this).after('<div class="col"></div>');
-	})
+	});
+
+	if ($("#formatioun .photos").children().length==0 && $("#maart .photos").children().length==0)
+	{
+		$("#float-wrapc").css("display","none");
+	} else {
+		$("#float-wrapc").css("display","block");
+	}
+	//console.log(laf);
+	try
+	{
+		if (!laf==undefined)
+		{
+			laf.unset();
+		}
+		
+	} finally {
+		laf = new LostAndFound();
+		laf.init();
+	}
+	//if (laf==undefined) {}
 	
 	//document.querySelectorAll(".col:last-child").remove();
 	
@@ -386,11 +410,11 @@ function menuDuJourContainer(date)
 				let res='<h1>Menu du jour</h1>';
 				res+='<h3 class="menu-header3">Menu</h3>';
 				res+='<p>'+result.menu+'<span class="alternative">allergènes: '+result.almenu+'</span></p>';
-				res+='<h3 class="menu-header3">Alternative 1</h3>';
-				res+='<p>'+result.al1+'<span class="alternative">allergènes: '+result.alal1+'</span></p>';
-				res+='<h3 class="menu-header3">Alternative 2</h3>';
-				res+='<p>'+result.al2+'<span class="alternative">allergènes: '+result.alal2+'</span></p>';
-				res+='<h3 class="menu-header3">Liste Allergènes</h3><p>1.&nbsp;Arachide | 2.&nbsp;Céléri | 3.&nbsp;Crustacés | 4.&nbsp;Fruits&nbsp;à coque | 5.&nbsp;Gluten | 6.&nbsp;Lait/Lactose | 7.&nbsp;Lupin | 8.&nbsp;Mollusques | 9.&nbsp;Moutarde | 10.&nbsp;Œufs | 11.&nbsp;Poisson | 12.&nbsp;Sésame | 13.&nbsp;Soja | 14.&nbsp;Anhydride&nbsp;sulfureux&nbsp;et&nbsp;sulfites</p>';
+				res+='<div class="floatingaltcont"><h3 class="menu-header3">Alternative 1</h3>';
+				res+='<p>'+result.al1+'<span class="alternative">allergènes: '+result.alal1+'</span></p></div>';
+				res+='<div class="floatingaltcont"><h3 class="menu-header3">Alternative 2</h3>';
+				res+='<p>'+result.al2+'<span class="alternative">allergènes: '+result.alal2+'</span></p></div>';
+				//res+='<h3 class="menu-header3">Liste Allergènes</h3><p>1.&nbsp;Arachide | 2.&nbsp;Céléri | 3.&nbsp;Crustacés | 4.&nbsp;Fruits&nbsp;à coque | 5.&nbsp;Gluten | 6.&nbsp;Lait/Lactose | 7.&nbsp;Lupin | 8.&nbsp;Mollusques | 9.&nbsp;Moutarde | 10.&nbsp;Œufs | 11.&nbsp;Poisson | 12.&nbsp;Sésame | 13.&nbsp;Soja | 14.&nbsp;Anhydride&nbsp;sulfureux&nbsp;et&nbsp;sulfites</p>';
 				$('#menu-jour-container').html(res);
 			}
 		}
