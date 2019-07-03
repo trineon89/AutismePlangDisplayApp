@@ -1,0 +1,1 @@
+cordova run ios --verbose --device --buildFlag="-UseModernBuildSystem=0"

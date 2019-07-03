@@ -34,10 +34,13 @@ var app = {
 		storage = window.localStorage;
 
 		Init();
-		
-		WSHandler(serverip);
-		
-		FastClick.attach(document.body);
+		try{
+			WSHandler(serverip);
+		} catch (e)
+		{
+			$("body").html("<h1>NO WSHANDLER</h1>");
+		}
+			FastClick.attach(document.body);
 		//initFS();
     },
 
@@ -62,9 +65,6 @@ var myId;
 var storage;
 var backupJsonObject;
 var ws;
-// var serverip="192.168.188.28";
-// var serverip="192.168.1.173";
-// var serverip="192.168.1.217";
 var serverip="192.168.11.28";
 var actualMode=null;
 var screens;
@@ -300,7 +300,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 
 	var fdel="\'img/personal/";
 	var edel="\'";
-	if (userdata.photo.substring(0,4)=="data")
+	if (userdata.photo.substring(0,4)=="data" || userdata.photo.substring(0,4)=="http")
 	{
 		fdel="";
 		edel="";
@@ -324,7 +324,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 				if (fullday==1 || fullday==3) $('<div/>',{id: usid+"-2", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-x2');
 			}
 			
-			if (userdata.photo=="placeholder.png" || fdel=="")
+			if (userdata.photo=="placeholder.png" || userdata.photo.substring(0,4)=="data")
 			{
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-1");
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-2");
@@ -341,7 +341,7 @@ function SingleUpdate(usid, servid, userdata, fullday)
 			if (fullday==1 || fullday==2) $('<div/>',{id: usid+"-1", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-u1');
 			if (fullday==1 || fullday==3) $('<div/>',{id: usid+"-2", style: "background-image:url("+fdel+userdata.photo+edel+")" ,class:"photo"}).appendTo('#'+servid+'-u2');
 			
-			if (userdata.photo=="placeholder.png" || fdel=="")
+			if (userdata.photo=="placeholder.png" || userdata.photo.substring(0,4)=="data")
 			{
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-1");
 				$('<div/>',{class:"nummplaceholder", text: userdata.virnumm}).appendTo('#'+usid+"-2");
@@ -431,6 +431,14 @@ function OnGotUpdate(id)
 		document.getElementById(id+"-1").removeChild(thesvg);
 		next();
 	});
+
+	if ($("#formatioun .photos").children().length==0 && $("#maart .photos").children().length==0)
+	{
+		$("#float-wrapc").css("display","none");
+	} else {
+		$("#float-wrapc").css("display","block");
+	}
+
 }
 
 function includeScript(path, cb) {
