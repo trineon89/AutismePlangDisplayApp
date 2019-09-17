@@ -501,7 +501,7 @@ function ShowService(servicename)
 	let datum = theJson.Date.substring(0,10);
 	result+="<div class='text'>Datum:"+datum+"</div>";
 	
-	if (singleService.id < 30 || singleService.id == 51)
+	if (singleService.id <= 30 || singleService.id == 51)
 	{
 		// Ateliers
 		result+="<div class='text'>Encadrants Moies:</div>";
@@ -544,7 +544,7 @@ function getUserDataById(theid)
 	var res = null;
 	for (var _i=0;_i <= theJson.Services.length -1;_i++)
 	{		
-		if (theJson.Services[_i].id < 30 || theJson.Services[_i].id == 51)
+		if (theJson.Services[_i].id <= 30 || theJson.Services[_i].id == 51)
 		{
 			for (var _j =0;_j < theJson.Services[_i].encadrantsMoies.length;_j++)
 			{if(theJson.Services[_i].encadrantsMoies[_j].id == theid) {res=theJson.Services[_i].encadrantsMoies[_j];return res;}}
@@ -573,7 +573,7 @@ function getUsersByInput(inpstr)
 	theObj={services:[]};
 	for (var _i=0;_i <= theJson.Services.length -1;_i++)
 	{
-		if (theJson.Services[_i].id < 30 || theJson.Services[_i].id == 51)
+		if (theJson.Services[_i].id <= 30 || theJson.Services[_i].id == 51)
 		{
 			for (var _j =0;_j < theJson.Services[_i].encadrantsMoies.length;_j++) {
 				if (FindInString(theJson.Services[_i].encadrantsMoies[_j],inpstr)) { buildObject(theJson,_i,_j,theJson.Services[_i],theJson.Services[_i].encadrantsMoies[_j],"moies"); } }

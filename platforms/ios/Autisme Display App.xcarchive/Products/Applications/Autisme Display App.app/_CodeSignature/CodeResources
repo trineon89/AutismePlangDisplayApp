@@ -86,11 +86,11 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		Yn3GsfteTKUbAW+PXhZYm+ygeWw=
+		m05RdItDdHfM4J8Fa3rdAlKA0YE=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		e4PwIncmNLtUZhZ2sWSpCDdHmL8=
+		D/URblCIBGl4FZBuhyTBIcMJ4LU=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -98,11 +98,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		bmk6eiQkN6gl2CLSC/1WP1DaB4M=
+		FuUv8LOfpKUbxxqY9Lk6qXhn6f0=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		WOHo1CNEsRF+XZsE70cRWCHLSfU=
+		qt+vlbuUa2yurzAi4ASHN411Z7I=
 		</data>
 		<key>LaunchImage-568h@2x.png</key>
 		<data>
@@ -170,7 +170,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		0m3bfq3dB37QWTcinYLZdxiWzqA=
+		cqMtSxoJEWczoN79imeCK3sH4Ww=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		O+EoSS47HxAOzJ9v2BvzYzjzvmE=
+		YOelZ9pDwcySfxcaIJ6iH8PGQGo=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -1078,11 +1078,11 @@
 		</data>
 		<key>www/css/plang.css</key>
 		<data>
-		DHIZav5Q0EKfUfQpUrGe2DxD48g=
+		DdKg4aou0JKKmL5PKxSCGMoQKRs=
 		</data>
 		<key>www/css/planghandler.css</key>
 		<data>
-		F472gFJEUzg86sHKrbMucmRt3Vc=
+		QW/5W9LoGcFGKbuEFdyqicGBCJU=
 		</data>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
 		<data>
@@ -1227,6 +1227,10 @@
 		<key>www/img/personal/bulaku-liridona.jpg</key>
 		<data>
 		XPTQAbjqq729XQZQ8tJ2xl7Aitk=
+		</data>
+		<key>www/img/personal/burgand-martin.jpg</key>
+		<data>
+		8a+LhYZa13x9EHf4+IGvE3VXCkQ=
 		</data>
 		<key>www/img/personal/burk-giulia.jpg</key>
 		<data>
@@ -1720,6 +1724,10 @@
 		<data>
 		2XsOkF/WSChdE0cITj623k5v8Us=
 		</data>
+		<key>www/img/personal/poignand-heike.jpg</key>
+		<data>
+		xvfbBX5QdRoD1d6vl9hot0uCChI=
+		</data>
 		<key>www/img/personal/poos-alain.jpg</key>
 		<data>
 		aE1IYH6/rpZ4kE6wrw0Axduzvz4=
@@ -1800,6 +1808,10 @@
 		<data>
 		wA6Yiyn983Fs9kgdaORNwh1Obwk=
 		</data>
+		<key>www/img/personal/schickes-nora.jpg</key>
+		<data>
+		lUpL7RTwFNcOCIltwSnz0MGWXf0=
+		</data>
 		<key>www/img/personal/schlim-johnny.jpg</key>
 		<data>
 		hbDbA2J5KBVyuw/DpBZoYSuhX3c=
@@ -1824,6 +1836,10 @@
 		<data>
 		NAPa2TRpSqp4o0OEnGVrSg+M/SU=
 		</data>
+		<key>www/img/personal/schockmel-anke.jpg</key>
+		<data>
+		Zn3pn8jeAPRPh58oXorC0uyx7/A=
+		</data>
 		<key>www/img/personal/schroeder-tom.jpg</key>
 		<data>
 		Dg6qn84/Bo6EOQ+fTJFhAu7ltIw=
@@ -1831,6 +1847,10 @@
 		<key>www/img/personal/seiwerath-claudine.jpg</key>
 		<data>
 		/wovkPcW4VXJZ6rTD81rgi+8DUg=
+		</data>
+		<key>www/img/personal/sequeira-sabrina.jpg</key>
+		<data>
+		ddPjE0bunuhNmG1r8SxKhAiin3Y=
 		</data>
 		<key>www/img/personal/seyler-lis.jpg</key>
 		<data>
@@ -1912,6 +1932,10 @@
 		<data>
 		NSwMONk1shXYtVeGgeATi4E3CHc=
 		</data>
+		<key>www/img/personal/thull-joanna.jpg</key>
+		<data>
+		KF7XIcfOXReYNFCzqLNfoG77qEE=
+		</data>
 		<key>www/img/personal/tricarico-valentina.jpg</key>
 		<data>
 		nsuB49OFpApSAeJyJnCQyIzyN9Y=
@@ -1928,9 +1952,17 @@
 		<data>
 		LcWO2lx1JjvQxSNGYnFYEdLjAp4=
 		</data>
+		<key>www/img/personal/wagner-jos.jpg</key>
+		<data>
+		uCeXN1+WkYFVYgtEocrxI5msFSY=
+		</data>
 		<key>www/img/personal/wallstroem-georges.jpg</key>
 		<data>
 		JbQgePgyPt1GNFusfmD6dsirLWo=
+		</data>
+		<key>www/img/personal/wampach-lussi.jpg</key>
+		<data>
+		HdJ1cRPasanZU3IM2wZYZQQio3M=
 		</data>
 		<key>www/img/personal/wantz-laurent.jpg</key>
 		<data>
@@ -1964,6 +1996,10 @@
 		<data>
 		YVdTXg0vYeHj3UPjEopHdkKy3F8=
 		</data>
+		<key>www/img/personal/wiltgen-eric.jpg</key>
+		<data>
+		NqMmrYsvnzSGpAz5ZnPEh/GkRVo=
+		</data>
 		<key>www/img/personal/zanier-sandro.jpg</key>
 		<data>
 		ugQc9s7YxlX64CISbsuCmUtBTok=
@@ -1975,10 +2011,6 @@
 		<key>www/img/personal/zimmer-joel.jpg</key>
 		<data>
 		CGlRtF7u9+vGDe1bbVUdK6b2UZE=
-		</data>
-		<key>www/img/services/Thumbs.db</key>
-		<data>
-		qUUAu+9fIyrZjipeqxc8VbFGyoo=
 		</data>
 		<key>www/img/services/apaken.jpg</key>
 		<data>
@@ -2035,6 +2067,10 @@
 		<key>www/img/services/krank.jpg</key>
 		<data>
 		1DeYqZ4RafIx/PC6GuJ5OKD5WGA=
+		</data>
+		<key>www/img/services/lasertec.jpg</key>
+		<data>
+		3Pja/hQ2QdibL6Kmzq056P9Calk=
 		</data>
 		<key>www/img/services/maart.jpg</key>
 		<data>
@@ -2116,6 +2152,10 @@
 		<data>
 		Qj55EKkAddWeJEppzzq4dcoG1Rk=
 		</data>
+		<key>www/img/servicesnew/lasertec.png</key>
+		<data>
+		uQORswz9V+0gl5U0p+4qzAL8fIY=
+		</data>
 		<key>www/img/servicesnew/maart.png</key>
 		<data>
 		48MN6c49I1xMAj3u2BWifNKz274=
@@ -2148,6 +2188,14 @@
 		<data>
 		5/HQHrd/UmUTLH4rAVASc5oESis=
 		</data>
+		<key>www/js/classes/lostandfound.class.js</key>
+		<data>
+		9B0z57QxpxhOyOb0RYleHQ+70q0=
+		</data>
+		<key>www/js/classes/responsiveslider.js</key>
+		<data>
+		FSqEwzamldmRKC+FcZNH6hPpl5o=
+		</data>
 		<key>www/js/fastclick.js</key>
 		<data>
 		tISBJl2XE/ZIcrZZfbYgvpzY+bM=
@@ -2158,11 +2206,11 @@
 		</data>
 		<key>www/js/index.js</key>
 		<data>
-		9OqNZmHJUs8zov93jNeoOr3XuE4=
+		X8AxZKOjzpQ28Hkn5LTGZvV2dt4=
 		</data>
 		<key>www/js/ipadPlangHandler.js</key>
 		<data>
-		fMmoprpDM+xsrfUwlrY5d4ybzdY=
+		DzkLD3ZyaNefjw9Hu6driPenRqk=
 		</data>
 		<key>www/js/jquery-1.11.1.min.js</key>
 		<data>
@@ -2178,7 +2226,7 @@
 		</data>
 		<key>www/js/plangJsonHandler.js</key>
 		<data>
-		TshUrM99GXN8KEpEQ2bkCIs8qCQ=
+		0QHWoxrxavABgCxMSungXu0ZS28=
 		</data>
 		<key>www/js/youtubehandler.js</key>
 		<data>
@@ -2527,22 +2575,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Yn3GsfteTKUbAW+PXhZYm+ygeWw=
+			m05RdItDdHfM4J8Fa3rdAlKA0YE=
 			</data>
 			<key>hash2</key>
 			<data>
-			BVHLDfwmsYWbcNtIfinKRjaaZH8xtxOIaB7RcimtXAQ=
+			Br6QKIAMCEhb+J+1+DtdEReQd8fgQzwzzKsN2f3ZlsU=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			e4PwIncmNLtUZhZ2sWSpCDdHmL8=
+			D/URblCIBGl4FZBuhyTBIcMJ4LU=
 			</data>
 			<key>hash2</key>
 			<data>
-			nmsxerjcGQcUAQ8CD4h7Y9sb7/jMsFuGyjn4p3GWee8=
+			zOhhI380N96I60LY984H5hNQOFSSqBqC/I+G/8KG2J8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -2560,11 +2608,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bmk6eiQkN6gl2CLSC/1WP1DaB4M=
+			FuUv8LOfpKUbxxqY9Lk6qXhn6f0=
 			</data>
 			<key>hash2</key>
 			<data>
-			8mqsF3n/hQF/JesBTqaVbTqiZG9BbRnwE8bbsqtGIlY=
+			49TP0afAvpMTdwG4rJxJdII5+CrjB19BFjVHwy6ED/g=
 			</data>
 		</dict>
 		<key>LaunchImage-568h@2x.png</key>
@@ -2747,22 +2795,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0m3bfq3dB37QWTcinYLZdxiWzqA=
+			cqMtSxoJEWczoN79imeCK3sH4Ww=
 			</data>
 			<key>hash2</key>
 			<data>
-			prigziCc2hg+sePNpYUulThMDm5sStc148qoV/miGeE=
+			GtAqG8S01GZlOnk3ZpR21ceAe4zIWEy/D8s6SB4nFBQ=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			O+EoSS47HxAOzJ9v2BvzYzjzvmE=
+			YOelZ9pDwcySfxcaIJ6iH8PGQGo=
 			</data>
 			<key>hash2</key>
 			<data>
-			tcOj0OCJZ2OQMAXtN7nbf4WasT/pbBnLyNeEjJMEXl8=
+			VUqTWA6Nrbb0kDIb2XJtDnjEjPO/znR/i//OYM1WpJY=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -5233,22 +5281,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DHIZav5Q0EKfUfQpUrGe2DxD48g=
+			DdKg4aou0JKKmL5PKxSCGMoQKRs=
 			</data>
 			<key>hash2</key>
 			<data>
-			1a4BPOVOXRGJQ/fH1fLLfrqb41gN2/rce5hS4u/Zabw=
+			H6x8gorpzrozsazM7CIQMabT3MP3/AZEIEjDuOzniSE=
 			</data>
 		</dict>
 		<key>www/css/planghandler.css</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			F472gFJEUzg86sHKrbMucmRt3Vc=
+			QW/5W9LoGcFGKbuEFdyqicGBCJU=
 			</data>
 			<key>hash2</key>
 			<data>
-			bR281NuavljvNJpIt+wDtnKuF5MHYFWajFVIvLUJR/M=
+			So+nVeGzp2m3Dg90s5Qis7XhqRA85AK6P1mmKLc4Bz0=
 			</data>
 		</dict>
 		<key>www/css/webfonts/fa-brands-400.eot</key>
@@ -5645,6 +5693,17 @@
 			<key>hash2</key>
 			<data>
 			qbKrpt0zLZzdj7Tj3Dz861+yBfTXXxFZHm8+47mIWcM=
+			</data>
+		</dict>
+		<key>www/img/personal/burgand-martin.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8a+LhYZa13x9EHf4+IGvE3VXCkQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			RABhtEN7ymZzlOcpXSh1rYJuHRmdTx5MC9S9bWum5Bk=
 			</data>
 		</dict>
 		<key>www/img/personal/burk-giulia.jpg</key>
@@ -7000,6 +7059,17 @@
 			sq6bNM9hWVEEB/ogUzrEzUFUTSMPFXdvUe5JllDzZ+4=
 			</data>
 		</dict>
+		<key>www/img/personal/poignand-heike.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			xvfbBX5QdRoD1d6vl9hot0uCChI=
+			</data>
+			<key>hash2</key>
+			<data>
+			4ZUpA2jofmrJBtgRAoplVJb1U1Kp04Dp5kzbB7karLg=
+			</data>
+		</dict>
 		<key>www/img/personal/poos-alain.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7220,6 +7290,17 @@
 			k8jWVMayQ4cMu5GWM4g/kLW65eDpWJcfh++lYIhU8NE=
 			</data>
 		</dict>
+		<key>www/img/personal/schickes-nora.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lUpL7RTwFNcOCIltwSnz0MGWXf0=
+			</data>
+			<key>hash2</key>
+			<data>
+			9Bhq4i0J3Zw++a0vttuIkD8W6dPkADj3XFCMB3eSaJo=
+			</data>
+		</dict>
 		<key>www/img/personal/schlim-johnny.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7286,6 +7367,17 @@
 			1bs17wkNyfJztrEnBttS+a2nuRRx60a0YvqCJ+QLadQ=
 			</data>
 		</dict>
+		<key>www/img/personal/schockmel-anke.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Zn3pn8jeAPRPh58oXorC0uyx7/A=
+			</data>
+			<key>hash2</key>
+			<data>
+			3QsoFhZp+eLTuajKLeddRivf00t6FtHVfxXyHp3FYLE=
+			</data>
+		</dict>
 		<key>www/img/personal/schroeder-tom.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7306,6 +7398,17 @@
 			<key>hash2</key>
 			<data>
 			5ULIFwAFcBV3jMQHK9tQCwJFYXy71JDgex45J9RY1wo=
+			</data>
+		</dict>
+		<key>www/img/personal/sequeira-sabrina.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ddPjE0bunuhNmG1r8SxKhAiin3Y=
+			</data>
+			<key>hash2</key>
+			<data>
+			hkggK346p18g5j7l9iX4plCXC4u+VDCmXXDt9CwLt6s=
 			</data>
 		</dict>
 		<key>www/img/personal/seyler-lis.jpg</key>
@@ -7528,6 +7631,17 @@
 			Ap00iP0hap2nq6xNebal/3gUr8E8uyVNbRkaJBLoWFc=
 			</data>
 		</dict>
+		<key>www/img/personal/thull-joanna.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			KF7XIcfOXReYNFCzqLNfoG77qEE=
+			</data>
+			<key>hash2</key>
+			<data>
+			WE1b+Xi8rn+QSFKECS11THceKc8NTDDZmVyZTSUomMs=
+			</data>
+		</dict>
 		<key>www/img/personal/tricarico-valentina.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7572,6 +7686,17 @@
 			BJw0HAs3rPjT1OLu05BmFfn3Oa4WAaOR3Fes1UBWGw0=
 			</data>
 		</dict>
+		<key>www/img/personal/wagner-jos.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uCeXN1+WkYFVYgtEocrxI5msFSY=
+			</data>
+			<key>hash2</key>
+			<data>
+			G4HayB+K5b0tqUeHV1gls5lWTEORlGt54FbTHx+1H44=
+			</data>
+		</dict>
 		<key>www/img/personal/wallstroem-georges.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7581,6 +7706,17 @@
 			<key>hash2</key>
 			<data>
 			s+MjkTeDObhR0tpfa1WDdtEpE2FuF2GZoLNAG95mIwQ=
+			</data>
+		</dict>
+		<key>www/img/personal/wampach-lussi.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			HdJ1cRPasanZU3IM2wZYZQQio3M=
+			</data>
+			<key>hash2</key>
+			<data>
+			EbSRVDF6bA/NV6900ZWijgDQ59Ixmet+P8NtkV3Z2wA=
 			</data>
 		</dict>
 		<key>www/img/personal/wantz-laurent.jpg</key>
@@ -7671,6 +7807,17 @@
 			aTOHrQ3jWgfXdO8v36NXYixu7FPlT8qkB38daa5N1IM=
 			</data>
 		</dict>
+		<key>www/img/personal/wiltgen-eric.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NqMmrYsvnzSGpAz5ZnPEh/GkRVo=
+			</data>
+			<key>hash2</key>
+			<data>
+			/plKh+cC2wxNQj+kVCJMkFAYitgNB7mchxFDVr+x4hY=
+			</data>
+		</dict>
 		<key>www/img/personal/zanier-sandro.jpg</key>
 		<dict>
 			<key>hash</key>
@@ -7702,17 +7849,6 @@
 			<key>hash2</key>
 			<data>
 			SQkwUdf05cgjH8yhrtzHqadfXct2LGAeITey3duUMEI=
-			</data>
-		</dict>
-		<key>www/img/services/Thumbs.db</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			qUUAu+9fIyrZjipeqxc8VbFGyoo=
-			</data>
-			<key>hash2</key>
-			<data>
-			zin9EkCB6joWQPpkd38jVXwvSi2Hy+Uvd6lpKLR+8lY=
 			</data>
 		</dict>
 		<key>www/img/services/apaken.jpg</key>
@@ -7867,6 +8003,17 @@
 			<key>hash2</key>
 			<data>
 			ZYlHblQfzf3AlRflWJrEyj3hwVlfzhML0/y9wf4elRk=
+			</data>
+		</dict>
+		<key>www/img/services/lasertec.jpg</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			3Pja/hQ2QdibL6Kmzq056P9Calk=
+			</data>
+			<key>hash2</key>
+			<data>
+			vW1hByKCs8dYF6dLEiRUAdyGll8B4dToT3XARWXsvDQ=
 			</data>
 		</dict>
 		<key>www/img/services/maart.jpg</key>
@@ -8089,6 +8236,17 @@
 			/4xKeaxDC3r9Li+grJ4vlarOC41mFRzXzb5b6fpxa68=
 			</data>
 		</dict>
+		<key>www/img/servicesnew/lasertec.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			uQORswz9V+0gl5U0p+4qzAL8fIY=
+			</data>
+			<key>hash2</key>
+			<data>
+			kTIuTWCFiOGLr3/x737JRrxvUDioUTOBkNsJcXomZxA=
+			</data>
+		</dict>
 		<key>www/img/servicesnew/maart.png</key>
 		<dict>
 			<key>hash</key>
@@ -8177,6 +8335,28 @@
 			8Qyb99jhbnCaZ7QpVlFJObsihCPc2I3SqAlSko+Njds=
 			</data>
 		</dict>
+		<key>www/js/classes/lostandfound.class.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9B0z57QxpxhOyOb0RYleHQ+70q0=
+			</data>
+			<key>hash2</key>
+			<data>
+			5vxRnX2DIK0HXbNXq8fsRgCCL+zx9bWy6xMVysnjoPc=
+			</data>
+		</dict>
+		<key>www/js/classes/responsiveslider.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			FSqEwzamldmRKC+FcZNH6hPpl5o=
+			</data>
+			<key>hash2</key>
+			<data>
+			kHVYzE6Biqz04KowxBlHB8BDdf/eFpL5EtxpIRYGnEk=
+			</data>
+		</dict>
 		<key>www/js/fastclick.js</key>
 		<dict>
 			<key>hash</key>
@@ -8203,22 +8383,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			9OqNZmHJUs8zov93jNeoOr3XuE4=
+			X8AxZKOjzpQ28Hkn5LTGZvV2dt4=
 			</data>
 			<key>hash2</key>
 			<data>
-			8gyikG9uO+CwOwva8/Yt5H9cik5+AQ3XkVWNQib0yzQ=
+			6gNOj97tSl4eIgRFO4zyXvaj17XZgbOoQ1Do56hOrPU=
 			</data>
 		</dict>
 		<key>www/js/ipadPlangHandler.js</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fMmoprpDM+xsrfUwlrY5d4ybzdY=
+			DzkLD3ZyaNefjw9Hu6driPenRqk=
 			</data>
 			<key>hash2</key>
 			<data>
-			g0czozxrVBC2mR/NHE2lszpTxUFJ2jgzuGBLo6DjtTs=
+			JCJcGQKgox3ROitb+1uzwvV1/q90pTC6bBR5Pm9nyVg=
 			</data>
 		</dict>
 		<key>www/js/jquery-1.11.1.min.js</key>
@@ -8258,11 +8438,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TshUrM99GXN8KEpEQ2bkCIs8qCQ=
+			0QHWoxrxavABgCxMSungXu0ZS28=
 			</data>
 			<key>hash2</key>
 			<data>
-			o5/1/Z+/34/gFpX+K7LTzAFt4M61a5Y+m7n8r9Jw1O0=
+			l+VWJrRBqo/lVXS8fc5DXG75SKdn0oHB7CTHcEDJabo=
 			</data>
 		</dict>
 		<key>www/js/youtubehandler.js</key>
