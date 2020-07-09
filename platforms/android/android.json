@@ -126,8 +126,7 @@
               "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"org.apache.cordova.camera.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/camera_provider_paths\" /></provider>",
               "count": 1
             }
-          ],
-          "/manifest/application": []
+          ]
         }
       },
       "res/xml/config.xml": {
@@ -150,11 +149,11 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
               "count": 1
             },
             {
-              "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
               "count": 1
             }
           ]
@@ -164,6 +163,10 @@
   },
   "installed_plugins": {
     "com.hughisaacs2.cordova.plugins.androidtvplugin": {
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
     "cordova-plugin-android-tv": {
@@ -178,10 +181,10 @@
     "cordova-plugin-file": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-network-information": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     }
   },
@@ -420,11 +423,12 @@
   ],
   "plugin_metadata": {
     "com.hughisaacs2.cordova.plugins.androidtvplugin": "1.0.3",
+    "cordova-android-support-gradle-release": "3.0.1",
     "cordova-plugin-android-tv": "1.0.0",
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-file": "6.0.1",
-    "cordova-plugin-whitelist": "1.3.3",
-    "cordova-plugin-network-information": "2.0.1"
+    "cordova-plugin-network-information": "2.0.1",
+    "cordova-plugin-whitelist": "1.3.3"
   }
 }

@@ -65,7 +65,8 @@ var myId;
 var storage;
 var backupJsonObject;
 var ws;
-var serverip="192.168.11.28";
+//var serverip="192.168.11.28";
+var serverip="192.168.1.28";
 var actualMode=null;
 var screens;
 

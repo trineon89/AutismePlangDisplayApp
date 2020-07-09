@@ -12,6 +12,7 @@
     "dependencies": {
         "com.hughisaacs2.cordova.plugins.androidtvplugin": "git+https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
         "cordova-android": "^7.1.4",
+        "cordova-android-support-gradle-release": "^3.0.1",
         "cordova-browser": "^5.0.4",
         "cordova-ios": "^4.5.5",
         "cordova-jquery": "^0.1.6",
@@ -31,12 +32,15 @@
             "cordova-plugin-device": {},
             "cordova-plugin-android-tv": {},
             "cordova-plugin-camera": {},
-            "cordova-plugin-network-information": {}
+            "cordova-plugin-network-information": {},
+            "cordova-android-support-gradle-release": {
+                "ANDROID_SUPPORT_VERSION": "27.+"
+            }
         },
         "platforms": [
             "browser",
-            "android",
-            "ios"
+            "ios",
+            "android"
         ]
     }
 }

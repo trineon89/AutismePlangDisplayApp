@@ -10,6 +10,10 @@
     "com.hughisaacs2.cordova.plugins.androidtvplugin": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "lu.autisme.displayclient"
+    },
     "cordova-plugin-android-tv": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
@@ -22,10 +26,10 @@
     "cordova-plugin-file": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     },
-    "cordova-plugin-network-information": {
+    "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "lu.autisme.displayclient"
     }
   },

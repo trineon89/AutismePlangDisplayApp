@@ -256,7 +256,8 @@ module.exports.metadata =
     "cordova-plugin-device": "2.0.2",
     "cordova-plugin-android-tv": "1.0.0",
     "cordova-plugin-camera": "4.0.3",
-    "cordova-plugin-network-information": "2.0.1"
+    "cordova-plugin-network-information": "2.0.1",
+    "cordova-android-support-gradle-release": "3.0.1"
 }
 // BOTTOM OF METADATA
 });
