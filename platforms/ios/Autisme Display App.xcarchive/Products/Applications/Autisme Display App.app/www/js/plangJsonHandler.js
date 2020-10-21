@@ -11,6 +11,7 @@ let laf;
 function showInformationOverlay()
 {
 	//if (myId=="qvhjjn")
+		/*
 	if (myId=="szdddmpdst")
 	{
 		var today = new Date();
@@ -27,7 +28,55 @@ function showInformationOverlay()
 						$('<div/>',{id:'informationoverlay-arrowcontainer'}).appendTo('#informationoverlay-textcontainer');
 			}
 		}
+	}*/	
+	
+	if (myId=="szdddmpdst")
+	{
+		var today = new Date();
+		if (today.getHours() >= 8 && today.getMinutes() >= 00 && (today.getDate()==18 && today.getFullYear()==2019 && today.getMonth()==10) )
+		{
+			if($('#informationoverlay').length <= 0)
+			{
+				$('<div/>',{id:'informationoverlay',class:'informationoverlay'}).appendTo('body');
+					$('<div/>',{id:'informationoverlay-content'}).appendTo('#informationoverlay');
+						$('<div/>',{id:'informationoverlay-textcontainer', style:'width:80%; right:10%;'}).appendTo('#informationoverlay-content');
+							$('<div/>',{id:'informationoverlay-textcontainer-container', style:'background-color:#009400;'}).appendTo('#informationoverlay-textcontainer');
+								$('<h1/>',{id:'informationoverlay-text',text:'WS1 – Stressmanagment der Mitarbeiter - 2ten Stack'}).appendTo('#informationoverlay-textcontainer-container');
+			}
+		} else { $('#informationoverlay').remove(); }
 	}
+	if (myId=="gecbarxm")
+	{
+		var today = new Date();
+		if (today.getHours() >= 8 && today.getMinutes() >= 00 && (today.getDate()==18 && today.getFullYear()==2019 && today.getMonth()==10) )
+		{
+			if($('#informationoverlay').length <= 0)
+			{
+				$('<div/>',{id:'informationoverlay',class:'informationoverlay'}).appendTo('body');
+					$('<div/>',{id:'informationoverlay-content'}).appendTo('#informationoverlay');
+						$('<div/>',{id:'informationoverlay-textcontainer', style:'width:80%; right:10%;'}).appendTo('#informationoverlay-content');
+							$('<div/>',{id:'informationoverlay-textcontainer-container', style:'background-color:#202bb3;'}).appendTo('#informationoverlay-textcontainer');
+								$('<h1/>',{id:'informationoverlay-text',text:'WS2 – Deseskalation Rollenspiele - Iesssäll', style:'color: white;'}).appendTo('#informationoverlay-textcontainer-container');
+			}
+		} else { $('#informationoverlay').remove(); }
+	}
+	if (myId=="vblzjko")
+	{
+		var today = new Date();
+		if (today.getHours() >= 8 && today.getMinutes() >= 00 && (today.getDate()==18 && today.getFullYear()==2019 && today.getMonth()==10) )
+		{
+			if($('#informationoverlay').length <= 0)
+			{
+				$('<div/>',{id:'informationoverlay',class:'informationoverlay'}).appendTo('body');
+					$('<div/>',{id:'informationoverlay-content'}).appendTo('#informationoverlay');
+						$('<div/>',{id:'informationoverlay-textcontainer', style:'width:80%; right:10%;'}).appendTo('#informationoverlay-content');
+							$('<div/>',{id:'informationoverlay-textcontainer-container', style:'background-color:##ffcf46;'}).appendTo('#informationoverlay-textcontainer');
+								$('<h1/>',{id:'informationoverlay-text',text:'WS3 – Achtsamkeit  - 1sten Stack'}).appendTo('#informationoverlay-textcontainer-container');
+			}
+		} else { $('#informationoverlay').remove(); }
+	}
+	
+	
 }
 
 function resetTooLate()
@@ -232,7 +281,7 @@ function buildService(AtelierJSON) {
 	 // console.log(theAtelierjson);
 	switch (theAtelierjson.id)
 	{
-		case 27:
+		case 28:
 				SHTML=showExtraContent(theAtelierjson);
 			break;
 		case 32:

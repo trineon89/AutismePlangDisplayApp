@@ -281,7 +281,7 @@ function buildService(AtelierJSON) {
 	 // console.log(theAtelierjson);
 	switch (theAtelierjson.id)
 	{
-		case 27:
+		case 28:
 				SHTML=showExtraContent(theAtelierjson);
 			break;
 		case 32:
